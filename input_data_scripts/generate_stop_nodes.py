@@ -1,4 +1,5 @@
 import json
+import math
 import re
 from shortest_path import Element, MinHeap
 
@@ -24,15 +25,38 @@ def seconds_to_time_elapsed(seconds):
 
     return (h, m, seconds)
 
+def km_distance_from_latlon(lat1,lon1,lat2,lon2):
+  R = 6371; # Radius of the earth in km
+  dLat = deg2rad(lat2-lat1);#// deg2rad below
+  dLon = deg2rad(lon2-lon1); 
+  a = math.sin(dLat/2) * math.sin(dLat/2) + math.cos(deg2rad(lat1)) * math.cos(deg2rad(lat2)) * math.sin(dLon/2) * math.sin(dLon/2) 
+  
+  c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a)); 
+  d = R * c; # Distance in km
+  return d;
+
+def deg2rad(deg):
+  return deg * (math.PI/180)
+
 
 def strip_go_transit_id(long_trip_id):
     fake = long_trip_id.replace('04230623-', '')
     return fake
 
 class Node:
-    def __init__(self, stop_id, name):
+    def __init__(self, stop_id, name, lat, lon):
         self.id = stop_id
         self.name = name
+        self.lat = lat
+        self.lon = lon
+
+    #Assuming Average 90 km/h
+    def distance_seconds(self, otherNode):
+        
+        spdkmh = 90
+        dist = km_distance_from_latlon(self.lat, self.lon, otherNode.lat, otherNode.lon)
+        return dist / spdkmh * 3600
+
     def __repr__(self):
         return self.name
 
@@ -415,7 +439,7 @@ def generate_transit_graph():
         while line != '':
 
             stop_id,stop_name,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,wheelchair_boarding,stop_code = line.split(',')
-            stopNode = Node(stop_id, stop_name)
+            stopNode = Node(stop_id, stop_name, stop_lat, stop_lon)
 
             G.add_node(stopNode)
 
