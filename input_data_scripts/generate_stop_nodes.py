@@ -36,7 +36,7 @@ def km_distance_from_latlon(lat1,lon1,lat2,lon2):
   return d;
 
 def deg2rad(deg):
-  return deg * (math.PI/180)
+  return deg * (math.pi/180)
 
 
 def strip_go_transit_id(long_trip_id):
@@ -47,15 +47,16 @@ class Node:
     def __init__(self, stop_id, name, lat, lon):
         self.id = stop_id
         self.name = name
-        self.lat = lat
-        self.lon = lon
+        self.lat = float(lat)
+        self.lon = float(lon)
 
     #Assuming Average 90 km/h
     def distance_seconds(self, otherNode):
         
         spdkmh = 90
         dist = km_distance_from_latlon(self.lat, self.lon, otherNode.lat, otherNode.lon)
-        return dist / spdkmh * 3600
+        seconds = dist / spdkmh * 3600
+        return int(seconds)
 
     def __repr__(self):
         return self.name
@@ -534,4 +535,5 @@ if __name__ == '__main__':
     print(G.get_route('GT').subroutes.keys())
     print(len(G.adj))
 
-    print(G.get_travel_route_details('UN', 'SF'))
+    print(G.get_travel_route_details('00310', '02184'))
+    print(seconds_to_time_elapsed(G.get_node('UN').distance_seconds(G.get_node('SF'))))
