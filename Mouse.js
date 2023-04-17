@@ -36,24 +36,19 @@ export function setupMouse() {
                 (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
                 (doc && doc.clientTop  || body && body.clientTop  || 0 );
             }
-            
-            mouse.gui_position = new Vector2(event.pageX, event.pageY); 
 
-            let info = {
-                m_pos_x: mouse.gui_position.x,
-                m_pos_y: mouse.gui_position.y,
-            }
-            console.log(info);
+            //Set Position
+            mouse.gui_position = new Vector2(event.pageX, event.pageY); 
 
             // Use event.pageX / event.pageY here
             if (dragging) {
 
                 //Add to Difference
-                let x = dragStartCamPos.x + (mouse.gui_position.x - dragStartMousePos.x);
-                let y = dragStartCamPos.y + (mouse.gui_position.y - dragStartMousePos.y);
+                let x = dragStartCamPos.x + (dragStartMousePos.x - mouse.gui_position.x);
+                let y = dragStartCamPos.y + (dragStartMousePos.y - mouse.gui_position.y);
 
+                //Update Position
                 cam.position = new Vector2(x, y);
-                //console.log(cam)
             }
 
             //Update

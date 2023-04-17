@@ -16,7 +16,7 @@ function Camera(position) {
         return gui_coords_to_real_coords(this.position);
     }
 
-    this.mouse_camera_position = function() {
+    this.mouse_world_position = function() {
         return new Vector2(this.position.x + mouse.gui_position.x, this.position.y + mouse.gui_position.y)
     }
 
@@ -34,7 +34,8 @@ function Camera(position) {
     this.update_scale = function(zoomIn) {
 
         //Get Position
-        let scrollFromCoords = gui_coords_to_real_coords(this.mouse_camera_position());
+        
+        let scrollFromCoords = gui_coords_to_real_coords(this.mouse_world_position());
 
         //Update Scale
         if (zoomIn) {
@@ -55,11 +56,11 @@ function Camera(position) {
         this.scale = cameraScales[this.scaleInd];
 
         //Get Update
-        //let postCoords = gui_coords_to_real_coords(this.mouse_camera_position());
-        //let diff = new Vector2(postCoords.x - scrollFromCoords.x, postCoords.y - scrollFromCoords.y);
-        
+        let postCoords = gui_coords_to_real_coords(mouse.gui_position);
+        let diff = new Vector2(postCoords.x - scrollFromCoords.x, postCoords.y - scrollFromCoords.y);
+        console.log(diff)
 
-        //this.position = new Vector2(this.position.x + diff.x*this.scale, this.position.y+diff.y*this.scale);
+        this.position = new Vector2(this.position.x + diff.x*this.scale, this.position.y+diff.y*this.scale);
     }
 }
-export let cam = new Camera(new Vector2(0, 0), 1);
+export let cam = new Camera(new Vector2(10, 10), 1);

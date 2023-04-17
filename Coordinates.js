@@ -12,8 +12,8 @@ export function real_coords_to_gui_position(coords) {
     let realScale = globalScale*cam.scale;
 
     return new Vector2(
-        (coords[0] - originX)*lakeXscale*realScale + goalCamW/2 + cam.position.x,
-        (coords[1] - originY)*lakeYscale*realScale + goalCamH/2 + cam.position.y
+        (coords[0] - originX)*lakeXscale*realScale - cam.position.x,
+        (coords[1] - originY)*lakeYscale*realScale - cam.position.y
     );
 }
 
@@ -22,8 +22,8 @@ export function gui_coords_to_real_coords(guiPosition) {
     //console.log(guiPosition);
     let realScale = globalScale*cam.scale;
 
-    let x = (guiPosition.x - goalCamW/2 - cam.position.x) / (realScale*lakeXscale) + originX;
-    let y = (guiPosition.y - goalCamH/2 - cam.position.y) / (realScale*lakeYscale) + originY;
+    let x = (guiPosition.x + cam.position.x) / (realScale*lakeXscale) + originX;
+    let y = (guiPosition.y + cam.position.y) / (realScale*lakeYscale) + originY;
     let v = new Vector2(x, y);
     //console.log(v);
 
