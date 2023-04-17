@@ -62,8 +62,23 @@ window.addEventListener('mouseup', (event) => {
 });
 
 window.addEventListener('wheel', (event) => {
-    let deltaY = event.deltaY;
-    console.log(deltaY);
+    
+    //Get
+    let deltaY = event.deltaY > 0
+
+    //Scroll Up
+    if (event.deltaY > 0) {
+
+        cam.zoom_in();
+        console.log(cam.scale);
+        return;
+        //Scroll Down
+    }
+
+    
+    console.log(cam.scale);
+    cam.zoom_out();
+    console.log(cam.scale);
 });
 
 function draw(){

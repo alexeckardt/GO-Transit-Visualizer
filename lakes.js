@@ -72,8 +72,6 @@ export function drawLakes(ctx) {
 
     let radius = 10;
     let orgPos = real_coords_to_lake([originX, originY]);
-    console.log(orgPos);
-
     ctx.beginPath();
     ctx.arc(orgPos.x, orgPos.y, radius, 0, 2 * Math.PI, false);
     ctx.fillStyle = "red";
