@@ -7,11 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello!</h1>
-    
-    <canvas id="myCanvas"></canvas>
-
-    <script src="index.js"></script>
+    <div class="backdiv">
+        <canvas id="myCanvas"></canvas>
+    </div>
+    <script src="index.js", type="module"></script>
 </body>
 </html>
 
@@ -19,5 +18,13 @@
     body {
         margin: 0;
         padding: 0;
+    }
+    .backdiv {
+        background-color: wheat;
+        height: 100vh;
+    }
+    canvas {
+        width: 100%;
+        height: 100%;
     }
 </style>

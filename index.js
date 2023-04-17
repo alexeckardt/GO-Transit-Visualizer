@@ -1,4 +1,5 @@
 //Comment
+import {drawLakes} from "./lakes.js";
 
 function Vector2(x, y) {
     this.x = x;
@@ -28,9 +29,14 @@ function Circle(pos, radius) {
 const canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext('2d');
 
+canvas.width = 1920;
+canvas.height = 1080;
+
 //Generate
 const circle = new Circle(new Vector2(50, 50), 10);
-circle.draw(ctx);
+//circle.draw(ctx);
 
 const circle2 = new Circle(new Vector2(80, 60), 10);
-circle2.draw(ctx);
+//circle2.draw(ctx);
+
+drawLakes(ctx, canvas.width / 2, canvas.height / 2);
