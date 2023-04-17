@@ -23,7 +23,7 @@ export function setupMouse() {
             // If pageX/Y aren't available and clientX/Y are,
             // calculate pageX/Y - logic taken from jQuery.
             // (This is to support old IE)
-            /*
+            
             if (event.pageX == null && event.clientX != null) {
                 eventDoc = (event.target && event.target.ownerDocument) || document;
                 doc = eventDoc.documentElement;
@@ -35,8 +35,8 @@ export function setupMouse() {
                 event.pageY = event.clientY +
                 (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
                 (doc && doc.clientTop  || body && body.clientTop  || 0 );
-            }*/
-
+            }
+            
             mouse.gui_position = new Vector2(event.pageX, event.pageY); 
 
             let info = {
