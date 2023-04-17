@@ -1,42 +1,77 @@
 //Comment
-import {drawLakes} from "./lakes.js";
-
-function Vector2(x, y) {
-    this.x = x;
-    this.y = y;
-}
-
-function Circle(pos, radius) {
-    this.radius = radius;
-    this.position = pos;
-    this.fill = 'black';
-
-    this.draw = function(ctx) {
-
-        var x = this.position.x;
-        var y = this.position.y;
-
-        ctx.beginPath();
-        ctx.arc(x, y, this.radius, 0, 2 * Math.PI, false);
-
-        ctx.fillStyle = this.fill;
-        ctx.fill();
-
-    }
-}
+import { Vector2 } from "./helper.js";
+import { drawLakes } from "./lakes.js";
+import { cam, goalCamW, goalCamH } from "./Camera.js";
 
 //Canvas
 const canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext('2d');
 
-canvas.width = 1920;
-canvas.height = 1080;
+canvas.setAttribute('width', goalCamW);
+canvas.setAttribute('height', goalCamH);
 
-//Generate
-const circle = new Circle(new Vector2(50, 50), 10);
-//circle.draw(ctx);
+let mousePos = new Vector2(0, 0);
+let dragStartMousePos = new Vector2(0, 0);
+let dragStartCamPos = new Vector2(0, 0);
+let dragging = false;
 
-const circle2 = new Circle(new Vector2(80, 60), 10);
-//circle2.draw(ctx);
+(function() {
+    document.onmousemove = handleMouseMove;
+    function handleMouseMove(event) {
+        var eventDoc, doc, body;
 
-drawLakes(ctx, canvas.width / 2, canvas.height / 2);
+        event = event || window.event; // IE-ism
+
+        // If pageX/Y aren't available and clientX/Y are,
+        // calculate pageX/Y - logic taken from jQuery.
+        // (This is to support old IE)
+        if (event.pageX == null && event.clientX != null) {
+            eventDoc = (event.target && event.target.ownerDocument) || document;
+            doc = eventDoc.documentElement;
+            body = eventDoc.body;
+
+            event.pageX = event.clientX +
+              (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+              (doc && doc.clientLeft || body && body.clientLeft || 0);
+            event.pageY = event.clientY +
+              (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+              (doc && doc.clientTop  || body && body.clientTop  || 0 );
+        }
+
+        mousePos = new Vector2(event.pageX, event.pageY); 
+
+        // Use event.pageX / event.pageY here
+        if (dragging) {
+            cam.position = new Vector2(dragStartCamPos.x + mousePos.x - dragStartMousePos.x, dragStartCamPos.y + mousePos.y - dragStartMousePos.y);
+            //console.log(cam)
+        }
+    }
+})();
+
+//Mouse Events
+window.addEventListener('mousedown', (event) => {
+    console.log("Mouse Down");
+    dragging = true;
+    dragStartMousePos = mousePos;
+    dragStartCamPos = cam.position;
+});
+
+window.addEventListener('mouseup', (event) => {
+    console.log("Mouse Up");
+    dragging = false;
+});
+
+window.addEventListener('wheel', (event) => {
+    let deltaY = event.deltaY;
+    console.log(deltaY);
+});
+
+function draw(){
+    window.requestAnimationFrame(draw);
+
+    //Clear
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawLakes(ctx, canvas.width / 2, canvas.height / 2);
+    
+}
+draw()
