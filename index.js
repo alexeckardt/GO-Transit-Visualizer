@@ -3,6 +3,8 @@ import { setupMouse } from "./Mouse.js";
 import { drawLakes } from "./lakes.js";
 import { goalCamW, goalCamH } from "./Camera.js";
 
+const backgroundCol = 'wheat';
+
 //Canvas
 const canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext('2d');
@@ -16,8 +18,7 @@ function draw(){
     window.requestAnimationFrame(draw);
 
     //Clear
-    //ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = backgroundCol;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     drawLakes(ctx, canvas.width / 2, canvas.height / 2);
