@@ -67,10 +67,13 @@ function drawGrid(ctx) {
     let offX = Math.floor(cam.position.x / skip);
     let offY = Math.floor(cam.position.y / skip);
 
-    for (var ii = 0; ii < c.x; ii++) {
-        for (var jj = 0; jj < c.y; jj++) {
+    let xPos = offX*skip;
+    while (xPos < cam.position.x + goalCamW) {
 
-            let position = new Vector2(offX*skip + ii*skip, offY*skip + jj*skip);
+        let yPos = offY*skip;
+        while (yPos < cam.position.y + goalCamH) {
+
+            let position = new Vector2(xPos, yPos);
             let pos = gui_coords_to_world_coords(position);
             let posR = gui_coords_to_world_coords(position.add(new Vector2(skip, 0)));
             let posD = gui_coords_to_world_coords(position.add(new Vector2(0, skip)));
@@ -89,8 +92,11 @@ function drawGrid(ctx) {
             ctx.lineWidth = 1;
             ctx.stroke();
             ctx.closePath();
+
+            yPos += skip
         }
-        
+
+        xPos += skip
     }
 
     ctx.beginPath();
