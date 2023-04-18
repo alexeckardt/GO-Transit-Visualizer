@@ -4,17 +4,20 @@ import { real_coords_to_world_position } from "../Components/Coordinates.js";
 
 const baseBusStopWidth = 8;
 
-export function BusStopNode(stop_id, pos) {
+export function BusStopNode(stop_id, input_coordinate) {
 
     this.stop_id = stop_id;
-    this.coord = pos;
+    this.coord = input_coordinate;
+
+    this.draw_position = function() {
+        return real_coords_to_world_position(this.coord);
+    }
 
     this.draw = function(ctx) {
 
         var s = cam.get_feature_scale();
         var w = baseBusStopWidth*s;
-
-        var pos = real_coords_to_world_position(this.coord);
+        var pos = this.draw_position();
 
         ctx.beginPath();
             ctx.arc(pos.x, pos.y, w, 0, 2 * Math.PI, false);
