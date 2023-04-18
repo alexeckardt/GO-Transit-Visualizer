@@ -483,7 +483,7 @@ def generate_transit_graph():
         #Storing
         lastTrip = Trip(None,None,None,None,None,None,None,None)
         tripCount = 0;
-        tripCountLimit = 300000
+        tripCountLimit = -1
         print('Starting Trip 0...')
 
         #Loop
