@@ -40,6 +40,6 @@ export function gui_coords_to_world_coords(guiPosition) {
 export function real_coords_to_world_position(coords) {
     var coordXOff = coords.x - originX;
     var coordYOff = coords.y - originY;
-    
-    return new Vector2(coordXOff, coordYOff).multiply(lakeScale).scale(coordinateScale).subtract(cam.position);
+
+    return new Vector2(coordXOff, coordYOff).multiply(lakeScale).scale(coordinateScale*cam.scale).subtract(cam.position);
 }

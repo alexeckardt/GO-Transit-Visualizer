@@ -12,7 +12,7 @@ async function load_lakes() {
 load_lakes();
 
 const lakeCol = 'black';
-const shouldDrawLakes = false;
+const shouldDrawLakes = true;
 
 //Canvas
 export function drawLakes(ctx) {
