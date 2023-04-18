@@ -4,7 +4,7 @@ import {gui_coords_to_real_coords, gui_coords_to_world_coords } from "./Coordina
 
 export const goalCamW = 1920;
 export const goalCamH = 1080;
-const cameraScales = [1, 1.5, 2, 3, 8, 10, 20];
+const cameraScales = [1, 2, 3, 8, 10, 20];
 const scaleCount = cameraScales.length;
 
 function Camera(position) {
@@ -17,18 +17,11 @@ function Camera(position) {
     }
 
     this.get_world_position = function() {
-        return gui_coords_to_world_coords(this.position);;
+        return this.position.scale(1/this.scale);
     }
 
     this.mouse_world_position = function() {
-
-        let camWorldPosition = this.get_world_position();
-        console.log(camWorldPosition)
-        //return gui_coords_to_world_coords(mouse.gui_position);
-        let x = (mouse.gui_position.x*this.scale + this.position.x)/this.scale;
-        let y = mouse.gui_position.y/this.scale + this.position.y;
-
-        let v = new Vector2(x, y);
+        let v = this.position.add(mouse.gui_position).scale(1/this.scale);
         return v;
     }
 
@@ -48,7 +41,7 @@ function Camera(position) {
         //Get Position
         //let scrollFromCoords = this.mouse_world_position();
 
-        //let mousePos = this.mouse_world_position();
+        let mousePos = this.mouse_world_position();
 
         //Update Scale
         if (zoomIn) {
@@ -70,17 +63,17 @@ function Camera(position) {
         this.scale = cameraScales[this.scaleInd];
         var ratio = this.scale / prevScale;
         
-        //let newMousePos = this.mouse_world_position();
-        //
-        //Get Update
-        //let postCoords = this.mouse_world_position();
-        //let coordDiff = new Vector2(newMousePos.x-mousePos.x, newMousePos.y-mousePos.y);
+        let newMousePos = this.mouse_world_position();
         
-        //console.log(coordDiff);
+        //Get Update
+        let postCoords = this.mouse_world_position();
+        let coordDiff = new Vector2(newMousePos.x-mousePos.x, newMousePos.y-mousePos.y);
+        
+        console.log(coordDiff);
 
         var p = this.position;
-        //var adding = coordDiff.scale(ratio);
-        //this.position = p.subtract(adding);
+        var adding = coordDiff.scale(this.scale);
+        this.position = p.subtract(adding);
     }
 }
 //export let cam = new Camera(new Vector2(-goalCamW/2, -goalCamH/2), 1);
