@@ -78,5 +78,5 @@ function Camera(position) {
 
     //Change
 }
-//export let cam = new Camera(new Vector2(-goalCamW/2, -goalCamH/2), 1);
-export let cam = new Camera(new Vector2(0, 0), 1);
+export let cam = new Camera(new Vector2(-goalCamW/2, -goalCamH/2), 1);
+//export let cam = new Camera(new Vector2(0, 0), 1);
