@@ -10,8 +10,8 @@ export function BusStopNode(pos) {
 
     this.draw = function(ctx) {
 
-        //var s = cam.get_feature_scale();
-        var w = baseBusStopWidth;
+        var s = cam.get_feature_scale();
+        var w = baseBusStopWidth*s;
 
         var pos = real_coords_to_world_position(this.coord);
 
@@ -22,7 +22,7 @@ export function BusStopNode(pos) {
 
         ctx.arc(pos.x, pos.y, w, 0, 2 * Math.PI, false);
         ctx.strokeStyle = busStopCol;
-        ctx.lineWidth = 3;
+        ctx.lineWidth = 3*s;
         ctx.stroke();
     }
 }

@@ -77,6 +77,15 @@ function Camera(position) {
     }
 
     //Change
+    this.get_feature_scale = function() {
+
+        if (this.scale >= 3) {
+            return 1;
+        }
+
+        return 0.5;
+
+    }
 }
 export let cam = new Camera(new Vector2(-goalCamW/2, -goalCamH/2), 1);
 //export let cam = new Camera(new Vector2(0, 0), 1);
