@@ -22,14 +22,27 @@ def export_nodes(G):
 
     return nodes;
 
+def export_edges(G):
+     
+    edges = {}
+
+    for source in G.adj:
+        sourceD = {}
+        for to in G.adj[source]:
+            w = G.get_weight(source, to)
+            sourceD[to] = w
+
+        edges[source] = sourceD
+
+    return edges
+
 def export_g(G):
 
     print(G)
 
-    nodes = export_nodes(G)
-
     graphDict = {}
-    graphDict["nodes"] = nodes
+    graphDict["nodes"] = export_nodes(G)
+    graphDict["edges"] = export_edges(G)
 
     strr = json.dumps(graphDict, indent=4)
     with open('transitGraph.json', 'w') as f:
