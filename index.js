@@ -2,8 +2,7 @@
 import { setupMouse } from "./Mouse.js";
 import { drawLakes } from "./lakes.js";
 import { goalCamW, goalCamH } from "./Camera.js";
-
-const backgroundCol = 'wheat';
+import { backgroundCol } from "./Colors.js";
 
 //Canvas
 const canvas = document.getElementById('myCanvas');

@@ -1,6 +1,7 @@
 import { cam, goalCamW, goalCamH } from "./Camera.js";
 import { real_coords_to_world_position, gui_coords_to_world_coords, originX, originY } from "./Coordinates.js";
 import { toVector2, Vector2 } from "./helper.js";
+import { gridLineCol, lakeCol } from "./Colors.js";
 
 let obj;
 let loadedLakes = false;
@@ -11,7 +12,6 @@ async function load_lakes() {
 }
 load_lakes();
 
-const lakeCol = 'black';
 const shouldDrawLakes = true;
 
 //Canvas
@@ -43,8 +43,6 @@ export function drawLakes(ctx) {
 
                 let newpoint = real_coords_to_world_position(toVector2(lakeobj[j]))
                 ctx.lineTo(newpoint.x, newpoint.y);
-                //console.log(newpoint)
-
                 j++;
             }
 
@@ -80,14 +78,14 @@ function drawGrid(ctx) {
             ctx.beginPath();
             ctx.moveTo(pos.x, pos.y);
             ctx.lineTo(posR.x, posR.y);
-            ctx.strokeStyle = "red";
+            ctx.strokeStyle = gridLineCol;
             ctx.stroke();
             ctx.closePath();
 
             ctx.beginPath();
             ctx.moveTo(pos.x, pos.y);
             ctx.lineTo(posD.x, posD.y);
-            ctx.strokeStyle = "red";
+            ctx.strokeStyle = gridLineCol;
             ctx.stroke();
             ctx.closePath();
         }
@@ -97,7 +95,7 @@ function drawGrid(ctx) {
     ctx.beginPath();
     let orgPos = real_coords_to_world_position([originX, originY]);
     ctx.arc(orgPos.x, orgPos.y, radius, 0, 2 * Math.PI, false);
-    ctx.fillStyle = "red";
+    ctx.fillStyle = gridLineCol;
     ctx.fill();
     ctx.closePath();
     
