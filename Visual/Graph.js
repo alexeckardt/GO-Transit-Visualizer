@@ -86,7 +86,6 @@ export async function generateGraph() {
     //See
 
     //Add Nodes
-    /*
     for (const [key, value] of Object.entries(obj.nodes)) {
         //console.log(value)
 
@@ -96,18 +95,18 @@ export async function generateGraph() {
         var newStop = new BusStopNode(value.stop_id, new Vector2(value.lon, value.lat));
         G.addStop(newStop);
     }
+
     //Add Edges
     for (const [source, adj] of Object.entries(obj.edges)) {
 
         //console.log(value)
         for (const [to, weight] of Object.entries(adj)) {
-
+            G.addEdge(source, to, weight);
         }
     }
-    generatedGraph = true;*/
-    
+
     //Bake Graph
-    bake_graph();
+    //bake_graph();
 
     generatedGraph = true;
 }
