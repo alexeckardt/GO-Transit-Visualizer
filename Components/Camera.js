@@ -4,7 +4,7 @@ import {gui_coords_to_real_coords } from "./Coordinates.js";
 
 export const goalCamW = 1920;
 export const goalCamH = 1080;
-const cameraScales = [1, 2, 3, 8, 10, 20, 40, 80];
+const cameraScales = [1, 2, 3, 8, 10, 20, 40, 80, 200];
 const scaleCount = cameraScales.length;
 
 function Camera(position) {
@@ -79,11 +79,15 @@ function Camera(position) {
     //Change
     this.get_feature_scale = function() {
 
-        if (this.scale >= 3) {
+        if (this.scale >= 40) {
             return 1;
         }
 
-        return 0.5;
+        if (this.scale >= 3) {
+            return 0.5;
+        }
+
+        return 0.25;
 
     }
 }
