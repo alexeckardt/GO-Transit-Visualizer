@@ -86,6 +86,7 @@ function drawGrid(ctx) {
             ctx.moveTo(pos.x, pos.y);
             ctx.lineTo(posD.x, posD.y);
             ctx.strokeStyle = gridLineCol;
+            ctx.lineWidth = 1;
             ctx.stroke();
             ctx.closePath();
         }

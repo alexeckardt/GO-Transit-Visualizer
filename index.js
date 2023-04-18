@@ -1,8 +1,9 @@
 //Comment
 import { setupMouse } from "./Mouse.js";
-import { drawLakes } from "./lakes.js";
+import { drawLakes } from "./Background.js";
 import { goalCamW, goalCamH } from "./Camera.js";
 import { backgroundCol } from "./Colors.js";
+import { generateGraph, drawGraph } from "./Graph.js";
 
 //Canvas
 const canvas = document.getElementById('myCanvas');
@@ -13,6 +14,8 @@ canvas.setAttribute('height', goalCamH);
 
 setupMouse();
 
+generateGraph();
+
 function draw(){
     window.requestAnimationFrame(draw);
 
@@ -21,5 +24,6 @@ function draw(){
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     drawLakes(ctx, canvas.width / 2, canvas.height / 2);
+    drawGraph(ctx);
 }
 draw()

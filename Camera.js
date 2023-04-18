@@ -75,6 +75,8 @@ function Camera(position) {
         var adding = coordDiff.scale(this.scale);
         this.position = p.subtract(adding);
     }
+
+    //Change
 }
 //export let cam = new Camera(new Vector2(-goalCamW/2, -goalCamH/2), 1);
 export let cam = new Camera(new Vector2(0, 0), 1);
