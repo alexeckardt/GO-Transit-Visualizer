@@ -1,6 +1,7 @@
 import json
 import math
 import re
+from export import export_g
 from shortest_path import Element, MinHeap
 
 def convert_time_to_seconds(timestr):
@@ -44,11 +45,17 @@ def strip_go_transit_id(long_trip_id):
     return fake
 
 class Node:
-    def __init__(self, stop_id, name, lat, lon):
-        self.id = stop_id
-        self.name = name
-        self.lat = float(lat)
-        self.lon = float(lon)
+    def __init__(self, stop_id, stop_name, stop_lat, stop_lon,zone_id,stop_url,location_type,parent_station,wheelchair_boarding,stop_code):
+        self.id = stop_id;
+        self.name = stop_name;
+        self.lat = float(stop_lat);
+        self.lon = float(stop_lon);
+        self.zone_id= zone_id;
+        self.stop_url =stop_url;
+        self.location_type= location_type;
+        self.parent_station= parent_station;
+        self.wheelchair_boarding= wheelchair_boarding;
+        self.stop_code= stop_code;
 
     #Assuming Average 90 km/h
     def distance_seconds(self, otherNode):
@@ -440,7 +447,7 @@ def generate_transit_graph():
         while line != '':
 
             stop_id,stop_name,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,wheelchair_boarding,stop_code = line.split(',')
-            stopNode = Node(stop_id, stop_name, stop_lat, stop_lon)
+            stopNode = Node(stop_id, stop_name, stop_lat, stop_lon,zone_id,stop_url,location_type,parent_station,wheelchair_boarding,stop_code)
 
             G.add_node(stopNode)
 
@@ -476,7 +483,7 @@ def generate_transit_graph():
         #Storing
         lastTrip = Trip(None,None,None,None,None,None,None,None)
         tripCount = 0;
-        tripCountLimit = 300000
+        tripCountLimit = 50000
         print('Starting Trip 0...')
 
         #Loop
@@ -524,6 +531,7 @@ def generate_transit_graph():
         # Print Adj List
         return G
     
+
 if __name__ == '__main__':
 
     G = generate_transit_graph()
@@ -537,3 +545,5 @@ if __name__ == '__main__':
 
     print(G.get_travel_route_details('00310', '02184'))
     print(seconds_to_time_elapsed(G.get_node('UN').distance_seconds(G.get_node('SF'))))
+
+    export_g(G)
