@@ -1,6 +1,6 @@
-import { cam } from "./Camera.js";
-import { backgroundCol, busStopCol } from "./Colors.js";
-import { real_coords_to_world_position } from "./Coordinates.js";
+import { cam } from "../Components/Camera.js";
+import { backgroundCol, busStopCol } from "../Components/Colors.js";
+import { real_coords_to_world_position } from "../Components/Coordinates.js";
 
 const baseBusStopWidth = 8;
 

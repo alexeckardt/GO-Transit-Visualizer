@@ -1,12 +1,12 @@
-import { cam, goalCamW, goalCamH } from "./Camera.js";
-import { real_coords_to_world_position, gui_coords_to_world_coords, originX, originY } from "./Coordinates.js";
-import { toVector2, Vector2 } from "./helper.js";
-import { gridLineCol, lakeCol } from "./Colors.js";
+import { cam, goalCamW, goalCamH } from "../Components/Camera.js";
+import { real_coords_to_world_position, gui_coords_to_world_coords, originX, originY } from "../Components/Coordinates.js";
+import { toVector2, Vector2 } from "../Components/helper.js";
+import { gridLineCol, lakeCol } from "../Components/Colors.js";
 
 let obj;
 let loadedLakes = false;
 async function load_lakes() {
-    const res = await fetch('./lakes.json')
+    const res = await fetch('./Visual/Source/lakes.json')
     obj = await res.json();
     loadedLakes = true;
 }

@@ -1,6 +1,6 @@
 import { BusStopNode } from "./Busstop.js";
-import { Vector2 } from "./helper.js";
-import { originX, originY } from "./Coordinates.js";
+import { Vector2 } from "../Components/helper.js";
+import { originX, originY } from "../Components/Coordinates.js";
 
 function Graph() {
     this.stops = [];

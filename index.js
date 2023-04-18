@@ -1,10 +1,9 @@
 //Comment
-import { setupMouse } from "./Mouse.js";
-import { drawLakes } from "./Background.js";
-import { goalCamW, goalCamH } from "./Camera.js";
-import { backgroundCol } from "./Colors.js";
-import { generateGraph, drawGraph } from "./Graph.js";
-
+import { setupMouse } from "./Components/Mouse.js";
+import { goalCamW, goalCamH } from "./Components/Camera.js";
+import { backgroundCol } from "./Components/Colors.js";
+import { generateGraph, drawGraph } from "./Visual/Graph.js";
+import { drawLakes } from "./Visual/Background.js";
 //Canvas
 const canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext('2d');

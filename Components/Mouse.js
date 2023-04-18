@@ -1,6 +1,6 @@
 import { Vector2 } from "./helper.js";
-import { cam, goalCamW, goalCamH } from "./Camera.js";
-import {gui_coords_to_real_coords } from "./Coordinates.js";
+import { cam } from "./Camera.js";
+
 
 function Mouse() {
     this.gui_position = new Vector2(0, 0);

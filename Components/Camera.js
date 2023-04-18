@@ -1,6 +1,6 @@
 import { Vector2 } from "./helper.js";
 import { mouse } from "./Mouse.js";
-import {gui_coords_to_real_coords, gui_coords_to_world_coords } from "./Coordinates.js";
+import {gui_coords_to_real_coords } from "./Coordinates.js";
 
 export const goalCamW = 1920;
 export const goalCamH = 1080;
