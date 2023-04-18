@@ -59,6 +59,9 @@ export function setupMouse() {
     //Mouse Events
     window.addEventListener('mousedown', (event) => {
         console.log("Mouse Down");
+        //console.log('MGUIP:' + cam.mouse_world_position())
+        console.log('CI' + cam.position)
+        console.log('CW:' + cam.get_world_position())
         dragging = true;
         dragStartMousePos = mouse.gui_position;
         dragStartCamPos = cam.position;
