@@ -4,7 +4,7 @@ import {gui_coords_to_real_coords, gui_coords_to_world_coords } from "./Coordina
 
 export const goalCamW = 1920;
 export const goalCamH = 1080;
-const cameraScales = [1, 2, 3, 8, 10, 20];
+const cameraScales = [1, 2, 3, 8, 10, 20, 40, 80];
 const scaleCount = cameraScales.length;
 
 function Camera(position) {

@@ -56,24 +56,42 @@ export function drawLakes(ctx) {
             i++;
         }
     }
+    
+    drawGrid(ctx);
+}
 
+function drawGrid(ctx) {
     //Draw Grid
-    let c = 10;
+    let c = new Vector2(15, 10);
     let skip = 100;
     let radius = 10;
 
-    for (var ii = 0; ii < c; ii++) {
-        ctx.beginPath();
-        for (var jj = 0; jj < c; jj++) {
+    let offX = Math.floor(cam.position.x / skip);
+    let offY = Math.floor(cam.position.y / skip);
 
-            let position = new Vector2(-c*skip/2 + ii*skip, -c*skip/2 + jj*skip);
+    for (var ii = 0; ii < c.x; ii++) {
+        for (var jj = 0; jj < c.y; jj++) {
+
+            let position = new Vector2(offX*skip + ii*skip, offY*skip + jj*skip);
             let pos = gui_coords_to_world_coords(position);
+            let posR = gui_coords_to_world_coords(position.add(new Vector2(skip, 0)));
+            let posD = gui_coords_to_world_coords(position.add(new Vector2(0, skip)));
 
-            ctx.arc(pos.x, pos.y, radius, 0, 2 * Math.PI, false);
-            ctx.fillStyle = "red";
-            ctx.fill();
+            ctx.beginPath();
+            ctx.moveTo(pos.x, pos.y);
+            ctx.lineTo(posR.x, posR.y);
+            ctx.strokeStyle = "red";
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.moveTo(pos.x, pos.y);
+            ctx.lineTo(posD.x, posD.y);
+            ctx.strokeStyle = "red";
+            ctx.stroke();
+            ctx.closePath();
         }
-        ctx.closePath();
+        
     }
 
     ctx.beginPath();
@@ -82,6 +100,5 @@ export function drawLakes(ctx) {
     ctx.fillStyle = "red";
     ctx.fill();
     ctx.closePath();
-    
     
 }
