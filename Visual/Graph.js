@@ -3,6 +3,8 @@ import { Vector2 } from "../Components/helper.js";
 import { originX, originY } from "../Components/Coordinates.js";
 import { TripEdge } from  "./TripEdges.js";
 
+const shouldBakeGraph = true;
+
 function Graph() {
 
     this.busstops = [];
@@ -36,6 +38,8 @@ function Graph() {
         //new visual
         let newEdge = new TripEdge(from, to, weight);
         this.display_edges.push(newEdge);
+
+        return newEdge;
     }
 
     this.get_edge_id = function(fromId, toId) {
@@ -74,7 +78,10 @@ function bake_graph() {
     G.addStop(baseStop);
     G.addStop(baseStop2);
 
-    G.addEdge("NA", "NAA", 1);
+    let edge = G.addEdge("NA", "NAA", 1);
+    edge.add_edge_shape_point(originX, originY)
+    edge.add_edge_shape_point(originX-2, originY)
+    edge.add_edge_shape_point(originX-1, originY+0.2)
 }
 
 export async function generateGraph() {
@@ -84,29 +91,33 @@ export async function generateGraph() {
     let obj = await res.json();
 
     //See
+    if (!shouldBakeGraph) {
+        
+        //Add Nodes
+        for (const [key, value] of Object.entries(obj.nodes)) {
+            //console.log(value)
 
-    //Add Nodes
-    for (const [key, value] of Object.entries(obj.nodes)) {
-        //console.log(value)
+            //Pass Data Into Struct
+            G.stop_data[key] = value;
 
-        //Pass Data Into Struct
-        G.stop_data[key] = value;
-
-        var newStop = new BusStopNode(value.stop_id, new Vector2(value.lon, value.lat));
-        G.addStop(newStop);
-    }
-
-    //Add Edges
-    for (const [source, adj] of Object.entries(obj.edges)) {
-
-        //console.log(value)
-        for (const [to, weight] of Object.entries(adj)) {
-            G.addEdge(source, to, weight);
+            var newStop = new BusStopNode(value.stop_id, new Vector2(value.lon, value.lat));
+            G.addStop(newStop);
         }
-    }
 
-    //Bake Graph
-    //bake_graph();
+        //Add Edges
+        for (const [source, adj] of Object.entries(obj.edges)) {
+
+            //console.log(value)
+            for (const [to, weight] of Object.entries(adj)) {
+                G.addEdge(source, to, weight);
+            }
+        }
+    } else {
+
+        //Bake Graph
+        bake_graph();
+
+    }
 
     generatedGraph = true;
 }
