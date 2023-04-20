@@ -433,7 +433,7 @@ class Graph:
 
 
     
-def generate_transit_graph():
+def generate_transit_graph(tripCountLimit = -1):
         
     with open('input_data_scripts/in_GTFS/stops.txt', 'r') as f:
 
@@ -483,7 +483,6 @@ def generate_transit_graph():
         #Storing
         lastTrip = Trip(None,None,None,None,None,None,None,None)
         tripCount = 0;
-        tripCountLimit = -1
         print('Starting Trip 0...')
 
         #Loop
