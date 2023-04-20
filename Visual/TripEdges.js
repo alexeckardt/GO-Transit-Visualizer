@@ -12,8 +12,6 @@ export function TripEdge(fromStop, toStop) {
     this.add_edge_shape_point = function(lat, lon) {
         this.edge_shape.push(new Vector2(lat, lon))
         this.draw_straight_line = false;
-
-        console.log(this.edge_shape)
     }
 
     this.draw = function(ctx) {

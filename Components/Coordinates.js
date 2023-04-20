@@ -32,7 +32,7 @@ export function gui_coords_to_real_coords(guiPosition) {
 
 
 export function gui_coords_to_world_coords(guiPosition) {
-    return new Vector2(guiPosition.x*cam.scale - cam.position.x, guiPosition.y*cam.scale - cam.position.y);
+    return new Vector2(guiPosition.x*cam.scale - cam.position.x, guiPosition.y*cam.scale - cam.position.y).floored();
 }
 
 
@@ -41,5 +41,5 @@ export function real_coords_to_world_position(coords) {
     var coordXOff = coords.x - originX;
     var coordYOff = coords.y - originY;
 
-    return new Vector2(coordXOff, coordYOff).multiply(lakeScale).scale(coordinateScale*cam.scale).subtract(cam.position);
+    return new Vector2(coordXOff, coordYOff).multiply(lakeScale).scale(coordinateScale*cam.scale).subtract(cam.position).floored();
 }

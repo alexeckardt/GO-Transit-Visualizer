@@ -226,7 +226,7 @@ def generate_edge_shapes():
             line = f.readline().strip();
 
     # Generate Graph
-    G = generate_transit_graph(250000);
+    G = generate_transit_graph(-1);
 
     edgeShapes = {}
 
@@ -267,7 +267,7 @@ def generate_edge_shapes():
     hi = True
 
     # Export All this data
-    with open('edge_shapes.json', 'w') as f:
+    with open('./Visual/Source/edge_shapes.json', 'w') as f:
           strr = json.dumps(edgeShapes, indent=4)
           f.write(strr)
 

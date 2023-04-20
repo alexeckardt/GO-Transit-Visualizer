@@ -18,6 +18,10 @@ export function Vector2(x, y) {
     this.scale = function(factor) {
         return new Vector2(this.x*factor, this.y*factor);
     }
+
+    this.floored = function() {
+        return new Vector2(Math.floor(this.x), Math.floor(this.y));
+    }
 }
 Vector2.prototype.toString = function() {
     return "V2:(" + this.x + ", " + this.y + ")";
