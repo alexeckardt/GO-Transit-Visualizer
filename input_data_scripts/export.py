@@ -24,17 +24,18 @@ def export_nodes(G):
 
 def export_edges(G):
      
-    edges = {}
+     return G.adj
+    # edges = {}
 
-    for source in G.adj:
-        sourceD = {}
-        for to in G.adj[source]:
-            w = G.get_weight(source, to)
-            sourceD[to] = w
+    # for source in G.adj:
+    #     sourceD = {}
+    #     for to in G.adj[source]:
+    #         w = G.get_weight(source, to)
+    #         sourceD[to] = w
 
-        edges[source] = sourceD
+    #     edges[source] = sourceD
 
-    return edges
+    # return edges
 
 def export_g(G):
 
@@ -45,5 +46,5 @@ def export_g(G):
     graphDict["edges"] = export_edges(G)
 
     strr = json.dumps(graphDict, indent=4)
-    with open('transitGraph.json', 'w') as f:
+    with open('./Visual/Source/transitGraph.json', 'w') as f:
           f.write(strr)

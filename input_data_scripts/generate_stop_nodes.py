@@ -202,17 +202,14 @@ class Graph:
     def add_edge(self, fromNodeId, toNodeId, routeId, timeElapsed):
         
         #Mark As Edge Exists
-        self.adj[fromNodeId][toNodeId] = 1 # just hash it :)
-        
-        # Add Weights
-        self.weights[(fromNodeId, toNodeId)] = (timeElapsed)
-
+        self.adj[fromNodeId][toNodeId] = timeElapsed # just hash it :)
+    
         # Get Route
         route = self.get_route(routeId)
         route.add_trip(routeId, fromNodeId, toNodeId)
  
     def get_weight(self, fromm, to):
-        return self.weights[(fromm, to)]
+        return self.adj[fromm][to]
 
     def get_route(self, routeId):
         shortId = routeId.split('-')[0]

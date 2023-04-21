@@ -1,6 +1,7 @@
 import json
 import re;
-from generate_stop_nodes import generate_transit_graph;
+from generate_stop_nodes import generate_transit_graph
+from export import export_g;
 
 #Modify to meet GTFS Data
 trip_headsign_format = "([\d\w]*) - [^,]*"; #Found in trips.txt
@@ -89,9 +90,7 @@ def get_route_shape(G, trips, shapes, route, edge):
     if route == None:
         return None
     
-    # Route ID Exists
-    shape_id = trips[route]['shape_id']
-    shapeList = shapes.get_shape(shape_id)
+    
 
     fromFrom = True #In case it's backwards, i don't really know
     store = False
@@ -104,48 +103,57 @@ def get_route_shape(G, trips, shapes, route, edge):
     tolat = too.lat
     tolon = too.lon
 
-    accuracy = 0.005 # accuracy, starts / end in range
+    accuracy = 0.05 # accuracy, starts / end in range
 
     shape = []
 
-    #Parse
-    for shapePoint in shapeList:
+    # Route ID Exists
+    for shape_id in trips[route]['shape_ids']:
+        shapeList = shapes.get_shape(shape_id)
 
-        pointlat = float(shapePoint['lat'])
-        pointlon = float(shapePoint['lon'])
+        #Parse
+        for shapePoint in shapeList:
 
-        if not store:
-            if abs(pointlat - fromlat) < accuracy and abs(pointlon - fromlon) < accuracy:
-                #START!!
-                fromFrom = True
-                store = True
-                shape.append([fromlat, fromlon])
-            elif abs(pointlat - tolat) < accuracy and abs(pointlon - tolon) < accuracy:
-                #START!!
-                fromFrom = False
-                store = True
-                shape.append([tolat, tolon])
+            pointlat = float(shapePoint['lat'])
+            pointlon = float(shapePoint['lon'])
 
-        else:
-            
-            #Not Ended
-            shape.append([pointlat, pointlon])
-
-            # END!!
-            if fromFrom:
-                if abs(pointlat - tolat) < accuracy and abs(pointlon - tolon) < accuracy:
-                    #END
-                    shape.append([tolat, tolon])
-                    break
-            if not fromFrom:
+            if not store:
                 if abs(pointlat - fromlat) < accuracy and abs(pointlon - fromlon) < accuracy:
-                    #END
+                    #START!!
+                    fromFrom = True
+                    store = True
+                    shape.append([fromlat, fromlon])
+                elif abs(pointlat - tolat) < accuracy and abs(pointlon - tolon) < accuracy:
+                    #START!!
+                    fromFrom = False
+                    store = True
                     shape.append([tolat, tolon])
-                    #Reverse
-                    shape.reverse()
-                    break
 
-    return shape
+            else:
+                
+                #Not Ended
+                shape.append([pointlat, pointlon])
+
+                # END!!
+                if fromFrom:
+                    if abs(pointlat - tolat) < accuracy and abs(pointlon - tolon) < accuracy:
+                        #END
+                        shape.append([tolat, tolon])
+                        break
+                if not fromFrom:
+                    if abs(pointlat - fromlat) < accuracy and abs(pointlon - fromlon) < accuracy:
+                        #END
+                        shape.append([tolat, tolon])
+                        #Reverse
+                        shape.reverse()
+                        break
+
+        #Shape Made
+        if shape != []:
+            return shape
+        
+    # Shape was Never Made
+    return []
 
 
 
@@ -181,19 +189,21 @@ def generate_edge_shapes():
             # See If We've already filled this information
             key = f"{routeType}:{direction}";
             if (trips.get(key, None) != None):
+
+                #Add Id
                 trips[key]['trip_ids'].append(trip_id)
 
-                subsequentRepeats += 1
-                if (subsequentRepeats>repeatsUntilAssumedFinished):
-                    pass
-                    #break;
+                #Add Shape
+                if (shape not in trips[key]['shape_ids']):
+                    trips[key]['shape_ids'].append(shape)
+
             else:
                 # New Data!!
                 subsequentRepeats = 0;
 
                 # Add To Data
                 data = {}
-                data['shape_id'] = shape
+                data['shape_ids'] = [shape]
                 data['trip_ids'] = [trip_id]
 
                 #Store
@@ -232,37 +242,41 @@ def generate_edge_shapes():
 
     print(len(G.weights))
     count = 0
-    for edge in G.weights:
+    for source in G.adj:
 
-        #Edge is the ID
-        allRoutesOnEdge = G.get_routes_that_travel_edge(edge)
+         for end in G.adj[source]:
 
-        #Loop
-        viableSubroutes = []
+            edge = (source, end)
 
-        for routeAbstractId in allRoutesOnEdge:
-            route = G.get_route(routeAbstractId)
+            #Edge is the ID
+            allRoutesOnEdge = G.get_routes_that_travel_edge(edge)
 
-            #Get Subroute with edge in it
-            for subroute in route.subroute_paths:
-                if (edge in route.subroute_paths[subroute]):
-                    viableSubroutes.append(subroute)
+            #Loop
+            viableSubroutes = []
 
-        # Get Route+Direction from trip ids
-        routeShapesToCheck = {}
-        for viableSubroute in viableSubroutes:
-            realId = get_routedir_from_trip_id(trips, viableSubroute)
-            routeShapesToCheck[realId]=1
+            for routeAbstractId in allRoutesOnEdge:
+                route = G.get_route(routeAbstractId)
 
-        for routeId in routeShapesToCheck:
-            shapee = get_route_shape(G, trips, shapes, routeId, edge)
-            if shapee != None:
-                edgeShapes[str(edge)] = shapee
-                break;
-    
-        count += 1
-        if (count % 200 == 0):
-            print(count)
+                #Get Subroute with edge in it
+                for subroute in route.subroute_paths:
+                    if (edge in route.subroute_paths[subroute]):
+                        viableSubroutes.append(subroute)
+
+            # Get Route+Direction from trip ids
+            routeShapesToCheck = {}
+            for viableSubroute in viableSubroutes:
+                realId = get_routedir_from_trip_id(trips, viableSubroute)
+                routeShapesToCheck[realId]=1
+
+            for routeId in routeShapesToCheck:
+                shapee = get_route_shape(G, trips, shapes, routeId, edge)
+                if shapee != None:
+                    edgeShapes[str(edge)] = shapee
+                    break;
+        
+            count += 1
+            if (count % 200 == 0):
+                print(count)
 
     hi = True
 
@@ -271,8 +285,8 @@ def generate_edge_shapes():
           strr = json.dumps(edgeShapes, indent=4)
           f.write(strr)
 
-
-
+    #Export Same Data
+    export_g(G)
 
 if __name__ == '__main__':
     generate_edge_shapes();

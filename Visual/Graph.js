@@ -107,6 +107,8 @@ export async function generateGraph() {
             G.addStop(newStop);
         }
 
+        let failEdges = []
+
         //Add Edges
         for (const [source, adj] of Object.entries(obj.edges)) {
 
@@ -120,6 +122,12 @@ export async function generateGraph() {
                 var edgeId = "('" + source + "', '" + to + "')";
                 var edgeShapes = edgeObj[edgeId]
                 
+                // Recreate, see if back works?
+                if (edgeShapes == undefined) {
+                    edgeId = "('" + to + "', '" + source + "')";
+                    edgeShapes = edgeObj[edgeId]
+                }
+
                 //Add Shape
                 if (edgeShapes != undefined) {
                     for (var i = 0; i < edgeShapes.length; i++) {
@@ -127,10 +135,13 @@ export async function generateGraph() {
                         edge.add_edge_shape_point(point[1], point[0])
                     }
                 } else {
-                    console.log(edgeId)
+                    failEdges.push(edgeId)
                 }
             }
         }
+
+        console.log(failEdges)
+        console.log(failEdges.length)
 
     } else {
 
