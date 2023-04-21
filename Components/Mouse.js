@@ -15,6 +15,7 @@ export let mouse = new Mouse();
 let dragStartMousePos = new Vector2(0, 0);
 let dragStartCamPos = new Vector2(0, 0);
 let dragging = false;
+let dragged = false;
 
 export function setupMouse() {
 
@@ -90,6 +91,7 @@ export function setupMouse() {
         dragging = true;
         dragStartMousePos = mouse.gui_position;
         dragStartCamPos = cam.position;
+        dragged = false;
 
     });
 
@@ -97,7 +99,14 @@ export function setupMouse() {
         console.log("Mouse Up");
         dragging = false;
 
-        mouse.elementSelected = mouse.elementHovering;
+        //Drag
+        if (mouse.elementHovering == undefined) {
+            if (dragStartCamPos.distance(cam.position) < 10) {
+                mouse.elementSelected = undefined;
+            }
+        } else {
+            mouse.elementSelected = mouse.elementHovering;
+        }
     });
 
     window.addEventListener('wheel', (event) => {
@@ -109,12 +118,16 @@ export function setupMouse() {
         if (event.deltaY > 0) {
 
             cam.zoom_in();
+            dragStartMousePos = mouse.gui_position;
+            dragStartCamPos = cam.position;
             return;
             
         }
         
         //Scroll Down
         cam.zoom_out();
+        dragStartMousePos = mouse.gui_position;
+        dragStartCamPos = cam.position;
     });
 
 }
