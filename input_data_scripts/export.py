@@ -18,32 +18,53 @@ def export_nodes(G):
         stopp['wheelchair_boarding'] = stop.wheelchair_boarding
         stopp['stop_code'] = stop.stop_code
 
+        stopp['routes_that_stop_here'] = routes_that_stop_at_stop(G, stop.id)
+
         nodes[node]=stopp
 
     return nodes;
 
 def export_edges(G):
-     
-     return G.adj
-    # edges = {}
+    return G.adj
 
-    # for source in G.adj:
-    #     sourceD = {}
-    #     for to in G.adj[source]:
-    #         w = G.get_weight(source, to)
-    #         sourceD[to] = w
 
-    #     edges[source] = sourceD
+def routes_that_stop_at_stop(G, stop_id):
+    routes = []
 
-    # return edges
+    for route in G.routes.values():
+        if (route.stops_at_stop(stop_id)):
+            routes.append(route.route_id)
+    
+    return routes
+
+
+def export_routes(G):
+    routesin = G.routes;
+    routes = {}
+    for route in routesin:
+        info = routesin[route]
+
+        store = {}
+        store['agency_id'] = info.agency_id
+        store['route_color'] = info.route_color
+        store['route_short_name'] = info.route_short_name
+        store['route_long_name'] = info.route_long_name
+        store['route_text_color'] = info.route_text_color
+        store['route_type'] = info.route_type
+
+        #Store
+        routes[info.route_id] = store
+
+    return routes
 
 def export_g(G):
 
     print(G)
 
     graphDict = {}
-    graphDict["nodes"] = export_nodes(G)
+    graphDict["routes"] = export_routes(G)
     graphDict["edges"] = export_edges(G)
+    graphDict["nodes"] = export_nodes(G)
 
     strr = json.dumps(graphDict, indent=4)
     with open('./Visual/Source/transitGraph.json', 'w') as f:
