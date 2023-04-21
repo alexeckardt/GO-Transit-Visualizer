@@ -1,5 +1,5 @@
 import { cam } from "../Components/Camera.js";
-import { edgeColour } from "../Components/Colors.js";
+import { edgeColour, busStopCol } from "../Components/Colors.js";
 import { Vector2 } from "../Components/helper.js";
 import { real_coords_to_world_position } from "../Components/Coordinates.js";
 
@@ -14,19 +14,31 @@ export function TripEdge(fromStop, toStop) {
         this.draw_straight_line = false;
     }
 
-    this.draw = function(ctx) {
-
-        var s = cam.get_feature_scale();
-
+    this.plot = function(ctx) {
         var pFrom = this.from.draw_position();
         var fFrom = this.to.draw_position();
 
-        ctx.beginPath();
         ctx.moveTo(pFrom.x, pFrom.y);
         ctx.lineTo(fFrom.x, fFrom.y);
-        ctx.strokeStyle = edgeColour;
-        ctx.lineWidth = 3*s;
-        ctx.stroke();
-        ctx.closePath();
+    }
+
+    this.draw = function(ctx) {
+        
+        ctx.beginPath();
+        this.plot(ctx);
+            ctx.strokeStyle = edgeColour;
+            ctx.lineWidth = 3*cam.get_feature_scale();
+            ctx.stroke();
+            ctx.closePath();
+    }
+
+    this.draw_selected = function(ctx) {
+
+        ctx.beginPath();
+        this.plot(ctx);
+            ctx.strokeStyle = busStopCol;
+            ctx.lineWidth = 3*cam.get_feature_scale();;
+            ctx.stroke();
+            ctx.closePath();
     }
 }

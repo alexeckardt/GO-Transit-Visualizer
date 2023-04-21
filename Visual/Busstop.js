@@ -16,7 +16,14 @@ export function BusStopNode(stop_id, input_coordinate, name) {
     }
 
     this.get_draw_col = function() {
+
         var c = (cam.selectable()) ? busStopCol : edgeColour;
+
+        //Hide
+        if (mouse.selectedRoutes.length != 0) {
+            c = edgeColour;
+        }
+
         if (mouse.elementHovering == this || mouse.elementSelected == this) {
             c = selectedBusStopCol;
 
@@ -24,6 +31,8 @@ export function BusStopNode(stop_id, input_coordinate, name) {
                 c = selectedAndHoveringBusStopCol;
             }
         }
+
+
         return c;
     }
 
@@ -33,14 +42,33 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         var s = cam.get_feature_scale();
 
         ctx.beginPath();
+        ctx.fillStyle = backgroundCol;
+        ctx.strokeStyle = c;
+        ctx.lineWidth = 3*s;
+
         this.plot_arc(ctx)
-            ctx.fillStyle = backgroundCol;
-            ctx.strokeStyle = c;
-            ctx.lineWidth = 3*s;
+            
             ctx.fill();
             ctx.stroke();
             ctx.closePath();
     }
+
+    this.draw_selected = function(ctx) {
+
+        var s = cam.get_feature_scale();
+
+        ctx.beginPath();
+        ctx.fillStyle = backgroundCol;
+        ctx.strokeStyle = selectedBusStopCol;
+        ctx.lineWidth = 3*s;
+
+        this.plot_arc(ctx)
+            
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+    }
+
 
     this.draw_with_text = function(ctx) {
 

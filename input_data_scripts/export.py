@@ -52,6 +52,8 @@ def export_routes(G):
         store['route_text_color'] = info.route_text_color
         store['route_type'] = info.route_type
 
+        store['travels_edges'] = info.edges
+
         #Store
         routes[info.route_id] = store
 

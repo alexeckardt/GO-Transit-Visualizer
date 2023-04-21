@@ -9,6 +9,21 @@ function Mouse() {
 
     this.elementHovering = undefined;
     this.elementSelected = undefined;
+
+    this.selectedRoutes = [];
+
+    this.deselect_element = function() {
+        this.elementSelected = undefined;
+        this.selectedRoutes = [];
+    }
+
+    this.select_element = function(el) {
+        this.elementSelected = el;
+
+        //More!!
+        this.selectedRoutes = G.get_all_routes_from_stop(el);
+        console.log(this.selectedRoutes);
+    }
 }
 
 export let mouse = new Mouse();
@@ -102,10 +117,10 @@ export function setupMouse() {
         //Drag
         if (mouse.elementHovering == undefined) {
             if (dragStartCamPos.distance(cam.position) < 10) {
-                mouse.elementSelected = undefined;
+                mouse.deselect_element();
             }
         } else {
-            mouse.elementSelected = mouse.elementHovering;
+            mouse.select_element(mouse.elementHovering);
         }
     });
 

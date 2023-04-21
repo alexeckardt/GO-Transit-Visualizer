@@ -84,6 +84,7 @@ class Route:
         self.subroute_paths = {}
         self.subroutes = {}
         self.stops = {}
+        self.edges = {}
 
     def add_trip(self, long_trip_id, fromNodeId, toNodeId):
 
@@ -101,6 +102,11 @@ class Route:
 
         self.stops[fromNodeId] = True
         self.stops[toNodeId] = True
+
+        d = self.edges.get(fromNodeId, {})
+        d[toNodeId] = 1
+        self.edges[fromNodeId] = d
+
 
     def stops_at_stop(self, stopid):
         return self.stops.get(stopid, False)
