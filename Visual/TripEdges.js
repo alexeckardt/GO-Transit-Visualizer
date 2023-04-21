@@ -34,20 +34,12 @@ export function TripEdge(fromStop, toStop) {
             ctx.closePath();
         } else {
 
-            //Start
-            var start = real_coords_to_world_position(this.edge_shape[0]);
-            ctx.beginPath();
-            ctx.moveTo(start.x, start.y);
-
             for (var i = 1; i < this.edge_shape.length; i++) {
-                var next = real_coords_to_world_position(this.edge_shape[i]);
+                var start = real_coords_to_world_position(this.edge_shape[i]);
+                var next = real_coords_to_world_position(this.edge_shape[i+1]);
+                ctx.moveTo(start.x, start.y);
                 ctx.lineTo(next.x, next.y);
             }
-
-            ctx.strokeStyle = edgeColour;
-            ctx.lineWidth = 3*s;
-            ctx.stroke();
-            ctx.closePath();
         }
 
     }

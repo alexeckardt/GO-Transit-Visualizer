@@ -6,10 +6,14 @@ import { generateGraph, drawGraph } from "./Visual/Graph.js";
 import { drawLakes } from "./Visual/Background.js";
 //Canvas
 const canvas = document.getElementById('myCanvas');
+const lakeCanvas = document.getElementById('lakes')
 let ctx = canvas.getContext('2d');
+let bkgCtx = lakeCanvas.getContext('2d');
 
 canvas.setAttribute('width', goalCamW);
 canvas.setAttribute('height', goalCamH);
+lakeCanvas.setAttribute('width', goalCamW);
+lakeCanvas.setAttribute('height', goalCamH);
 
 setupMouse();
 
@@ -19,10 +23,11 @@ function draw(){
     window.requestAnimationFrame(draw);
 
     //Clear
-    ctx.fillStyle = backgroundCol;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    bkgCtx.fillStyle = backgroundCol;
+    bkgCtx.fillRect(0, 0, canvas.width, canvas.height);
+    drawLakes(bkgCtx, canvas.width / 2, canvas.height / 2);
 
-    drawLakes(ctx, canvas.width / 2, canvas.height / 2);
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
     drawGraph(ctx);
 }
 draw()

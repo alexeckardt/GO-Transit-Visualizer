@@ -3,6 +3,8 @@ import { Vector2 } from "../Components/helper.js";
 import { originX, originY } from "../Components/Coordinates.js";
 import { TripEdge } from  "./TripEdges.js";
 import { mouse } from "../Components/Mouse.js";
+import { edgeColour, backgroundCol, busStopCol } from "../Components/Colors.js";
+import { cam } from "../Components/Camera.js";
 
 const shouldBakeGraph = false;
 
@@ -53,16 +55,29 @@ function Graph() {
         
 
         //Draw Edges
+
+        //Start
+        var s = cam.get_feature_scale();
         for (var i = 0; i < this.display_edges.length; i++) {
             let edge = this.display_edges[i];
             edge.draw(ctx);
         }
+        ctx.strokeStyle = edgeColour;
+        ctx.lineWidth = 3*s;
+        ctx.stroke();
 
         //Draw Stops
+        ctx.beginPath();
         for (var i = 0; i < this.busstops.length; i++) {
             let busstop = this.busstops[i];
-            busstop.draw(ctx);
+            busstop.plot_arc(ctx)
         }
+        ctx.fillStyle = backgroundCol;
+        ctx.strokeStyle = (cam.selectable()) ? busStopCol : edgeColour;
+        ctx.lineWidth = 3*s;
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
 
         //Redraw Selected
         if (mouse.elementSelected != undefined) {

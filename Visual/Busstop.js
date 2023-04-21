@@ -17,8 +17,6 @@ export function BusStopNode(stop_id, input_coordinate) {
     this.draw = function(ctx) {
 
         var s = cam.get_feature_scale();
-        var w = baseBusStopWidth*s;
-        var pos = this.draw_position();
 
         var c = (cam.selectable()) ? busStopCol : edgeColour;
         if (mouse.elementHovering == this || mouse.elementSelected == this) {
@@ -30,12 +28,21 @@ export function BusStopNode(stop_id, input_coordinate) {
         }
 
         ctx.beginPath();
-            ctx.arc(pos.x, pos.y, w, 0, 2 * Math.PI, false);
-                ctx.fillStyle = backgroundCol;
-                ctx.strokeStyle = c;
-                ctx.lineWidth = 3*s;
-                ctx.fill();
-                ctx.stroke();
-        ctx.closePath();
+        this.plot_arc(ctx)
+            ctx.fillStyle = backgroundCol;
+            ctx.strokeStyle = c;
+            ctx.lineWidth = 3*s;
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+    }
+
+    this.plot_arc = function(ctx) {
+        var s = cam.get_feature_scale();
+        var w = baseBusStopWidth*s;
+        var pos = this.draw_position();
+
+        ctx.moveTo(pos.x + w, pos.y);
+        ctx.arc(pos.x, pos.y, w, 0, 2 * Math.PI, false);
     }
 }
