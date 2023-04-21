@@ -178,6 +178,7 @@ class Graph:
         self.weights = {}
         self.routes = {}
         self.nodes = {}
+        self.duplicate_stops = {}
 
     #
     #
@@ -198,9 +199,19 @@ class Graph:
         else:
             raise Exception(f"Node {node.id} exists in graph already!")
         
+    def store_stop_as_duplicate(self, duplicate, source):
+            self.duplicate_stops[duplicate] = source;
+
+    def get_duplicate_if_duplicate(self, stopId):
+        return self.duplicate_stops.get(stopId, stopId) #Return self if not found
+
     #
     def add_edge(self, fromNodeId, toNodeId, routeId, timeElapsed):
         
+        #Get real
+        fromNodeId = self.get_duplicate_if_duplicate(fromNodeId)
+        toNodeId = self.get_duplicate_if_duplicate(toNodeId)
+
         #Mark As Edge Exists
         self.adj[fromNodeId][toNodeId] = timeElapsed # just hash it :)
     
@@ -209,6 +220,10 @@ class Graph:
         route.add_trip(routeId, fromNodeId, toNodeId)
  
     def get_weight(self, fromm, to):
+
+        #Get real
+        fromm = self.get_duplicate_if_duplicate(fromm)
+        to = self.get_duplicate_if_duplicate(to)
         return self.adj[fromm][to]
 
     def get_route(self, routeId):
@@ -216,7 +231,7 @@ class Graph:
         return self.routes[shortId]
 
     def get_node(self, stop_id_str):
-        return self.nodes[stop_id_str];
+        return self.nodes.get(stop_id_str, None);
     #
     def add_route(self, route):
 
@@ -263,9 +278,17 @@ class Graph:
     # Check if edge is bidirectional
     #
     def edge_exists(self, fromId, toId):
+        #Get real
+        fromId = self.get_duplicate_if_duplicate(fromId)
+        toId = self.get_duplicate_if_duplicate(toId)
+
         return self.adj[fromId].get(toId, None) != None
 
     def edge_is_dual(self, fromId, toId):
+        #Get real
+        fromId = self.get_duplicate_if_duplicate(fromId)
+        toId = self.get_duplicate_if_duplicate(toId)
+
         if (not self.edge_exists(fromId, toId)): #Edge DNE At least one way
             return False
         
@@ -295,6 +318,10 @@ class Graph:
 
     # Time in
     def get_shortest_travel_path(self, fromNode, toNode):
+
+        #Get real
+        fromId = self.get_duplicate_if_duplicate(fromId)
+        toId = self.get_duplicate_if_duplicate(toId)
 
         # Dijksta
         pred = {}
@@ -418,6 +445,10 @@ class Graph:
     
     def get_travel_route_details(self, fromStop, toStop):
 
+        #Get real
+        fromStop = self.get_duplicate_if_duplicate(fromStop)
+        toStop = self.get_duplicate_if_duplicate(toStop)
+
         shortestPath = self.get_shortest_travel_path(fromStop, toStop)
         edges = shortestPath.keys()
         time = self.get_travel_time(edges)
@@ -440,13 +471,34 @@ def generate_transit_graph(tripCountLimit = -1):
         line = f.readline();
         line = f.readline().strip();
 
+        stopNamesToId = {}
+        
         #Loop
         while line != '':
 
             stop_id,stop_name,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,wheelchair_boarding,stop_code = line.split(',')
             stopNode = Node(stop_id, stop_name, stop_lat, stop_lon,zone_id,stop_url,location_type,parent_station,wheelchair_boarding,stop_code)
 
-            G.add_node(stopNode)
+            #Check if same named stop
+            if stopNamesToId.get(stop_name, None) == None:
+                stopNamesToId[stop_name] = stop_id
+
+                G.add_node(stopNode)
+            else:
+                diff = 0.009
+                sameNameId = stopNamesToId[stop_name];
+                other = G.get_node(sameNameId)
+                latDist = abs(stopNode.lat - other.lat)
+                lonDist = abs(stopNode.lon - other.lon)
+
+                if (latDist < diff and lonDist < diff):
+
+                    #Store as a duplicate
+                    G.store_stop_as_duplicate(stop_id, sameNameId)
+
+                else:
+                    #Too Far, Keep Seperate
+                    G.add_node(stopNode)
 
             #Continue
             line = f.readline().strip();
