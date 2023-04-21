@@ -103,7 +103,7 @@ def get_route_shape(G, trips, shapes, route, edge):
     tolat = too.lat
     tolon = too.lon
 
-    accuracy = 0.05 # accuracy, starts / end in range
+    accuracy = 0.005 # accuracy, starts / end in range
 
     shape = []
 
@@ -186,6 +186,10 @@ def generate_edge_shapes():
             shape = tripInfo['shape_id']
             trip_id = tripInfo['trip_id'][9::] #remove the date
 
+            twodigit = trip_id[0:2]
+            if (twodigit not in routeType):
+                routeType = twodigit
+
             # See If We've already filled this information
             key = f"{routeType}:{direction}";
             if (trips.get(key, None) != None):
@@ -240,11 +244,14 @@ def generate_edge_shapes():
 
     edgeShapes = {}
 
-    print(len(G.weights))
+
     count = 0
     for source in G.adj:
 
-         for end in G.adj[source]:
+        if (len(source) < 4):
+            print(source)
+
+        for end in G.adj[source]:
 
             edge = (source, end)
 
