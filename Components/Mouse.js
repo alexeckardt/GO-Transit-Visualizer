@@ -58,7 +58,7 @@ export function setupMouse() {
 
             } else {
 
-                if (cam.scale > 3) {
+                if (cam.selectable()) {
 
                     //Check Which Bus Stop Hovering Over
                     for (const node of G.busstops) {

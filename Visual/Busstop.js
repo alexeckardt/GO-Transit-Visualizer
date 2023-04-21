@@ -1,5 +1,5 @@
 import { cam } from "../Components/Camera.js";
-import { backgroundCol, busStopCol, selectedBusStopCol, selectedAndHoveringBusStopCol } from "../Components/Colors.js";
+import { backgroundCol, busStopCol, selectedBusStopCol, selectedAndHoveringBusStopCol, edgeColour } from "../Components/Colors.js";
 import { real_coords_to_world_position } from "../Components/Coordinates.js";
 import { mouse } from "../Components/Mouse.js";
 
@@ -20,7 +20,7 @@ export function BusStopNode(stop_id, input_coordinate) {
         var w = baseBusStopWidth*s;
         var pos = this.draw_position();
 
-        var c = busStopCol;
+        var c = (cam.selectable()) ? busStopCol : edgeColour;
         if (mouse.elementHovering == this || mouse.elementSelected == this) {
             c = selectedBusStopCol;
 

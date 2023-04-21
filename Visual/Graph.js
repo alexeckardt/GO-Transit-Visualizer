@@ -2,6 +2,7 @@ import { BusStopNode } from "./Busstop.js";
 import { Vector2 } from "../Components/helper.js";
 import { originX, originY } from "../Components/Coordinates.js";
 import { TripEdge } from  "./TripEdges.js";
+import { mouse } from "../Components/Mouse.js";
 
 const shouldBakeGraph = false;
 
@@ -61,6 +62,14 @@ function Graph() {
         for (var i = 0; i < this.busstops.length; i++) {
             let busstop = this.busstops[i];
             busstop.draw(ctx);
+        }
+
+        //Redraw Selected
+        if (mouse.elementSelected != undefined) {
+            mouse.elementSelected.draw(ctx);
+        }
+        if (mouse.elementHovering != undefined) {
+            mouse.elementHovering.draw(ctx);
         }
 
         //End

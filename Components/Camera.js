@@ -4,12 +4,13 @@ import {gui_coords_to_real_coords } from "./Coordinates.js";
 
 export const goalCamW = 1920;
 export const goalCamH = 1080;
+const busstopSelectableAtZoomIndex = 5;
 const cameraScales = [1, 2, 3, 8, 10, 20, 40, 80, 200];
 const scaleCount = cameraScales.length;
 
 function Camera(position) {
     this.position = position;
-    this.scaleInd = 0;
+    this.scaleInd = 1;
     this.scale = cameraScales[this.scaleInd];
 
     this.coord_position = function() {
@@ -23,6 +24,10 @@ function Camera(position) {
     this.mouse_world_position = function() {
         let v = this.position.add(mouse.gui_position).scale(1/this.scale);
         return v;
+    }
+
+    this.selectable = function() {
+        return this.scaleInd >= busstopSelectableAtZoomIndex;
     }
 
     this.zoom_out = function() {
@@ -91,5 +96,5 @@ function Camera(position) {
 
     }
 }
-export let cam = new Camera(new Vector2(-goalCamW/2, -goalCamH/2), 1);
+export let cam = new Camera(new Vector2(-goalCamW/2.4, -goalCamH/2.6), 1);
 //export let cam = new Camera(new Vector2(0, 0), 1);
