@@ -219,6 +219,14 @@ class Graph:
         route = self.get_route(routeId)
         route.add_trip(routeId, fromNodeId, toNodeId)
  
+    def add_walking_edge(self, fromNodeId, toNodeId, timeElapsed):
+                #Get real
+        fromNodeId = self.get_duplicate_if_duplicate(fromNodeId)
+        toNodeId = self.get_duplicate_if_duplicate(toNodeId)
+        #Mark As Edge Exists
+        self.adj[fromNodeId][toNodeId] = timeElapsed # just hash it :)
+        self.adj[toNodeId][fromNodeId] = timeElapsed # just hash it :)
+
     def get_weight(self, fromm, to):
 
         #Get real
@@ -459,7 +467,8 @@ class Graph:
 
         return d
 
-
+def name_is_duplicate(stopNamesToId, stop_name):
+    return stopNamesToId.get(stop_name, None) == None
     
 def generate_transit_graph(tripCountLimit = -1):
         
@@ -479,13 +488,16 @@ def generate_transit_graph(tripCountLimit = -1):
             stop_id,stop_name,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,wheelchair_boarding,stop_code = line.split(',')
             stopNode = Node(stop_id, stop_name, stop_lat, stop_lon,zone_id,stop_url,location_type,parent_station,wheelchair_boarding,stop_code)
 
+            # Rename GO BUS, Keep them the same station
+            if ("GO Bus" in stop_name):
+                stop_name = stop_name.replace(" Bus", "")
+
             #Check if same named stop
             if stopNamesToId.get(stop_name, None) == None:
                 stopNamesToId[stop_name] = stop_id
-
                 G.add_node(stopNode)
             else:
-                diff = 0.009
+                diff = 0.03
                 sameNameId = stopNamesToId[stop_name];
                 other = G.get_node(sameNameId)
                 latDist = abs(stopNode.lat - other.lat)
@@ -574,24 +586,17 @@ def generate_transit_graph(tripCountLimit = -1):
         # Clean Routes
         #
 
-        G.clean_routes()
+    #
+    # Add Constant Walking Edges
+    #
+    G.add_walking_edge("UN", "02300", 600) #10 minute walk
 
-        # Print Adj List
-        return G
+    G.clean_routes()
+
+    # Print Adj List
+    return G
     
 
 if __name__ == '__main__':
-
     G = generate_transit_graph()
-    G.dump('go_network.json')
-
-    print(G.get_routes_that_stop_at_stop('UN'))
-    print(G.edge_exists('ET', 'UN'))
-
-    print(G.get_route('GT').subroutes.keys())
-    print(len(G.adj))
-
-    print(G.get_travel_route_details('00310', '02184'))
-    print(seconds_to_time_elapsed(G.get_node('UN').distance_seconds(G.get_node('SF'))))
-
     export_g(G)

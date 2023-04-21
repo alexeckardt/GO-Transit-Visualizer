@@ -852,18 +852,6 @@
             "wheelchair_boarding": "1",
             "stop_code": ""
         },
-        "08044": {
-            "stop_id": "08044",
-            "name": "Bramalea GO Bus",
-            "lat": 43.702138,
-            "lon": -79.690011,
-            "zone_id": "32",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=08044",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "108044"
-        },
         "08043": {
             "stop_id": "08043",
             "name": "Cornell Bus Terminal",
@@ -887,30 +875,6 @@
             "parent_station": "",
             "wheelchair_boarding": "1",
             "stop_code": "108032"
-        },
-        "08006": {
-            "stop_id": "08006",
-            "name": "Bradford GO Bus",
-            "lat": 44.116654,
-            "lon": -79.555752,
-            "zone_id": "65",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=08006",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "108006"
-        },
-        "08002": {
-            "stop_id": "08002",
-            "name": "Allandale Waterfront GO Bus",
-            "lat": 44.373817,
-            "lon": -79.689441,
-            "zone_id": "69",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=08002",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "108002"
         },
         "02821": {
             "stop_id": "02821",
@@ -1343,18 +1307,6 @@
             "parent_station": "",
             "wheelchair_boarding": "1",
             "stop_code": "102757"
-        },
-        "02752": {
-            "stop_id": "02752",
-            "name": "Cooksville GO Bus",
-            "lat": 43.5822961767171,
-            "lon": -79.6245055812486,
-            "zone_id": "11",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=02752",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "102752"
         },
         "02750": {
             "stop_id": "02750",
@@ -2580,18 +2532,6 @@
             "wheelchair_boarding": "1",
             "stop_code": "102520"
         },
-        "02519": {
-            "stop_id": "02519",
-            "name": "Guelph Central GO Bus",
-            "lat": 43.544932,
-            "lon": -80.246388,
-            "zone_id": "39",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=02519",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "102519"
-        },
         "02518": {
             "stop_id": "02518",
             "name": "MacDonell St. @ Carden St. (Guelph Central GO)",
@@ -2699,18 +2639,6 @@
             "parent_station": "",
             "wheelchair_boarding": "1",
             "stop_code": "102501"
-        },
-        "02413": {
-            "stop_id": "02413",
-            "name": "Georgetown GO Bus",
-            "lat": 43.6560287,
-            "lon": -79.9186783,
-            "zone_id": "35",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=02413",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "102413"
         },
         "02412": {
             "stop_id": "02412",
@@ -2892,18 +2820,6 @@
             "wheelchair_boarding": "2",
             "stop_code": "102190"
         },
-        "02186": {
-            "stop_id": "02186",
-            "name": "Kitchener GO Bus",
-            "lat": 43.455573,
-            "lon": -80.492543,
-            "zone_id": "27",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=02186",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "102186"
-        },
         "02185": {
             "stop_id": "02185",
             "name": "Main St. W. @ Haddon Ave. S.",
@@ -3035,18 +2951,6 @@
             "parent_station": "",
             "wheelchair_boarding": "1",
             "stop_code": "102158"
-        },
-        "02157": {
-            "stop_id": "02157",
-            "name": "Maple GO Bus",
-            "lat": 43.859853,
-            "lon": -79.505926,
-            "zone_id": "61",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=02157",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "102157"
         },
         "02153": {
             "stop_id": "02153",
@@ -7056,18 +6960,6 @@
             "wheelchair_boarding": "1",
             "stop_code": "100354"
         },
-        "00352": {
-            "stop_id": "00352",
-            "name": "Old Elm GO Bus",
-            "lat": 43.994805,
-            "lon": -79.233773,
-            "zone_id": "74",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00352",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100352"
-        },
         "00350": {
             "stop_id": "00350",
             "name": "Richmond Hill Centre",
@@ -7116,18 +7008,6 @@
             "wheelchair_boarding": "2",
             "stop_code": "100346"
         },
-        "00345": {
-            "stop_id": "00345",
-            "name": "Barrie South GO Bus",
-            "lat": 44.351771,
-            "lon": -79.628335,
-            "zone_id": "68",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00345",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100345"
-        },
         "00344": {
             "stop_id": "00344",
             "name": "Kingston Rd. @ Church St.",
@@ -7151,18 +7031,6 @@
             "parent_station": "",
             "wheelchair_boarding": "1",
             "stop_code": "100342"
-        },
-        "00341": {
-            "stop_id": "00341",
-            "name": "Lisgar GO Bus",
-            "lat": 43.591504,
-            "lon": -79.788224,
-            "zone_id": "23",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00341",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100341"
         },
         "00339": {
             "stop_id": "00339",
@@ -7368,18 +7236,6 @@
             "wheelchair_boarding": "2",
             "stop_code": "100299"
         },
-        "00296": {
-            "stop_id": "00296",
-            "name": "Mount Pleasant GO Bus",
-            "lat": 43.674976,
-            "lon": -79.822181,
-            "zone_id": "34",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00296",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100296"
-        },
         "00292": {
             "stop_id": "00292",
             "name": "Bovaird Dr. W. @ Hurontario St.",
@@ -7391,42 +7247,6 @@
             "parent_station": "",
             "wheelchair_boarding": "2",
             "stop_code": "100292"
-        },
-        "00276": {
-            "stop_id": "00276",
-            "name": "East Gwillimbury GO Bus",
-            "lat": 44.078506,
-            "lon": -79.456539,
-            "zone_id": "44",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00276",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100276"
-        },
-        "00264": {
-            "stop_id": "00264",
-            "name": "Bronte GO Bus",
-            "lat": 43.416275,
-            "lon": -79.724009,
-            "zone_id": "14",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00264",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100264"
-        },
-        "00263": {
-            "stop_id": "00263",
-            "name": "Appleby GO Bus",
-            "lat": 43.379261,
-            "lon": -79.760483,
-            "zone_id": "15",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00263",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100263"
         },
         "00258": {
             "stop_id": "00258",
@@ -7523,18 +7343,6 @@
             "parent_station": "",
             "wheelchair_boarding": "1",
             "stop_code": "100231"
-        },
-        "00228": {
-            "stop_id": "00228",
-            "name": "Malton GO Bus",
-            "lat": 43.705143,
-            "lon": -79.637825,
-            "zone_id": "31",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00228",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100228"
         },
         "00227": {
             "stop_id": "00227",
@@ -7704,18 +7512,6 @@
             "wheelchair_boarding": "2",
             "stop_code": "100196"
         },
-        "00194": {
-            "stop_id": "00194",
-            "name": "Milton GO Bus",
-            "lat": 43.523803,
-            "lon": -79.867178,
-            "zone_id": "24",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00194",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100194"
-        },
         "00191": {
             "stop_id": "00191",
             "name": "Aquitaine Ave. @ Meadowvale Town Centre Circle",
@@ -7739,42 +7535,6 @@
             "parent_station": "",
             "wheelchair_boarding": "2",
             "stop_code": "100190"
-        },
-        "00189": {
-            "stop_id": "00189",
-            "name": "Erindale GO Bus",
-            "lat": 43.567861,
-            "lon": -79.667632,
-            "zone_id": "40",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00189",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100189"
-        },
-        "00181": {
-            "stop_id": "00181",
-            "name": "Clarkson GO Bus",
-            "lat": 43.512831,
-            "lon": -79.633109,
-            "zone_id": "12",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00181",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100181"
-        },
-        "00180": {
-            "stop_id": "00180",
-            "name": "Aldershot GO Bus",
-            "lat": 43.313036,
-            "lon": -79.855903,
-            "zone_id": "17",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00180",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100180"
         },
         "00178": {
             "stop_id": "00178",
@@ -7836,18 +7596,6 @@
             "wheelchair_boarding": "1",
             "stop_code": "100166"
         },
-        "00161": {
-            "stop_id": "00161",
-            "name": "Ajax GO Bus",
-            "lat": 43.847547,
-            "lon": -79.041084,
-            "zone_id": "92",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00161",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100161"
-        },
         "00158": {
             "stop_id": "00158",
             "name": "King St. E. @ Liberty St.",
@@ -7883,30 +7631,6 @@
             "parent_station": "",
             "wheelchair_boarding": "1",
             "stop_code": "100153"
-        },
-        "00148": {
-            "stop_id": "00148",
-            "name": "Streetsville GO Bus",
-            "lat": 43.575378,
-            "lon": -79.709271,
-            "zone_id": "21",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00148",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100148"
-        },
-        "00147": {
-            "stop_id": "00147",
-            "name": "Pickering GO Bus",
-            "lat": 43.830982,
-            "lon": -79.084571,
-            "zone_id": "91",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00147",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100147"
         },
         "00144": {
             "stop_id": "00144",
@@ -7956,18 +7680,6 @@
             "wheelchair_boarding": "2",
             "stop_code": "100138"
         },
-        "00137": {
-            "stop_id": "00137",
-            "name": "Oakville GO Bus",
-            "lat": 43.455966,
-            "lon": -79.681676,
-            "zone_id": "13",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00137",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100137"
-        },
         "00133": {
             "stop_id": "00133",
             "name": "Square One",
@@ -7991,30 +7703,6 @@
             "parent_station": "",
             "wheelchair_boarding": "2",
             "stop_code": "100131"
-        },
-        "00129": {
-            "stop_id": "00129",
-            "name": "Meadowvale GO Bus",
-            "lat": 43.597499,
-            "lon": -79.754517,
-            "zone_id": "22",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00129",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100129"
-        },
-        "00128": {
-            "stop_id": "00128",
-            "name": "Unionville GO Bus",
-            "lat": 43.851935,
-            "lon": -79.313774,
-            "zone_id": "71",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00128",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100128"
         },
         "00127": {
             "stop_id": "00127",
@@ -8063,18 +7751,6 @@
             "parent_station": "",
             "wheelchair_boarding": "1",
             "stop_code": "100122"
-        },
-        "00121": {
-            "stop_id": "00121",
-            "name": "Mount Joy GO Bus",
-            "lat": 43.900455,
-            "lon": -79.263649,
-            "zone_id": "73",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00121",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100121"
         },
         "00118": {
             "stop_id": "00118",
@@ -8136,18 +7812,6 @@
             "wheelchair_boarding": "1",
             "stop_code": "100083"
         },
-        "00081": {
-            "stop_id": "00081",
-            "name": "Aurora GO Bus",
-            "lat": 43.999846,
-            "lon": -79.459435,
-            "zone_id": "63",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00081",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100081"
-        },
         "00079": {
             "stop_id": "00079",
             "name": "Yonge St. @ North York Blvd. (Mel Lastman Square)",
@@ -8172,18 +7836,6 @@
             "wheelchair_boarding": "2",
             "stop_code": "100074"
         },
-        "00062": {
-            "stop_id": "00062",
-            "name": "Richmond Hill GO Bus",
-            "lat": 43.875786,
-            "lon": -79.426228,
-            "zone_id": "50",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00062",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100062"
-        },
         "00061": {
             "stop_id": "00061",
             "name": "Langstaff Rd. E. @ Cedar Ave. (Langstaff GO)",
@@ -8196,18 +7848,6 @@
             "wheelchair_boarding": "1",
             "stop_code": "100061"
         },
-        "00031": {
-            "stop_id": "00031",
-            "name": "Whitby GO Bus",
-            "lat": 43.8653526,
-            "lon": -78.9379272,
-            "zone_id": "93",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00031",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100031"
-        },
         "00030": {
             "stop_id": "00030",
             "name": "Keele St. @ Burton Grove (King City GO)",
@@ -8219,18 +7859,6 @@
             "parent_station": "",
             "wheelchair_boarding": "2",
             "stop_code": "100030"
-        },
-        "00028": {
-            "stop_id": "00028",
-            "name": "Rutherford GO Bus",
-            "lat": 43.838582,
-            "lon": -79.498945,
-            "zone_id": "61",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00028",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100028"
         },
         "00027": {
             "stop_id": "00027",
@@ -8349,7 +7977,9 @@
             "NI": 4560
         },
         "WH": {
-            "AJ": 420,
+            "02573": 360,
+            "AJ": 900,
+            "02698": 120,
             "OS": 300
         },
         "WE": {
@@ -8366,9 +7996,11 @@
             "BE": 1620,
             "KE": 1140,
             "DW": 1260,
-            "OR": 1740
+            "OR": 1740,
+            "02300": 600
         },
         "UI": {
+            "02144": 60,
             "CE": 300,
             "MK": 360
         },
@@ -8377,6 +8009,7 @@
             "MJ": 600
         },
         "SR": {
+            "01385": 240,
             "ME": 420,
             "ER": 360
         },
@@ -8393,6 +8026,8 @@
             "EG": 300
         },
         "RU": {
+            "02159": 300,
+            "02300": 2100,
             "DW": 600,
             "MP": 300
         },
@@ -8401,21 +8036,24 @@
             "PIN": 420
         },
         "RI": {
-            "LA": 360,
-            "GO": 600
+            "02580": 240,
+            "GO": 900,
+            "LA": 360
         },
         "PO": {
-            "02752": 780,
+            "CO": 780,
             "02300": 1080,
-            "00181": 600,
-            "CL": 360,
+            "CL": 600,
             "LO": 360,
             "OA": 660,
             "EX": 780
         },
         "PIN": {
-            "RO": 480,
-            "AJ": 300
+            "02816": 1200,
+            "00727": 120,
+            "02300": 1800,
+            "AJ": 420,
+            "RO": 480
         },
         "PA": {
             "02209": 660,
@@ -8438,8 +8076,11 @@
             "LA": 480
         },
         "OA": {
-            "BO": 360,
-            "CL": 420,
+            "01729": 300,
+            "CL": 900,
+            "02300": 1920,
+            "BO": 600,
+            "00804": 840,
             "BU": 720,
             "PO": 660
         },
@@ -8456,14 +8097,19 @@
             "CE": 300
         },
         "MP": {
+            "01878": 180,
+            "02158": 240,
             "RU": 240,
             "KC": 420
         },
         "MO": {
+            "01153": 240,
+            "00215": 180,
             "BR": 420,
             "GE": 600
         },
         "ML": {
+            "00932": 60,
             "LS": 540
         },
         "MK": {
@@ -8471,6 +8117,8 @@
             "AG": 360
         },
         "MJ": {
+            "02545": 300,
+            "02575": 60,
             "ST": 600,
             "MR": 300
         },
@@ -8479,15 +8127,21 @@
             "EX": 480
         },
         "ME": {
+            "02597": 60,
+            "01139": 240,
             "LS": 300,
             "SR": 360
         },
         "MA": {
-            "BE": 360,
+            "00242": 600,
+            "02300": 1500,
+            "BE": 600,
             "ET": 420,
             "WE": 720
         },
         "LS": {
+            "01482": 600,
+            "01196": 240,
             "ML": 540,
             "ME": 300
         },
@@ -8499,6 +8153,8 @@
             "SM": 3540
         },
         "LI": {
+            "02171": 60,
+            "00974": 300,
             "ST": 540
         },
         "LA": {
@@ -8510,6 +8166,8 @@
             "UN": 1080
         },
         "KI": {
+            "02531": 120,
+            "02153": 600,
             "GL": 1200,
             "SF": 3240
         },
@@ -8529,15 +8187,17 @@
             "RO": 420
         },
         "GO": {
-            "00062": 900,
-            "BM": 480,
-            "RI": 600
+            "RI": 900,
+            "BM": 480
         },
         "GL": {
+            "00201": 600,
+            "02819": 2160,
             "AC": 960,
             "KI": 1020
         },
         "GE": {
+            "02633": 300,
             "MO": 660,
             "AC": 780
         },
@@ -8552,6 +8212,8 @@
             "UN": 1140
         },
         "ER": {
+            "01356": 60,
+            "01191": 180,
             "SR": 300,
             "CO": 360
         },
@@ -8560,6 +8222,8 @@
             "GU": 300
         },
         "EA": {
+            "02743": 360,
+            "02637": 840,
             "NE": 240,
             "BD": 660
         },
@@ -8576,12 +8240,16 @@
             "SC": 300
         },
         "CO": {
+            "PO": 780,
+            "00133": 720,
+            "02300": 1320,
             "ER": 360,
             "DI": 360
         },
         "CL": {
-            "OA": 420,
-            "PO": 420,
+            "02215": 900,
+            "PO": 720,
+            "OA": 600,
             "UN": 1380
         },
         "CE": {
@@ -8601,8 +8269,8 @@
             "MO": 360
         },
         "BO": {
-            "AP": 300,
-            "OA": 360
+            "OA": 660,
+            "AP": 600
         },
         "BM": {
             "GO": 900
@@ -8612,36 +8280,58 @@
             "UN": 600
         },
         "BE": {
+            "00354": 660,
+            "02674": 900,
+            "00020": 1200,
+            "01160": 660,
+            "MA": 900,
+            "00014": 1320,
+            "00133": 1020,
+            "02174": 900,
+            "01459": 360,
+            "00200": 960,
             "UN": 1620,
             "BR": 420,
-            "MA": 420,
             "ET": 720
         },
         "BD": {
+            "01515": 120,
+            "01974": 360,
             "EA": 600,
             "BA": 1260
         },
         "BA": {
+            "01526": 60,
+            "00093": 60,
             "BD": 1260,
             "AD": 540
         },
         "AU": {
+            "02520": 120,
+            "00030": 1200,
             "KC": 660,
             "NE": 420
         },
         "AP": {
-            "BU": 360,
-            "BO": 360
+            "BO": 600,
+            "00804": 600,
+            "BU": 360
         },
         "AL": {
+            "00310": 900,
+            "00337": 1920,
+            "00912": 300,
+            "00178": 600,
             "WR": 720,
             "BU": 480,
             "HA": 960,
             "NI": 4560
         },
         "AJ": {
-            "PIN": 300,
-            "WH": 480
+            "WH": 720,
+            "02816": 1080,
+            "PIN": 420,
+            "02776": 900
         },
         "AG": {
             "MK": 360,
@@ -8655,18 +8345,6 @@
             "GE": 660,
             "GL": 900
         },
-        "08044": {
-            "00354": 660,
-            "02674": 900,
-            "00020": 1200,
-            "01160": 660,
-            "00228": 900,
-            "00014": 1320,
-            "00133": 1020,
-            "02174": 900,
-            "01459": 360,
-            "00200": 960
-        },
         "08043": {
             "02539": 720,
             "02144": 780
@@ -8674,11 +8352,6 @@
         "08032": {
             "01185": 300
         },
-        "08006": {
-            "01515": 120,
-            "01974": 360
-        },
-        "08002": {},
         "02821": {
             "02772": 0,
             "02816": 900,
@@ -8689,7 +8362,7 @@
         },
         "02819": {
             "02153": 720,
-            "02519": 2160
+            "GL": 2160
         },
         "02816": {
             "00723": 60,
@@ -8727,10 +8400,10 @@
             "00854": 180
         },
         "02802": {
-            "02413": 120
+            "GE": 120
         },
         "02801": {
-            "02413": 180,
+            "GE": 180,
             "00211": 60
         },
         "02800": {
@@ -8778,7 +8451,7 @@
         },
         "02776": {
             "02816": 600,
-            "00161": 900
+            "AJ": 900
         },
         "02772": {
             "00299": 180,
@@ -8789,7 +8462,7 @@
             "02144": 540,
             "00131": 60,
             "02021": 60,
-            "08044": 1020,
+            "BE": 1020,
             "02757": 600
         },
         "02768": {
@@ -8812,11 +8485,6 @@
             "02777": 900,
             "02021": 1140,
             "02816": 720
-        },
-        "02752": {
-            "PO": 780,
-            "00133": 720,
-            "02300": 1320
         },
         "02750": {
             "02746": 60,
@@ -8843,7 +8511,7 @@
         },
         "02743": {
             "02706": 360,
-            "00276": 240,
+            "EA": 240,
             "02027": 60
         },
         "02742": {
@@ -8854,7 +8522,7 @@
         },
         "02739": {
             "01362": 180,
-            "00189": 180
+            "ER": 180
         },
         "02737": {
             "00931": 0,
@@ -8933,7 +8601,7 @@
             "02573": 180
         },
         "02697": {
-            "00031": 180
+            "WH": 180
         },
         "02696": {
             "00828": 60
@@ -8951,7 +8619,7 @@
             "02692": 120
         },
         "02688": {
-            "08002": 120,
+            "AD": 120,
             "02744": 240
         },
         "02684": {
@@ -8978,7 +8646,7 @@
             "00342": 120
         },
         "02674": {
-            "08044": 1380,
+            "BE": 1380,
             "PA": 900,
             "02021": 1020,
             "00334": 900,
@@ -8998,7 +8666,7 @@
             "02661": 300
         },
         "02655": {
-            "02752": 180
+            "CO": 180
         },
         "02654": {
             "02655": 120
@@ -9025,7 +8693,7 @@
             "02190": 120
         },
         "02637": {
-            "00276": 300,
+            "EA": 300,
             "02742": 60
         },
         "02636": {
@@ -9087,7 +8755,7 @@
             "02150": 120
         },
         "02598": {
-            "00129": 60
+            "ME": 60
         },
         "02597": {
             "01327": 60
@@ -9108,11 +8776,11 @@
         },
         "02586": {
             "00020": 1200,
-            "08044": 1200
+            "BE": 1200
         },
         "02580": {
             "02052": 180,
-            "00062": 60
+            "RI": 60
         },
         "02577": {
             "01516": 0
@@ -9123,11 +8791,11 @@
         },
         "02575": {
             "00959": 240,
-            "00121": 60
+            "MJ": 60
         },
         "02573": {
             "OS": 120,
-            "00031": 480,
+            "WH": 480,
             "02697": 240
         },
         "02571": {
@@ -9139,7 +8807,7 @@
             "00250": 180
         },
         "02545": {
-            "00121": 120,
+            "MJ": 120,
             "02112": 180
         },
         "02543": {
@@ -9176,7 +8844,7 @@
             "02205": 360
         },
         "02530": {
-            "02186": 60
+            "KI": 60
         },
         "02523": {
             "02538": 480,
@@ -9186,15 +8854,11 @@
             "02523": 420
         },
         "02521": {
-            "00081": 120
+            "AU": 120
         },
         "02520": {
             "02726": 120,
             "00303": 120
-        },
-        "02519": {
-            "00201": 600,
-            "02819": 2160
         },
         "02518": {
             "01704": 420
@@ -9229,9 +8893,6 @@
         "02501": {
             "02502": 1380
         },
-        "02413": {
-            "02633": 300
-        },
         "02412": {
             "00960": 0
         },
@@ -9253,20 +8914,21 @@
         },
         "02300": {
             "01459": 1860,
-            "02752": 1500,
+            "CO": 1500,
             "00307": 2820,
-            "00028": 3300,
+            "RU": 3300,
             "01905": 2160,
-            "00228": 1800,
-            "00147": 1920,
+            "MA": 1800,
+            "PIN": 1920,
             "02741": 2700,
             "02144": 2400,
             "00178": 3480,
             "PO": 1500,
-            "00137": 1800
+            "OA": 1800,
+            "UN": 600
         },
         "02215": {
-            "00181": 1020,
+            "CL": 1020,
             "02636": 180,
             "00133": 480,
             "02788": 180,
@@ -9301,15 +8963,11 @@
             "02645": 120,
             "00738": 120
         },
-        "02186": {
-            "02531": 120,
-            "02153": 600
-        },
         "02185": {
             "00139": 1320,
             "00178": 360,
             "02620": 300,
-            "00180": 900,
+            "AL": 900,
             "00133": 2340
         },
         "02184": {
@@ -9325,7 +8983,7 @@
         },
         "02174": {
             "00231": 300,
-            "08044": 600
+            "BE": 600
         },
         "02173": {
             "00027": 240,
@@ -9333,7 +8991,7 @@
         },
         "02171": {
             "02758": 120,
-            "00352": 60
+            "LI": 60
         },
         "02163": {
             "00809": 960,
@@ -9348,21 +9006,17 @@
             "02505": 780
         },
         "02159": {
-            "02157": 300
+            "MP": 300
         },
         "02158": {
             "02139": 60
-        },
-        "02157": {
-            "01878": 180,
-            "02158": 240
         },
         "02153": {
             "02800": 480,
             "02184": 1260,
             "00133": 3900,
             "02819": 780,
-            "02186": 480
+            "KI": 480
         },
         "02151": {
             "00337": 960,
@@ -9377,14 +9031,14 @@
             "02046": 60
         },
         "02144": {
-            "00128": 60,
+            "UI": 60,
             "01861": 180,
             "02021": 780,
             "02300": 1500,
             "08043": 840
         },
         "02139": {
-            "00028": 300
+            "RU": 300
         },
         "02127": {
             "02024": 60
@@ -9559,7 +9213,7 @@
             "01985": 0
         },
         "01974": {
-            "08006": 360,
+            "BD": 360,
             "01972": 60
         },
         "01972": {
@@ -9585,7 +9239,7 @@
         },
         "01878": {
             "01888": 0,
-            "02157": 120
+            "MP": 120
         },
         "01861": {
             "01807": 60,
@@ -9655,7 +9309,7 @@
         },
         "01704": {
             "02720": 0,
-            "02519": 120
+            "GL": 120
         },
         "01702": {
             "02719": 60,
@@ -9741,7 +9395,7 @@
         },
         "01526": {
             "01528": 60,
-            "00345": 60
+            "BA": 60
         },
         "01521": {
             "01528": 60
@@ -9751,7 +9405,7 @@
         },
         "01515": {
             "00025": 120,
-            "08006": 120
+            "BD": 120
         },
         "01508": {
             "02688": 60
@@ -9772,7 +9426,7 @@
             "01284": 120
         },
         "01483": {
-            "00341": 480,
+            "LS": 480,
             "01481": 60
         },
         "01482": {
@@ -9828,7 +9482,7 @@
             "00354": 480
         },
         "01436": {
-            "00148": 60
+            "SR": 60
         },
         "01426": {
             "02745": 120
@@ -10011,10 +9665,10 @@
         "01196": {
             "01482": 60,
             "01203": 60,
-            "00341": 240
+            "LS": 240
         },
         "01192": {
-            "00189": 120
+            "ER": 120
         },
         "01191": {
             "01235": 120
@@ -10045,7 +9699,7 @@
             "01177": 0
         },
         "01165": {
-            "08044": 360
+            "BE": 360
         },
         "01160": {
             "02680": 120
@@ -10060,7 +9714,7 @@
             "01143": 60
         },
         "01139": {
-            "00129": 60,
+            "ME": 60,
             "01137": 120
         },
         "01137": {
@@ -10094,7 +9748,7 @@
         "01010": {
             "00310": 180,
             "00139": 1380,
-            "00180": 420,
+            "AL": 420,
             "02300": 2520
         },
         "01009": {
@@ -10142,7 +9796,7 @@
             "00837": 60
         },
         "00974": {
-            "00352": 120,
+            "LI": 120,
             "00965": 60
         },
         "00972": {
@@ -10176,7 +9830,7 @@
             "02575": 240
         },
         "00949": {
-            "00263": 540
+            "AP": 540
         },
         "00948": {
             "00946": 60
@@ -10189,7 +9843,7 @@
             "00306": 120
         },
         "00942": {
-            "00296": 180
+            "MO": 180
         },
         "00939": {
             "02783": 60,
@@ -10218,10 +9872,10 @@
         },
         "00912": {
             "00884": 0,
-            "00180": 0
+            "AL": 0
         },
         "00902": {
-            "00137": 300
+            "OA": 300
         },
         "00896": {
             "00892": 0,
@@ -10232,7 +9886,7 @@
             "01024": 60
         },
         "00892": {
-            "00194": 60,
+            "ML": 60,
             "00896": 60
         },
         "00890": {
@@ -10393,11 +10047,11 @@
         },
         "00727": {
             "00972": 120,
-            "00147": 120
+            "PIN": 120
         },
         "00723": {
-            "00147": 1140,
-            "00161": 1140,
+            "PIN": 1140,
+            "AJ": 1140,
             "00171": 900,
             "02776": 1140
         },
@@ -10502,11 +10156,7 @@
             "01440": 420,
             "00991": 240,
             "00020": 1200,
-            "08044": 720
-        },
-        "00352": {
-            "02171": 60,
-            "00974": 300
+            "BE": 720
         },
         "00350": {
             "02771": 60
@@ -10520,10 +10170,6 @@
         "00346": {
             "01346": 60
         },
-        "00345": {
-            "01526": 60,
-            "00093": 60
-        },
         "00344": {
             "02628": 180,
             "02702": 120
@@ -10531,10 +10177,6 @@
         "00342": {
             "02676": 120,
             "00174": 120
-        },
-        "00341": {
-            "01482": 600,
-            "01196": 240
         },
         "00339": {
             "00963": 480
@@ -10547,7 +10189,7 @@
             "02151": 1200,
             "02605": 1140,
             "02508": 1860,
-            "00180": 1860
+            "AL": 1860
         },
         "00334": {
             "00021": 900,
@@ -10598,24 +10240,8 @@
         "00299": {
             "00300": 60
         },
-        "00296": {
-            "01153": 240,
-            "00215": 180
-        },
         "00292": {
             "02745": 180
-        },
-        "00276": {
-            "02743": 360,
-            "02637": 840
-        },
-        "00264": {
-            "00137": 660,
-            "00263": 600
-        },
-        "00263": {
-            "00264": 600,
-            "00804": 600
         },
         "00258": {
             "01140": 0
@@ -10639,18 +10265,13 @@
             "01248": 60
         },
         "00241": {
-            "00228": 540
+            "MA": 540
         },
         "00231": {
             "02174": 600
         },
-        "00228": {
-            "00242": 600,
-            "02300": 1500,
-            "08044": 600
-        },
         "00227": {
-            "08044": 420,
+            "BE": 420,
             "02300": 1860
         },
         "00223": {
@@ -10667,7 +10288,7 @@
             "00942": 60
         },
         "00215": {
-            "00296": 120,
+            "MO": 120,
             "00839": 360
         },
         "00213": {
@@ -10688,7 +10309,7 @@
             "00803": 0
         },
         "00201": {
-            "02519": 600,
+            "GL": 600,
             "02721": 480,
             "02518": 600
         },
@@ -10701,29 +10322,11 @@
         "00196": {
             "01439": 60
         },
-        "00194": {
-            "00932": 60
-        },
         "00191": {
             "01483": 120
         },
         "00190": {
             "01135": 60
-        },
-        "00189": {
-            "01356": 60,
-            "01191": 180
-        },
-        "00181": {
-            "02215": 900,
-            "PO": 720,
-            "00137": 600
-        },
-        "00180": {
-            "00310": 900,
-            "00337": 1920,
-            "00912": 300,
-            "00178": 600
         },
         "00178": {
             "01005": 60
@@ -10741,12 +10344,6 @@
         "00166": {
             "02749": 60
         },
-        "00161": {
-            "00031": 720,
-            "02816": 1080,
-            "00147": 420,
-            "02776": 900
-        },
         "00158": {
             "00537": 120,
             "00521": 180
@@ -10759,15 +10356,6 @@
         "00153": {
             "02543": 900,
             "02781": 180
-        },
-        "00148": {
-            "01385": 240
-        },
-        "00147": {
-            "02816": 1200,
-            "00727": 120,
-            "02300": 1800,
-            "00161": 420
         },
         "00144": {
             "02651": 300,
@@ -10788,20 +10376,13 @@
             "02163": 480,
             "00139": 480
         },
-        "00137": {
-            "01729": 300,
-            "00181": 900,
-            "02300": 1920,
-            "00264": 600,
-            "00804": 840
-        },
         "00133": {
             "02215": 900,
             "02659": 660,
             "02654": 420,
             "01363": 180,
             "02163": 900,
-            "08044": 1500,
+            "BE": 1500,
             "00310": 2400,
             "01657": 3000,
             "02153": 4620
@@ -10809,13 +10390,6 @@
         "00131": {
             "00061": 120,
             "02771": 60
-        },
-        "00129": {
-            "02597": 60,
-            "01139": 240
-        },
-        "00128": {
-            "02144": 60
         },
         "00127": {
             "00125": 60,
@@ -10831,10 +10405,6 @@
         "00122": {
             "02113": 120
         },
-        "00121": {
-            "02545": 300,
-            "02575": 60
-        },
         "00118": {
             "01924": 60,
             "02193": 60
@@ -10844,7 +10414,7 @@
             "00681": 60
         },
         "00093": {
-            "00345": 60,
+            "BA": 60,
             "01535": 180
         },
         "00087": {
@@ -10853,10 +10423,6 @@
         "00083": {
             "01825": 120
         },
-        "00081": {
-            "02520": 120,
-            "00030": 1200
-        },
         "00079": {
             "01654": 60
         },
@@ -10864,28 +10430,15 @@
             "01652": 120,
             "02058": 60
         },
-        "00062": {
-            "02580": 240,
-            "GO": 900
-        },
         "00061": {
             "01803": 180,
             "00131": 120
         },
-        "00031": {
-            "02573": 360,
-            "00161": 900,
-            "02698": 120
-        },
         "00030": {
             "02173": 240
         },
-        "00028": {
-            "02159": 300,
-            "02300": 2100
-        },
         "00027": {
-            "00081": 1200
+            "AU": 1200
         },
         "00025": {
             "01507": 240
@@ -10896,7 +10449,7 @@
             "01439": 2640,
             "00354": 2040,
             "PA": 600,
-            "08044": 1200
+            "BE": 1200
         },
         "00021": {
             "02732": 600,
