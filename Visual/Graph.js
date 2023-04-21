@@ -70,7 +70,7 @@ function Graph() {
         ctx.beginPath();
         for (var i = 0; i < this.busstops.length; i++) {
             let busstop = this.busstops[i];
-            busstop.plot_arc(ctx)
+            busstop.plot(ctx)
         }
         ctx.fillStyle = backgroundCol;
         ctx.strokeStyle = (cam.selectable()) ? busStopCol : edgeColour;
