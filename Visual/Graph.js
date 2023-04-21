@@ -68,23 +68,29 @@ function Graph() {
 
         //Draw Stops
         ctx.beginPath();
-        for (var i = 0; i < this.busstops.length; i++) {
-            let busstop = this.busstops[i];
-            busstop.plot(ctx)
+        
+        if (cam.selectable()) {
+            for (var i = 0; i < this.busstops.length; i++) {
+                let busstop = this.busstops[i];
+                busstop.draw(ctx)
+            }
+        } else {
+            ctx.fillStyle = edgeColour;
+            for (var i = 0; i < this.busstops.length; i++) {
+                let busstop = this.busstops[i];
+                busstop.plot_rect(ctx)
+            }
+            ctx.fill();
         }
-        ctx.fillStyle = backgroundCol;
-        ctx.strokeStyle = (cam.selectable()) ? busStopCol : edgeColour;
-        ctx.lineWidth = 3*s;
-        ctx.stroke();
-        ctx.fill();
+        
         ctx.closePath();
 
         //Redraw Selected
         if (mouse.elementSelected != undefined) {
-            mouse.elementSelected.draw(ctx);
+            mouse.elementSelected.draw_with_text(ctx);
         }
         if (mouse.elementHovering != undefined) {
-            mouse.elementHovering.draw(ctx);
+            mouse.elementHovering.draw_with_text(ctx);
         }
 
         //End
@@ -97,8 +103,8 @@ function bake_graph() {
     G.stop_data["NA"] = {}
     G.stop_data["NAA"] = {}
 
-    let baseStop = new BusStopNode("NA", new Vector2(originX, originY));
-    let baseStop2 = new BusStopNode("NAA", new Vector2(originX - 1, originY + 0.2));
+    let baseStop = new BusStopNode("NA", new Vector2(originX, originY), "Test");
+    let baseStop2 = new BusStopNode("NAA", new Vector2(originX - 1, originY + 0.2), "Test");
     G.addStop(baseStop);
     G.addStop(baseStop2);
 
@@ -127,7 +133,7 @@ export async function generateGraph() {
             //Pass Data Into Struct
             G.stop_data[key] = value;
 
-            var newStop = new BusStopNode(value.stop_id, new Vector2(value.lon, value.lat));
+            var newStop = new BusStopNode(value.stop_id, new Vector2(value.lon, value.lat), value.name);
             G.addStop(newStop);
         }
 

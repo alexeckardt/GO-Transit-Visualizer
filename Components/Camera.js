@@ -4,7 +4,7 @@ import {gui_coords_to_real_coords } from "./Coordinates.js";
 
 export const goalCamW = 1920;
 export const goalCamH = 1080;
-const busstopSelectableAtZoomIndex = 6;
+const busstopSelectableAtZoomIndex = 7;
 const cameraScales = [1, 2, 3, 8, 10, 20, 40, 80, 200];
 const scaleCount = cameraScales.length;
 
