@@ -28,7 +28,7 @@ export function BusStopNode(stop_id, input_coordinate) {
         }
 
         ctx.beginPath();
-        this.plot_arc(ctx)
+        this.plot(ctx)
             ctx.fillStyle = backgroundCol;
             ctx.strokeStyle = c;
             ctx.lineWidth = 3*s;
@@ -37,7 +37,7 @@ export function BusStopNode(stop_id, input_coordinate) {
             ctx.closePath();
     }
 
-    this.plot_arc = function(ctx) {
+    this.plot = function(ctx) {
         var s = cam.get_feature_scale();
         var w = baseBusStopWidth*s;
         var pos = this.draw_position();
