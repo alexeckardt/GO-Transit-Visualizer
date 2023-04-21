@@ -3,6 +3,8 @@ import { edgeColour } from "../Components/Colors.js";
 import { Vector2 } from "../Components/helper.js";
 import { real_coords_to_world_position } from "../Components/Coordinates.js";
 
+const forceStraightLine = true;
+
 export function TripEdge(fromStop, toStop) {
     this.from = fromStop
     this.to = toStop;
@@ -18,7 +20,7 @@ export function TripEdge(fromStop, toStop) {
 
         var s = cam.get_feature_scale();
 
-        if (this.draw_straight_line) {
+        if (this.draw_straight_line || forceStraightLine) {
             
             var pFrom = this.from.draw_position();
             var fFrom = this.to.draw_position();

@@ -22,6 +22,12 @@ export function Vector2(x, y) {
     this.floored = function() {
         return new Vector2(Math.floor(this.x), Math.floor(this.y));
     }
+
+    this.distance = function(otherVector2) {
+        var xx = this.x-otherVector2.x;
+        var yy = this.y-otherVector2.y;
+        return Math.sqrt(xx*xx + yy*yy);
+    }
 }
 Vector2.prototype.toString = function() {
     return "V2:(" + this.x + ", " + this.y + ")";

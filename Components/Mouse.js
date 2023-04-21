@@ -1,9 +1,14 @@
 import { Vector2 } from "./helper.js";
 import { cam } from "./Camera.js";
-
+import { gui_coords_to_world_coords } from "./Coordinates.js";
+import { G } from "../Visual/Graph.js";
 
 function Mouse() {
     this.gui_position = new Vector2(0, 0);
+    this.world_position = new Vector2(0, 0);
+
+    this.elementHovering = undefined;
+    this.elementSelected = undefined;
 }
 
 export let mouse = new Mouse();
@@ -39,6 +44,7 @@ export function setupMouse() {
 
             //Set Position
             mouse.gui_position = new Vector2(event.pageX, event.pageY); 
+            mouse.world_position = gui_coords_to_world_coords(mouse.gui_position);
 
             // Use event.pageX / event.pageY here
             if (dragging) {
@@ -49,6 +55,25 @@ export function setupMouse() {
 
                 //Update Position
                 cam.position = new Vector2(x, y);
+
+            } else {
+
+                if (cam.scale > 3) {
+
+                    //Check Which Bus Stop Hovering Over
+                    for (const node of G.busstops) {
+                        if (mouse.gui_position.distance(node.draw_position()) < 10) {
+                            mouse.elementHovering = node;
+                        }
+                    }
+                }
+
+                if (mouse.elementHovering != undefined) {
+                    if (mouse.gui_position.distance(mouse.elementHovering.draw_position()) > 40) {
+                        mouse.elementHovering = undefined;
+                    }
+                }
+
             }
 
             //Update
@@ -65,11 +90,14 @@ export function setupMouse() {
         dragging = true;
         dragStartMousePos = mouse.gui_position;
         dragStartCamPos = cam.position;
+
     });
 
     window.addEventListener('mouseup', (event) => {
         console.log("Mouse Up");
         dragging = false;
+
+        mouse.elementSelected = mouse.elementHovering;
     });
 
     window.addEventListener('wheel', (event) => {

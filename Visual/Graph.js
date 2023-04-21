@@ -159,5 +159,5 @@ export function drawGraph(ctx) {
     }
 }
 
-let G = new Graph();
+export const G = new Graph();
 let generatedGraph = false;

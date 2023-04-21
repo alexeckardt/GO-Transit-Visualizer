@@ -2,6 +2,8 @@ export const backgroundCol = "#202125";
 export const gridLineCol = "#28292e";
 export const lakeCol = "#233b3f";
 export const busStopCol = "#2c6f38";
+export const selectedBusStopCol = '#31ed53';
+export const selectedAndHoveringBusStopCol = '#a6ffb6';
 export const edgeColour = "#113c1d";
 
 /*

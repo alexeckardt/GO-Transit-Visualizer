@@ -1,6 +1,7 @@
 import { cam } from "../Components/Camera.js";
-import { backgroundCol, busStopCol } from "../Components/Colors.js";
+import { backgroundCol, busStopCol, selectedBusStopCol, selectedAndHoveringBusStopCol } from "../Components/Colors.js";
 import { real_coords_to_world_position } from "../Components/Coordinates.js";
+import { mouse } from "../Components/Mouse.js";
 
 const baseBusStopWidth = 8;
 
@@ -19,10 +20,19 @@ export function BusStopNode(stop_id, input_coordinate) {
         var w = baseBusStopWidth*s;
         var pos = this.draw_position();
 
+        var c = busStopCol;
+        if (mouse.elementHovering == this || mouse.elementSelected == this) {
+            c = selectedBusStopCol;
+
+            if (mouse.elementHovering == this && mouse.elementSelected == this) {
+                c = selectedAndHoveringBusStopCol;
+            }
+        }
+
         ctx.beginPath();
             ctx.arc(pos.x, pos.y, w, 0, 2 * Math.PI, false);
                 ctx.fillStyle = backgroundCol;
-                ctx.strokeStyle = busStopCol;
+                ctx.strokeStyle = c;
                 ctx.lineWidth = 3*s;
                 ctx.fill();
                 ctx.stroke();
