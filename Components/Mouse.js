@@ -26,6 +26,7 @@ function Mouse() {
         //More!!
         this.selectedRoutes = G.get_all_routes_from_stop(el);
         console.log(this.selectedRoutes);
+        infoBox.update();
     }
 }
 
@@ -79,7 +80,7 @@ export function setupMouse() {
 
                 let selectable = cam.selectable();
                 let sc = cam.get_feature_scale();
-                
+
                 //Check Which Bus Stop Hovering Over
                 for (const node of G.busstops) {
                     if (mouse.gui_position.distance(node.draw_position()) < 10*sc && (selectable || node.drewAsHighlighted)) {

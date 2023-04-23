@@ -9,6 +9,7 @@ export const edgeColour = "#113c1d";
 export const defFont = "10px sans-serif";
 export const titleFont = "30px sans-serif";
 export const descFont = "20px sans-serif";
+export const routeFont = "20px serif";
 
 /*
 //Constant Final Variables

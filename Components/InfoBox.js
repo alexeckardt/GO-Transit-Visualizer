@@ -1,4 +1,6 @@
-import { backgroundCol, busStopCol, defFont, descFont, gridLineCol, selectedBusStopCol, titleFont } from "./Style.js";
+import { backgroundCol, busStopCol, defFont, descFont, gridLineCol, routeFont, selectedBusStopCol, titleFont } from "./Style.js";
+import { mouse } from "./Mouse.js";
+import { G } from "../Visual/Graph.js";
 
 export function InfoBox(infoCanvas) {
     this.title = "Empty";
@@ -10,15 +12,21 @@ export function InfoBox(infoCanvas) {
 
     this.edgeBuffer = 15;
 
+    this.routeBoxWidth = 40;
+    this.routeBoxHeight = -1;
+
     this.canvas = infoCanvas;
     this.ctx = function() {
         return this.canvas.getContext('2d')}
 
-    this.set_dimentions = function(width, height) {
+    this.set_dimentions = function(width, height, routeSelectorHeight, edgeBuffer) {
         this.width = width;
         this.height = height;
+        this.edgeBuffer = edgeBuffer;
         this.canvas.setAttribute('width', width);
-        this.canvas.setAttribute('height', height);
+        this.canvas.setAttribute('height', height+routeSelectorHeight);
+
+        this.routeBoxHeight = routeSelectorHeight - 2*this.edgeBuffer;
     }
 
     this.set_text = function(title, smalldesc, desc) {
@@ -82,8 +90,8 @@ export function InfoBox(infoCanvas) {
         ctx.fillStyle = backgroundCol;
         ctx.strokeStyle = gridLineCol;
         ctx.lineWidth = 2;
-        ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-        ctx.strokeRect(0, 0, this.canvas.width, this.canvas.height);
+        ctx.fillRect(0, 0, this.width, this.height+5);
+        ctx.strokeRect(0, 0, this.width, this.height+5);
 
         ctx.fillStyle = selectedBusStopCol;
         ctx.textAlign = 'left';
@@ -111,6 +119,52 @@ export function InfoBox(infoCanvas) {
         for (var i=0; i < this.descLines.length; i++) {
             let line = this.descLines[i];
             ctx.fillText(line, b, b*2+titleHeight+lineHeight*i);
+        }
+
+        //
+        //
+        // Selected Routes
+        //
+        //
+
+        //Clear
+        let routes = mouse.selectedRoutes
+        if (routes.length > 0) {
+            ctx.fillStyle = backgroundCol;
+            ctx.strokeStyle = gridLineCol;
+            ctx.lineWidth = 2;
+            ctx.fillRect(0, this.height, this.width, this.canvas.height-this.height);
+            ctx.strokeRect(0, this.height, this.width, this.canvas.height-this.height);
+        
+            let boxY = this.height + this.edgeBuffer;
+            let boxW = this.routeBoxWidth;
+            let boxH = this.routeBoxHeight;
+
+            //Draw the selected routes
+            for (var i = 0; i < routes.length; i++) {
+
+                let boxX = this.edgeBuffer + (boxW+this.edgeBuffer/2)*i
+
+                let route = routes[i];
+                let data = G.route_data[route];
+                console.log(data)
+
+                ctx.fillStyle = "#" + data.route_color;
+                ctx.beginPath();
+                ctx.roundRect(boxX, boxY, boxW, boxH, 5);
+                ctx.closePath();
+                ctx.fill();
+
+                ctx.fillStyle = "#" + data.route_text_color;
+                ctx.font = routeFont;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(data.route_short_name, boxX + boxW / 2, boxY + boxH/2 + 2);
+            }
+
+        
+        } else {
+
         }
     }
 }
