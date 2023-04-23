@@ -208,9 +208,6 @@ export async function generateGraph() {
         const res = await fetch('./Visual/Source/transitGraph.json')
         let obj = await res.json();
 
-        const result2 = await fetch('./Visual/Source/edge_shapes.json')
-        let edgeObj = await result2.json();
-
         //Add Nodes
         for (const [key, value] of Object.entries(obj.nodes)) {
             //console.log(value)
@@ -222,8 +219,6 @@ export async function generateGraph() {
             G.addStop(newStop);
         }
 
-        let failEdges = []
-
         //Add Edges
         for (const [source, adj] of Object.entries(obj.edges)) {
 
@@ -231,31 +226,9 @@ export async function generateGraph() {
             for (const [to, weight] of Object.entries(adj)) {
                 
                 //Generate Edge                
-                var edge = G.addEdge(source, to, weight);
-
-                //Get Edge
-                var edgeId = "('" + source + "', '" + to + "')";
-                var edgeShapes = edgeObj[edgeId]
-                
-                // Recreate, see if back works?
-                if (edgeShapes == undefined) {
-                    edgeId = "('" + to + "', '" + source + "')";
-                    edgeShapes = edgeObj[edgeId]
-                }
-
-                //Add Shape
-                if (edgeShapes != undefined) {
-                    for (var i = 0; i < edgeShapes.length; i++) {
-                        var point = edgeShapes[i]
-                        edge.add_edge_shape_point(point[1], point[0])
-                    }
-                } else {
-                    failEdges.push(edgeId)
-                }
+                G.addEdge(source, to, weight);
             }
         }
-        console.log(failEdges)
-        console.log(failEdges.length)
 
         //Add Routes
         for (const [key, value] of Object.entries(obj.routes)) {
