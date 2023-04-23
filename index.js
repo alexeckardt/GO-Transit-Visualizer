@@ -17,8 +17,8 @@ canvas.setAttribute('height', goalCamH);
 lakeCanvas.setAttribute('width', goalCamW);
 lakeCanvas.setAttribute('height', goalCamH);
 
-const infoBox = new InfoBox(infoCanvas);
-infoBox.set_dimentions(600, 500);
+export const infoBox = new InfoBox(infoCanvas);
+infoBox.set_dimentions(500, 200);
 //infoBox.set_text("Test", "Liufehfiewufhewuifwbnfuiwehfewiuhfewuifhweifuhwiuefhweiufhwuiffuiehfewiufhewuifhewfuiwehfuiwehfwuiefhweiufhweuifhwuifhweiufhwefhweiufhweuifhweiufhewiufhne\nLine\nLine\nLine\nLine\nLine\nLine\nLine\n");
 infoBox.update();
 

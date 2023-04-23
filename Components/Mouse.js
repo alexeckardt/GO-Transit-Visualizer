@@ -2,6 +2,7 @@ import { Vector2 } from "./helper.js";
 import { cam } from "./Camera.js";
 import { gui_coords_to_world_coords } from "./Coordinates.js";
 import { G } from "../Visual/Graph.js";
+import { infoBox } from "../index.js";
 
 function Mouse() {
     this.gui_position = new Vector2(0, 0);
@@ -19,6 +20,8 @@ function Mouse() {
 
     this.select_element = function(el) {
         this.elementSelected = el;
+
+        el.selected_events();
 
         //More!!
         this.selectedRoutes = G.get_all_routes_from_stop(el);
@@ -80,6 +83,7 @@ export function setupMouse() {
                     for (const node of G.busstops) {
                         if (mouse.gui_position.distance(node.draw_position()) < 10) {
                             mouse.elementHovering = node;
+                            node.selected_events();
                         }
                     }
                 }
@@ -87,6 +91,9 @@ export function setupMouse() {
                 if (mouse.elementHovering != undefined) {
                     if (mouse.gui_position.distance(mouse.elementHovering.draw_position()) > 40) {
                         mouse.elementHovering = undefined;
+                        if (mouse.elementSelected != undefined) {
+                            mouse.elementSelected.selected_events();
+                        }
                     }
                 }
 
@@ -118,6 +125,8 @@ export function setupMouse() {
         if (mouse.elementHovering == undefined) {
             if (dragStartCamPos.distance(cam.position) < 10) {
                 mouse.deselect_element();
+                infoBox.clear();
+                infoBox.update();
             }
         } else {
             mouse.select_element(mouse.elementHovering);

@@ -2,6 +2,7 @@ import { cam } from "../Components/Camera.js";
 import { backgroundCol, busStopCol, selectedBusStopCol, selectedAndHoveringBusStopCol, edgeColour, defFont } from "../Components/Style.js";
 import { real_coords_to_world_position } from "../Components/Coordinates.js";
 import { mouse } from "../Components/Mouse.js";
+import { infoBox } from "../index.js";
 
 const baseBusStopWidth = 6;
 
@@ -98,5 +99,17 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         var w = baseBusStopWidth*s*1.5;
         var pos = this.draw_position();
         ctx.fillRect(pos.x - w/2, pos.y - w/2, w, w);
+    }
+
+    this.coordinate_string = function() {
+        return this.coord.y + ", " + this.coord.x
+    }
+
+    this.selected_events = function() {
+        let desc = "\n";
+        let descc = this.coordinate_string();
+
+        infoBox.set_text(this.name, descc, desc);
+        infoBox.update();
     }
 }

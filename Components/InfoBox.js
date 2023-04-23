@@ -1,7 +1,8 @@
-import { backgroundCol, busStopCol, descFont, selectedBusStopCol, titleFont } from "./Style.js";
+import { backgroundCol, busStopCol, defFont, descFont, gridLineCol, selectedBusStopCol, titleFont } from "./Style.js";
 
 export function InfoBox(infoCanvas) {
     this.title = "Empty";
+    this.smallDescLines = ["Empty"];
     this.descLines = ["Empty"];
     this.routesToDraw = [];
 
@@ -20,9 +21,11 @@ export function InfoBox(infoCanvas) {
         this.canvas.setAttribute('height', height);
     }
 
-    this.set_text = function(title, desc) {
+    this.set_text = function(title, smalldesc, desc) {
         this.title = title;
+        this.smallDescLines = smalldesc.split("\n");
         this.descLines = [];
+
         let split = desc.split("\n");
 
         let maxLineLength = (this.width - this.edgeBuffer*2) / 10; // 10 for font approx
@@ -77,7 +80,10 @@ export function InfoBox(infoCanvas) {
 
         //Clear
         ctx.fillStyle = backgroundCol;
+        ctx.strokeStyle = gridLineCol;
+        ctx.lineWidth = 2;
         ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        ctx.strokeRect(0, 0, this.canvas.width, this.canvas.height);
 
         ctx.fillStyle = selectedBusStopCol;
         ctx.textAlign = 'left';
@@ -86,12 +92,21 @@ export function InfoBox(infoCanvas) {
         ctx.fillText(this.title, b, b);
 
         ctx.fillStyle = busStopCol;
-        ctx.textAlign = 'left';
-        ctx.textBaseline = 'top';
-        ctx.font = descFont;
+        ctx.font = defFont;
         
         let lineHeight = 25;
         let titleHeight = 20;
+
+        for (var i=0; i < this.smallDescLines.length; i++) {
+            let line = this.smallDescLines[i];
+            ctx.fillText(line, b, b*2+titleHeight+lineHeight*i);
+        }
+
+        titleHeight = 20 + this.smallDescLines.length*lineHeight;
+        lineHeight = 25;
+
+        ctx.fillStyle = busStopCol;
+        ctx.font = descFont;
 
         for (var i=0; i < this.descLines.length; i++) {
             let line = this.descLines[i];
