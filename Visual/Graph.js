@@ -3,7 +3,7 @@ import { Vector2 } from "../Components/helper.js";
 import { originX, originY } from "../Components/Coordinates.js";
 import { TripEdge } from  "./TripEdges.js";
 import { mouse } from "../Components/Mouse.js";
-import { edgeColour, backgroundCol, busStopCol } from "../Components/Colors.js";
+import { edgeColour, backgroundCol, busStopCol } from "../Components/Style.js";
 import { cam } from "../Components/Camera.js";
 
 const shouldBakeGraph = false;

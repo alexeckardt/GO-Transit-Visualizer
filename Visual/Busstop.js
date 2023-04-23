@@ -1,5 +1,5 @@
 import { cam } from "../Components/Camera.js";
-import { backgroundCol, busStopCol, selectedBusStopCol, selectedAndHoveringBusStopCol, edgeColour, defFont } from "../Components/Colors.js";
+import { backgroundCol, busStopCol, selectedBusStopCol, selectedAndHoveringBusStopCol, edgeColour, defFont } from "../Components/Style.js";
 import { real_coords_to_world_position } from "../Components/Coordinates.js";
 import { mouse } from "../Components/Mouse.js";
 

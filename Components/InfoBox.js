@@ -1,4 +1,4 @@
-import { backgroundCol, busStopCol, descFont, selectedBusStopCol, titleFont } from "./Colors.js";
+import { backgroundCol, busStopCol, descFont, selectedBusStopCol, titleFont } from "./Style.js";
 
 export function InfoBox(infoCanvas) {
     this.title = "Empty";
@@ -49,7 +49,7 @@ export function InfoBox(infoCanvas) {
                 this.descLines.push(lineStr)
             }
         }
-        
+
         this.draw_box = true;
     }
 

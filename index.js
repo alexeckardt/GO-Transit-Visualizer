@@ -1,7 +1,7 @@
 //Comment
 import { setupMouse } from "./Components/Mouse.js";
 import { goalCamW, goalCamH } from "./Components/Camera.js";
-import { backgroundCol } from "./Components/Colors.js";
+import { backgroundCol } from "./Components/Style.js";
 import { generateGraph, drawGraph } from "./Visual/Graph.js";
 import { drawLakes } from "./Visual/Background.js";
 import { InfoBox } from "./Components/InfoBox.js";

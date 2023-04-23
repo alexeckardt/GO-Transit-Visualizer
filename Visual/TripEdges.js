@@ -1,5 +1,5 @@
 import { cam } from "../Components/Camera.js";
-import { edgeColour, busStopCol } from "../Components/Colors.js";
+import { edgeColour, busStopCol } from "../Components/Style.js";
 import { Vector2 } from "../Components/helper.js";
 import { real_coords_to_world_position } from "../Components/Coordinates.js";
 

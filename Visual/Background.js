@@ -1,7 +1,7 @@
 import { cam, goalCamW, goalCamH } from "../Components/Camera.js";
 import { real_coords_to_world_position, gui_coords_to_world_coords, originX, originY } from "../Components/Coordinates.js";
 import { toVector2, Vector2 } from "../Components/helper.js";
-import { gridLineCol, lakeCol } from "../Components/Colors.js";
+import { gridLineCol, lakeCol } from "../Components/Style.js";
 
 let obj;
 let loadedLakes = false;
