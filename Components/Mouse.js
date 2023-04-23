@@ -28,6 +28,15 @@ function Mouse() {
         console.log(this.selectedRoutes);
         infoBox.update();
     }
+
+    this.is_route_selected = function(routeId) {
+        for (var i = 0; i < this.selectedRoutes.length; i++) {
+            if (routeId == this.selectedRoutes[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 export let mouse = new Mouse();

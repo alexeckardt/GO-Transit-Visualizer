@@ -204,7 +204,7 @@
         },
         "LE": {
             "agency_id": "GO",
-            "route_color": "ff0d00",
+            "route_color": "bb0a00",
             "route_short_name": "LE",
             "route_long_name": "Lakeshore East",
             "route_text_color": "FFFFFF",
@@ -326,7 +326,7 @@
         },
         "BR": {
             "agency_id": "GO",
-            "route_color": "003767",
+            "route_color": "004d91",
             "route_short_name": "BR",
             "route_long_name": "Barrie",
             "route_text_color": "FFFFFF",
@@ -378,7 +378,7 @@
         },
         "96": {
             "agency_id": "GO",
-            "route_color": "ff0d00",
+            "route_color": "bb0a00",
             "route_short_name": "96",
             "route_long_name": "Oshawa / Finch Express",
             "route_text_color": "FFFFFF",
@@ -525,7 +525,7 @@
         },
         "92": {
             "agency_id": "GO",
-            "route_color": "ff0d00",
+            "route_color": "bb0a00",
             "route_short_name": "92",
             "route_long_name": "Oshawa / Yorkdale",
             "route_text_color": "FFFFFF",
@@ -652,7 +652,7 @@
         },
         "90": {
             "agency_id": "GO",
-            "route_color": "ff0d00",
+            "route_color": "bb0a00",
             "route_short_name": "90",
             "route_long_name": "Lakeshore East",
             "route_text_color": "FFFFFF",
@@ -690,7 +690,7 @@
         },
         "88": {
             "agency_id": "GO",
-            "route_color": "ff0d00",
+            "route_color": "bb0a00",
             "route_short_name": "88",
             "route_long_name": "Peterborough / Oshawa",
             "route_text_color": "FFFFFF",

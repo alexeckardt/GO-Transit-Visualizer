@@ -28,6 +28,12 @@ export function Vector2(x, y) {
         var yy = this.y-otherVector2.y;
         return Math.sqrt(xx*xx + yy*yy);
     }
+
+    this.normalize = function() {
+        let factor = 1/this.distance(new Vector2(0, 0));
+        this.x*=factor;
+        this.y*=factor;
+    }
 }
 Vector2.prototype.toString = function() {
     return "V2:(" + this.x + ", " + this.y + ")";

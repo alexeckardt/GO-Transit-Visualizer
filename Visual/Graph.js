@@ -113,6 +113,7 @@ function Graph() {
         //
         // Route Selected info
         //
+        
         var routesToDraw = mouse.selectedRoutes;
         for (var i = 0; i < routesToDraw.length; i++) {
             let routeId = routesToDraw[i];
@@ -271,6 +272,13 @@ export async function generateGraph() {
             routeData.stops_at = get_travel_stop(value['travels_edges']);
 
             G.route_data[key] = routeData;
+
+            //Add Self to the edges
+            for (var i=0; i < routeData.travels_edges.length; i++) {
+                let edge = routeData.travels_edges[i];
+                edge.add_route_that_travels_me(key, routeData.route_color);
+                console.log(key);
+            }
 
         }
 
