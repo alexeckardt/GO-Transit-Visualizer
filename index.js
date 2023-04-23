@@ -4,9 +4,11 @@ import { goalCamW, goalCamH } from "./Components/Camera.js";
 import { backgroundCol } from "./Components/Colors.js";
 import { generateGraph, drawGraph } from "./Visual/Graph.js";
 import { drawLakes } from "./Visual/Background.js";
+import { InfoBox } from "./Components/InfoBox.js";
 //Canvas
 const canvas = document.getElementById('myCanvas');
 const lakeCanvas = document.getElementById('lakes')
+const infoCanvas = document.getElementById('infoCanvas');
 let ctx = canvas.getContext('2d');
 let bkgCtx = lakeCanvas.getContext('2d');
 
@@ -14,6 +16,12 @@ canvas.setAttribute('width', goalCamW);
 canvas.setAttribute('height', goalCamH);
 lakeCanvas.setAttribute('width', goalCamW);
 lakeCanvas.setAttribute('height', goalCamH);
+
+const infoBox = new InfoBox(infoCanvas);
+infoBox.set_dimentions(600, 500);
+//infoBox.set_text("Test", "Liufehfiewufhewuifwbnfuiwehfewiuhfewuifhweifuhwiuefhweiufhwuiffuiehfewiufhewuifhewfuiwehfuiwehfwuiefhweiufhweuifhwuifhweiufhwefhweiufhweuifhweiufhewiufhne\nLine\nLine\nLine\nLine\nLine\nLine\nLine\n");
+infoBox.update();
+
 
 setupMouse();
 

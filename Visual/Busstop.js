@@ -1,5 +1,5 @@
 import { cam } from "../Components/Camera.js";
-import { backgroundCol, busStopCol, selectedBusStopCol, selectedAndHoveringBusStopCol, edgeColour } from "../Components/Colors.js";
+import { backgroundCol, busStopCol, selectedBusStopCol, selectedAndHoveringBusStopCol, edgeColour, defFont } from "../Components/Colors.js";
 import { real_coords_to_world_position } from "../Components/Coordinates.js";
 import { mouse } from "../Components/Mouse.js";
 
@@ -79,7 +79,7 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         ctx.fillStyle = selectedBusStopCol;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'bottom';
-
+        ctx.font = defFont;
         ctx.fillText(this.name, pos.x, pos.y - baseBusStopWidth*s*2);
 
     }
