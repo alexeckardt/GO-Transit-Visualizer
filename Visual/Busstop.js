@@ -12,6 +12,8 @@ export function BusStopNode(stop_id, input_coordinate, name) {
     this.coord = input_coordinate;
     this.name = name;
 
+    this.drewAsHighlighted = false;
+
     this.draw_position = function() {
         return real_coords_to_world_position(this.coord);
     }
@@ -52,6 +54,8 @@ export function BusStopNode(stop_id, input_coordinate, name) {
             ctx.fill();
             ctx.stroke();
             ctx.closePath();
+
+        this.drewAsHighlighted = false;
     }
 
     this.draw_selected = function(ctx) {
@@ -68,6 +72,8 @@ export function BusStopNode(stop_id, input_coordinate, name) {
             ctx.fill();
             ctx.stroke();
             ctx.closePath();
+
+        this.drewAsHighlighted = true;
     }
 
 
@@ -83,6 +89,7 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         ctx.font = defFont;
         ctx.fillText(this.name, pos.x, pos.y - baseBusStopWidth*s*2);
 
+        this.drewAsHighlighted = true;
     }
 
     this.plot_arc = function(ctx) {

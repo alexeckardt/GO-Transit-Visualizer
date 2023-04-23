@@ -77,14 +77,14 @@ export function setupMouse() {
 
             } else {
 
-                if (cam.selectable()) {
-
-                    //Check Which Bus Stop Hovering Over
-                    for (const node of G.busstops) {
-                        if (mouse.gui_position.distance(node.draw_position()) < 10) {
-                            mouse.elementHovering = node;
-                            node.selected_events();
-                        }
+                let selectable = cam.selectable();
+                let sc = cam.get_feature_scale();
+                
+                //Check Which Bus Stop Hovering Over
+                for (const node of G.busstops) {
+                    if (mouse.gui_position.distance(node.draw_position()) < 10*sc && (selectable || node.drewAsHighlighted)) {
+                        mouse.elementHovering = node;
+                        node.selected_events();
                     }
                 }
 
