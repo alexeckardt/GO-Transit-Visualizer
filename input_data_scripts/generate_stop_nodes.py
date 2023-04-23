@@ -522,7 +522,9 @@ def generate_transit_graph(tripCountLimit = -1):
             line = f.readline().strip();
 
         # Done, Generated Nodes
-
+    COT = {}
+    with open('input_data_scripts/color_switch.json', 'r') as f:
+        COT = json.load(f);
     #
     #Generate Routes
     with open('input_data_scripts/in_GTFS/routes.txt', 'r') as f:
@@ -533,11 +535,14 @@ def generate_transit_graph(tripCountLimit = -1):
         while line != '':
 
             route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color = line.split(',')
-            route = Route(route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color);
+            route = Route(route_id,agency_id,route_short_name,route_long_name,route_type,COT[route_color],route_text_color);
             G.add_route(route)
 
             #Continue
             line = f.readline().strip();
+
+    
+
 
     #
     # Generate Edges

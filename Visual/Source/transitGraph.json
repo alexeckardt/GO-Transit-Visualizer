@@ -2,7 +2,7 @@
     "routes": {
         "ST": {
             "agency_id": "GO",
-            "route_color": "794500",
+            "route_color": "754b2f",
             "route_short_name": "ST",
             "route_long_name": "Stouffville",
             "route_text_color": "FFFFFF",
@@ -50,7 +50,7 @@
         },
         "RH": {
             "agency_id": "GO",
-            "route_color": "0099c7",
+            "route_color": "407679",
             "route_short_name": "RH",
             "route_long_name": "Richmond Hill",
             "route_text_color": "FFFFFF",
@@ -86,7 +86,7 @@
         },
         "MI": {
             "agency_id": "GO",
-            "route_color": "f57f25",
+            "route_color": "b78337",
             "route_short_name": "MI",
             "route_long_name": "Milton",
             "route_text_color": "FFFFFF",
@@ -130,7 +130,7 @@
         },
         "LW": {
             "agency_id": "GO",
-            "route_color": "98002e",
+            "route_color": "89193b",
             "route_short_name": "LW",
             "route_long_name": "Lakeshore West",
             "route_text_color": "FFFFFF",
@@ -204,7 +204,7 @@
         },
         "LE": {
             "agency_id": "GO",
-            "route_color": "bb0a00",
+            "route_color": "b92525",
             "route_short_name": "LE",
             "route_long_name": "Lakeshore East",
             "route_text_color": "FFFFFF",
@@ -326,7 +326,7 @@
         },
         "BR": {
             "agency_id": "GO",
-            "route_color": "004d91",
+            "route_color": "0c4a80",
             "route_short_name": "BR",
             "route_long_name": "Barrie",
             "route_text_color": "FFFFFF",
@@ -378,7 +378,7 @@
         },
         "96": {
             "agency_id": "GO",
-            "route_color": "bb0a00",
+            "route_color": "b92525",
             "route_short_name": "96",
             "route_long_name": "Oshawa / Finch Express",
             "route_text_color": "FFFFFF",
@@ -469,7 +469,7 @@
         },
         "94": {
             "agency_id": "GO",
-            "route_color": "a21884",
+            "route_color": "9b2567",
             "route_short_name": "94",
             "route_long_name": "Pickering / Square One",
             "route_text_color": "FFFFFF",
@@ -525,7 +525,7 @@
         },
         "92": {
             "agency_id": "GO",
-            "route_color": "bb0a00",
+            "route_color": "b92525",
             "route_short_name": "92",
             "route_long_name": "Oshawa / Yorkdale",
             "route_text_color": "FFFFFF",
@@ -652,7 +652,7 @@
         },
         "90": {
             "agency_id": "GO",
-            "route_color": "bb0a00",
+            "route_color": "b92525",
             "route_short_name": "90",
             "route_long_name": "Lakeshore East",
             "route_text_color": "FFFFFF",
@@ -690,7 +690,7 @@
         },
         "88": {
             "agency_id": "GO",
-            "route_color": "bb0a00",
+            "route_color": "b92525",
             "route_short_name": "88",
             "route_long_name": "Peterborough / Oshawa",
             "route_text_color": "FFFFFF",
@@ -820,7 +820,7 @@
         },
         "71": {
             "agency_id": "GO",
-            "route_color": "794500",
+            "route_color": "754b2f",
             "route_short_name": "71",
             "route_long_name": "Stouffville",
             "route_text_color": "FFFFFF",
@@ -1007,7 +1007,7 @@
         },
         "70": {
             "agency_id": "GO",
-            "route_color": "794500",
+            "route_color": "754b2f",
             "route_short_name": "70",
             "route_long_name": "Uxbridge / Mount Joy",
             "route_text_color": "FFFFFF",
@@ -1142,7 +1142,7 @@
         },
         "68": {
             "agency_id": "GO",
-            "route_color": "003767",
+            "route_color": "0c4a80",
             "route_short_name": "68",
             "route_long_name": "Barrie / Newmarket",
             "route_text_color": "FFFFFF",
@@ -1334,7 +1334,7 @@
         },
         "67": {
             "agency_id": "GO",
-            "route_color": "003767",
+            "route_color": "0c4a80",
             "route_short_name": "67",
             "route_long_name": "Keswick / North York",
             "route_text_color": "FFFFFF",
@@ -1416,7 +1416,7 @@
         },
         "66": {
             "agency_id": "GO",
-            "route_color": "003767",
+            "route_color": "0c4a80",
             "route_short_name": "66",
             "route_long_name": "East Gwillimbury / Newmarket / North York",
             "route_text_color": "FFFFFF",
@@ -1481,7 +1481,7 @@
         },
         "65": {
             "agency_id": "GO",
-            "route_color": "003767",
+            "route_color": "0c4a80",
             "route_short_name": "65",
             "route_long_name": "Newmarket / Toronto",
             "route_text_color": "FFFFFF",
@@ -1593,7 +1593,7 @@
         },
         "63": {
             "agency_id": "GO",
-            "route_color": "003767",
+            "route_color": "0c4a80",
             "route_short_name": "63",
             "route_long_name": "King City / Toronto",
             "route_text_color": "FFFFFF",
@@ -1627,7 +1627,7 @@
         },
         "61": {
             "agency_id": "GO",
-            "route_color": "0099c7",
+            "route_color": "407679",
             "route_short_name": "61",
             "route_long_name": "Richmond Hill",
             "route_text_color": "FFFFFF",
@@ -2033,7 +2033,7 @@
         },
         "48": {
             "agency_id": "GO",
-            "route_color": "a21984",
+            "route_color": "9b2567",
             "route_short_name": "48",
             "route_long_name": "Guelph / Hwy 407 Terminal",
             "route_text_color": "FFFFFF",
@@ -2188,7 +2188,7 @@
         },
         "47": {
             "agency_id": "GO",
-            "route_color": "a21984",
+            "route_color": "9b2567",
             "route_short_name": "47",
             "route_long_name": "Hamilton / Hwy 407 Terminal",
             "route_text_color": "FFFFFF",
@@ -2289,7 +2289,7 @@
         },
         "41": {
             "agency_id": "GO",
-            "route_color": "a21984",
+            "route_color": "9b2567",
             "route_short_name": "41",
             "route_long_name": "Hamilton / Pickering",
             "route_text_color": "FFFFFF",
@@ -2441,7 +2441,7 @@
         },
         "40": {
             "agency_id": "GO",
-            "route_color": "a11984",
+            "route_color": "9b2567",
             "route_short_name": "40",
             "route_long_name": "Hamilton / Richmond Hill",
             "route_text_color": "FFFFFF",
@@ -3711,7 +3711,7 @@
         },
         "27": {
             "agency_id": "GO",
-            "route_color": "f57f25",
+            "route_color": "b78337",
             "route_short_name": "27",
             "route_long_name": "Milton / North York",
             "route_text_color": "000000",
@@ -3927,7 +3927,7 @@
         },
         "25": {
             "agency_id": "GO",
-            "route_color": "f57f25",
+            "route_color": "b78337",
             "route_short_name": "25",
             "route_long_name": "Waterloo / Mississauga",
             "route_text_color": "000000",
@@ -3982,7 +3982,7 @@
         },
         "21": {
             "agency_id": "GO",
-            "route_color": "f57f25",
+            "route_color": "b78337",
             "route_short_name": "21",
             "route_long_name": "Milton",
             "route_text_color": "000000",
@@ -4274,7 +4274,7 @@
         },
         "19": {
             "agency_id": "GO",
-            "route_color": "f57f25",
+            "route_color": "b78337",
             "route_short_name": "19",
             "route_long_name": "Mississauga / North York",
             "route_text_color": "000000",
@@ -4369,7 +4369,7 @@
         },
         "18": {
             "agency_id": "GO",
-            "route_color": "98002e",
+            "route_color": "89193b",
             "route_short_name": "18",
             "route_long_name": "Lakeshore West",
             "route_text_color": "FFFFFF",
@@ -4530,7 +4530,7 @@
         },
         "17": {
             "agency_id": "GO",
-            "route_color": "f78025",
+            "route_color": "b78337",
             "route_short_name": "17",
             "route_long_name": "Waterloo / Hamilton",
             "route_text_color": "000000",
@@ -4665,7 +4665,7 @@
         },
         "16": {
             "agency_id": "GO",
-            "route_color": "98002e",
+            "route_color": "89193b",
             "route_short_name": "16",
             "route_long_name": "Hamilton / Toronto Express",
             "route_text_color": "FFFFFF",
@@ -4729,7 +4729,7 @@
         },
         "15": {
             "agency_id": "GO",
-            "route_color": "98002e",
+            "route_color": "89193b",
             "route_short_name": "15",
             "route_long_name": "Brantford / Aldershot",
             "route_text_color": "FFFFFF",
@@ -4785,7 +4785,7 @@
         },
         "12": {
             "agency_id": "GO",
-            "route_color": "98002e",
+            "route_color": "89193b",
             "route_short_name": "12",
             "route_long_name": "Niagara Falls / Toronto",
             "route_text_color": "FFFFFF",
