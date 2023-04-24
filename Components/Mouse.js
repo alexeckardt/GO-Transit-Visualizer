@@ -153,7 +153,7 @@ export function setupMouse() {
         console.log("Mouse Up");
         dragging = false;
 
-        console.log(cam.position);
+        console.log(window);
 
         //Drag
         if (!mouse.overInfoBox) {
