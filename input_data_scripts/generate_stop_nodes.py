@@ -567,7 +567,8 @@ def generate_transit_graph(tripCountLimit = -1):
             #Store as City Name
             if (" GO" == stop_name[-3:]):
                 cityName = stop_name.replace(" GO", "")
-                G.set_city_stop(cityName, stop_id);
+                replaceName = stopNamesToId[stop_name];
+                G.set_city_stop(cityName, replaceName);
 
             #Continue
             line = f.readline().strip();
@@ -658,7 +659,7 @@ def generate_transit_graph(tripCountLimit = -1):
 
     #Set City Stops, Force
     G.set_city_stop('Toronto', 'UN');
-
+    G.set_city_stop('Mississagua', '00133');
 
     G.clean_routes()
 
