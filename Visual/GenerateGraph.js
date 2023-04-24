@@ -103,6 +103,7 @@ export async function generateGraph() {
             var cityData = value;
             var newCity = new City(key, cityData['population'], cityData['lat'], cityData['lon'], cityData['place'], cityData['my_hub_stop']);
             G.addCity(newCity);
+            G.city_set_hub_city(key, cityData['my_hub_stop']);
         }
 
     } else {

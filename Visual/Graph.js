@@ -19,6 +19,7 @@ function Graph() {
 
     this.cities = [];
     this.city_index = {};
+    this.stop_hubs = {};
 
     this.generated = false;
 
@@ -34,6 +35,20 @@ function Graph() {
     this.addCity = function(city) {
         this.cities.push(city);
         this.city_index[city.name] = this.cities.length-1;
+    }
+
+    this.city_set_hub_city = function(cityName, hubId) {
+
+        console.log(cityName, hubId);
+        if (hubId == undefined) {
+            return;
+        }
+
+        this.stop_hubs[hubId] = cityName;
+        let stop = this.getStop(hubId);
+        console.log(stop)
+
+        stop.isHubOf = cityName;
     }
 
     this.getStop = function(stopId) {

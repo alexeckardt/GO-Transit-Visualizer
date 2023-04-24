@@ -18288,7 +18288,7 @@
         "Burlington": {
             "population": 160000,
             "place": "city",
-            "my_hub_stop": "00177",
+            "my_hub_stop": "BU",
             "lat": -79.7966835,
             "lon": 43.3248924
         },
@@ -18414,7 +18414,7 @@
         "Bradford": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "02160",
+            "my_hub_stop": "BD",
             "lat": -79.5647069,
             "lon": 44.1143279
         },
@@ -18428,7 +18428,7 @@
         "Kitchener": {
             "population": 233222,
             "place": "city",
-            "my_hub_stop": "02186",
+            "my_hub_stop": "KI",
             "lat": -80.4927815,
             "lon": 43.451291
         },
@@ -18484,7 +18484,7 @@
         "Milton": {
             "population": 110128,
             "place": "town",
-            "my_hub_stop": "00194",
+            "my_hub_stop": "ML",
             "lat": -79.882817,
             "lon": 43.513671
         },
@@ -18827,7 +18827,7 @@
         "Ajax": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "00161",
+            "my_hub_stop": "AJ",
             "lat": -79.0208814,
             "lon": 43.8505287
         },
@@ -18918,21 +18918,21 @@
         "Aurora": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "00081",
+            "my_hub_stop": "AU",
             "lat": -79.467545,
             "lon": 43.99973
         },
         "Pickering": {
             "population": 91771,
             "place": "city",
-            "my_hub_stop": "00147",
+            "my_hub_stop": "PIN",
             "lat": -79.090576,
             "lon": 43.835765
         },
         "Oakville": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "00137",
+            "my_hub_stop": "OA",
             "lat": -79.666672,
             "lon": 43.447436
         },
@@ -18981,7 +18981,7 @@
         "Whitby": {
             "population": 128377,
             "place": "city",
-            "my_hub_stop": "00031",
+            "my_hub_stop": "WH",
             "lat": -78.9421751,
             "lon": 43.87982
         },
@@ -19198,7 +19198,7 @@
         "Georgetown": {
             "population": 40150,
             "place": "town",
-            "my_hub_stop": "02413",
+            "my_hub_stop": "GE",
             "lat": -79.9036058,
             "lon": 43.6502652
         },
@@ -19653,7 +19653,7 @@
         "Richmond Hill": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "00062",
+            "my_hub_stop": "RI",
             "lat": -79.4392925,
             "lon": 43.8801166
         },

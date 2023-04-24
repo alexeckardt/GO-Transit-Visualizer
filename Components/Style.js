@@ -11,7 +11,7 @@ export const cityNameCol = "#959595";
 
 export const defFont = "10px sans-serif";
 export const titleFont = "30px sans-serif";
-export const descFont = "20px sans-serif";
+export const descFont = "18px sans-serif";
 export const routeFont = "20px serif";
 
 /*

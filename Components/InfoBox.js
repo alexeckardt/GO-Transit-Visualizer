@@ -113,7 +113,7 @@ export function InfoBox(infoCanvas) {
             ctx.fillText(line, b, b*2+titleHeight+lineHeight*i);
         }
 
-        titleHeight = 20 + this.smallDescLines.length*lineHeight;
+        titleHeight = 20 + this.smallDescLines.length*lineHeight+this.edgeBuffer/2;
         lineHeight = 25;
 
         ctx.fillStyle = busStopCol;

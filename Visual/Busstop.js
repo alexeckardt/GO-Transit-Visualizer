@@ -12,6 +12,8 @@ export function BusStopNode(stop_id, input_coordinate, name) {
     this.coord = input_coordinate;
     this.name = name;
 
+    this.isHubOf = undefined;
+
     this.drewAsHighlighted = false;
 
     this.draw_position = function() {
@@ -97,6 +99,11 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         var w = baseBusStopWidth*s*1.5;
         var pos = this.draw_position();
 
+        //Hubs Are Bigger
+        if (this.isHubOf != undefined) {
+            w *= 2;
+        }
+
         ctx.moveTo(pos.x + w, pos.y);
         ctx.arc(pos.x, pos.y, w, 0, 2 * Math.PI, false);
     }
@@ -114,6 +121,9 @@ export function BusStopNode(stop_id, input_coordinate, name) {
 
     this.selected_events = function() {
         let desc = "\n";
+        if (this.isHubOf != undefined) {
+            desc += "Main Stop of " + this.isHubOf;
+        }
         let descc = this.coordinate_string() + "\nID:" + this.stop_id;
 
         infoBox.set_text(this.name, descc, desc);
