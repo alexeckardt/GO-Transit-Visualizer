@@ -105,7 +105,7 @@ export function InfoBox(infoCanvas) {
         ctx.fillStyle = busStopCol;
         ctx.font = defFont;
         
-        let lineHeight = 25;
+        let lineHeight = 10;
         let titleHeight = 20;
 
         for (var i=0; i < this.smallDescLines.length; i++) {

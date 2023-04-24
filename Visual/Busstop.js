@@ -114,7 +114,7 @@ export function BusStopNode(stop_id, input_coordinate, name) {
 
     this.selected_events = function() {
         let desc = "\n";
-        let descc = this.coordinate_string();
+        let descc = this.coordinate_string() + "\nID:" + this.stop_id;
 
         infoBox.set_text(this.name, descc, desc);
         infoBox.update();
