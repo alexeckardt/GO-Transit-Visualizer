@@ -497,6 +497,17 @@ class Graph:
 def name_is_duplicate(stopNamesToId, stop_name):
     return stopNamesToId.get(stop_name, None) == None
 
+def manual_stop_override(stopName):
+
+    #Look up tabel
+    const = {
+        "Brampton Bus Terminal": "Brampton GO"
+    }
+
+    #Get update, if none, return self.
+    return const.get(stopName, stopName)
+
+
 #https://stackoverflow.com/questions/61488790/how-can-i-proportionally-mix-colors-in-python
 def combine_hex_values(d):
     d_items = sorted(d.items())
@@ -536,8 +547,6 @@ def generate_transit_graph(tripCountLimit = -1):
 
     with open('input_data_scripts/in_GTFS/stops.txt', 'r') as f:
 
-
-
         # Drop Heading Line
         line = f.readline();
         line = f.readline().strip();
@@ -553,6 +562,9 @@ def generate_transit_graph(tripCountLimit = -1):
             # Rename GO BUS, Keep them the same station
             if (" GO" in stop_name and " Bus" in stop_name):
                 stop_name = stop_name.replace(" Bus", "")
+
+            #Manual Renaming
+            stop_name = manual_stop_override(stop_name);
 
             #Check if same named stop
             if stopNamesToId.get(stop_name, None) == None:
@@ -669,7 +681,23 @@ def generate_transit_graph(tripCountLimit = -1):
 
     #Set City Stops, Force
     G.set_city_stop('Toronto', 'UN');
-    G.set_city_stop('Mississagua', '00133');
+    G.set_city_stop('Mississauga', '00133');
+    G.set_city_stop('Waterloo', '02153');
+    G.set_city_stop('Cambridge', '02150');
+    G.set_city_stop('Rockwood', '00861');
+    G.set_city_stop('Bowmanville', '00938');
+    G.set_city_stop('Peterborough', '02502');
+    G.set_city_stop('Uxbridge', '00302');
+    # G.set_city_stop('Barrie', 'AD'); BARRIE HAS ONE, it's just not in the circle
+    G.set_city_stop('Bolton', '02682');
+    G.set_city_stop('Orangeville', '02653');
+    G.set_city_stop('Brantford', '02617');
+    G.set_city_stop('St. Catharines', '02402');
+
+    #Add the VIA stops
+    G.set_city_stop('London', 'LN');
+    G.set_city_stop('St. Marys', 'SM');
+    G.set_city_stop('Stratford', 'SF');
 
     G.clean_routes()
 

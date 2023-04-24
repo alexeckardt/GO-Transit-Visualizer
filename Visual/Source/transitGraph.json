@@ -2653,7 +2653,7 @@
             "route_text_color": "FFFFFF",
             "route_type": "3",
             "travels_edges": {
-                "00221": {
+                "BR": {
                     "01426": 1
                 },
                 "01426": {
@@ -2789,7 +2789,7 @@
                     "02745": 1
                 },
                 "01321": {
-                    "00221": 1
+                    "BR": 1
                 }
             }
         },
@@ -2885,9 +2885,9 @@
                     "02746": 1
                 },
                 "01313": {
-                    "00221": 1
+                    "BR": 1
                 },
-                "00221": {
+                "BR": {
                     "01426": 1,
                     "01311": 1
                 },
@@ -3068,7 +3068,7 @@
                     "02745": 1
                 },
                 "01321": {
-                    "00221": 1
+                    "BR": 1
                 },
                 "01311": {
                     "02750": 1
@@ -3456,9 +3456,9 @@
                     "01462": 1
                 },
                 "01321": {
-                    "00221": 1
+                    "BR": 1
                 },
-                "00221": {
+                "BR": {
                     "01311": 1,
                     "01426": 1
                 },
@@ -3497,7 +3497,7 @@
                     "01374": 1
                 },
                 "01313": {
-                    "00221": 1
+                    "BR": 1
                 },
                 "01426": {
                     "02745": 1
@@ -5132,6 +5132,8 @@
             "OA": 720
         },
         "BR": {
+            "01311": 660,
+            "01426": 540,
             "BE": 420,
             "MO": 360
         },
@@ -6418,10 +6420,10 @@
             "00196": 120
         },
         "01321": {
-            "00221": 60
+            "BR": 60
         },
         "01313": {
-            "00221": 120
+            "BR": 120
         },
         "01311": {
             "02750": 60
@@ -7145,10 +7147,6 @@
             "01374": 180,
             "01308": 120,
             "00990": 120
-        },
-        "00221": {
-            "01311": 660,
-            "01426": 540
         },
         "00217": {
             "02712": 180,
@@ -8279,7 +8277,10 @@
             "wheelchair_boarding": "1",
             "stop_code": "",
             "routes_that_stop_here": [
-                "GT"
+                "GT",
+                "37",
+                "33",
+                "31"
             ]
         },
         "BO": {
@@ -17095,23 +17096,6 @@
                 "31"
             ]
         },
-        "00221": {
-            "stop_id": "00221",
-            "name": "Brampton Bus Terminal",
-            "lat": 43.6869087,
-            "lon": -79.7628632,
-            "zone_id": "33",
-            "stop_url": "https://www.gotransit.com/en/stations-stops-parking/find-a-station-or-stop/results?stationCode=00221",
-            "location_type": "0",
-            "parent_station": "",
-            "wheelchair_boarding": "1",
-            "stop_code": "100221",
-            "routes_that_stop_here": [
-                "37",
-                "33",
-                "31"
-            ]
-        },
         "00217": {
             "stop_id": "00217",
             "name": "Bovaird Dr. W. @ Chinguacousy Rd.",
@@ -17922,7 +17906,7 @@
         "Cambridge": {
             "population": 129920,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "02150",
             "lat": -80.3123023,
             "lon": 43.3600536
         },
@@ -17950,7 +17934,7 @@
         "Peterborough": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": null,
+            "my_hub_stop": "02502",
             "lat": -78.3199496,
             "lon": 44.3048009
         },
@@ -17964,14 +17948,14 @@
         "St. Catharines": {
             "population": 133113,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "02402",
             "lat": -79.2441003,
             "lon": 43.1579812
         },
         "Orangeville": {
             "population": 27975,
             "place": "town",
-            "my_hub_stop": null,
+            "my_hub_stop": "02653",
             "lat": -80.0973754,
             "lon": 43.9193171
         },
@@ -18286,7 +18270,7 @@
         "Mississauga": {
             "population": 721599,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "00133",
             "lat": -79.6443879,
             "lon": 43.5896231
         },
@@ -18300,7 +18284,7 @@
         "Brantford": {
             "population": 97496,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "02617",
             "lat": -80.2631733,
             "lon": 43.1408157
         },
@@ -18349,7 +18333,7 @@
         "Waterloo": {
             "population": 104986,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "02153",
             "lat": -80.5222961,
             "lon": 43.4652699
         },
@@ -18664,7 +18648,7 @@
         "St. Marys": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": null,
+            "my_hub_stop": "SM",
             "lat": -81.1421953,
             "lon": 43.2594556
         },
@@ -18727,7 +18711,7 @@
         "Uxbridge": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": null,
+            "my_hub_stop": "00302",
             "lat": -79.1226768,
             "lon": 44.1088502
         },
@@ -18832,7 +18816,7 @@
         "Rockwood": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": null,
+            "my_hub_stop": "00861",
             "lat": -80.1442087,
             "lon": 43.6189078
         },
@@ -18846,7 +18830,7 @@
         "Stratford": {
             "population": 31465,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "SF",
             "lat": -80.9818016,
             "lon": 43.3700899
         },
@@ -19203,7 +19187,7 @@
         "Bolton": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": null,
+            "my_hub_stop": "02682",
             "lat": -79.73826,
             "lon": 43.879548
         },
@@ -19840,7 +19824,7 @@
         "Bowmanville": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": null,
+            "my_hub_stop": "00938",
             "lat": -78.6891675,
             "lon": 43.9122995
         },
@@ -19931,7 +19915,7 @@
         "London": {
             "population": 422324,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "LN",
             "lat": -81.243372,
             "lon": 42.9832406
         }
