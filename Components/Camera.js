@@ -73,8 +73,6 @@ function Camera(position) {
         //Get Update
         let postCoords = this.mouse_world_position();
         let coordDiff = new Vector2(newMousePos.x-mousePos.x, newMousePos.y-mousePos.y);
-        
-        console.log(coordDiff);
 
         var p = this.position;
         var adding = coordDiff.scale(this.scale);

@@ -204,7 +204,6 @@ function bake_graph() {
 function get_travel_edges(adjList) {
     var list = [];
 
-    console.log(adjList);
 
     for (const [sourceid, value] of Object.entries(adjList)) {
         for (const [destid, _] of Object.entries(value)) {
@@ -242,7 +241,6 @@ export async function generateGraph() {
 
         //Add Nodes
         for (const [key, value] of Object.entries(obj.nodes)) {
-            //console.log(value)
 
             //Pass Data Into Struct
             G.stop_data[key] = value;
@@ -254,7 +252,6 @@ export async function generateGraph() {
         //Add Edges
         for (const [source, adj] of Object.entries(obj.edges)) {
 
-            //console.log(value)
             for (const [to, weight] of Object.entries(adj)) {
                 
                 //Generate Edge                
@@ -282,7 +279,6 @@ export async function generateGraph() {
             for (var i=0; i < routeData.travels_edges.length; i++) {
                 let edge = routeData.travels_edges[i];
                 edge.add_route_that_travels_me(key, routeData.route_color);
-                console.log(key);
             }
 
         }
@@ -296,8 +292,6 @@ export async function generateGraph() {
             var newCity = new City(cityData['name'], cityData['population'], parseFloat(pos[1]), parseFloat(pos[0]), cityData['place']);
             G.addCity(newCity);
         }
-
-        console.log(G.route_data)
         
     } else {
 

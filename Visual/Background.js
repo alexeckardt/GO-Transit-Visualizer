@@ -34,9 +34,7 @@ export function drawLakes(ctx) {
 
             //Plot First Point
             let point = real_coords_to_world_position(toVector2(lakeobj[0]))
-            //console.log(point)
             ctx.moveTo(point.x, point.y);
-            //console.log(point)
 
             //PLot Other Points
             while (j < lakeobj.length) {

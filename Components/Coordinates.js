@@ -18,13 +18,11 @@ export function real_coords_to_gui_position(coords) {
 
 export function gui_coords_to_real_coords(guiPosition) {
 
-    //console.log(guiPosition);
     let realScale = coordinateScale*cam.scale;
 
     let x = (guiPosition.x + cam.position.x) / (realScale*lakeXscale) + originX;
     let y = (guiPosition.y + cam.position.y) / (realScale*lakeYscale) + originY;
     let v = new Vector2(x, y);
-    //console.log(v);
 
     return v;
 }

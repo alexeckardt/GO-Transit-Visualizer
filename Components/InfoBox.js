@@ -150,7 +150,7 @@ export function InfoBox(infoCanvas) {
 
                 let route = routes[i];
                 let data = G.route_data[route];
-                console.log(data)
+
 
                 ctx.fillStyle = "#" + data.route_color;
                 ctx.beginPath();

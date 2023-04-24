@@ -27,7 +27,6 @@ function Mouse() {
 
         //More!!
         this.selectedRoutes = G.get_all_routes_from_stop(el);
-        console.log(this.selectedRoutes);
         infoBox.update();
     }
 
@@ -39,6 +38,10 @@ function Mouse() {
         }
         return false;
     }
+}
+
+function clampCamPosition() {
+    //if (cam.position.x <)
 }
 
 export let mouse = new Mouse();
@@ -97,6 +100,8 @@ export function setupMouse() {
                 //Update Position
                 cam.position = new Vector2(x, y);
 
+                clampCamPosition();
+
             } else {
 
                 let selectable = cam.selectable();
@@ -129,9 +134,6 @@ export function setupMouse() {
     //Mouse Events
     window.addEventListener('mousedown', (event) => {
         console.log("Mouse Down");
-        //console.log('MGUIP:' + cam.mouse_world_position())
-        console.log('CI' + cam.position)
-        console.log('CW:' + cam.get_world_position())
 
         if (!mouse.overInfoBox) {
             dragging = true;
@@ -167,7 +169,6 @@ export function setupMouse() {
                 var xx = mouse.gui_position.x - infoBox.edgeBuffer;
                 var BoxI = Math.floor(xx / (infoBox.routeBoxWidth + infoBox.routeBoxSep));
 
-                console.log(BoxI);
                 if (BoxI >= 0 && BoxI < mouse.selectedRoutes.length) {
                     //Update Routes
                     mouse.selectedRoutes = [mouse.selectedRoutes[BoxI]];

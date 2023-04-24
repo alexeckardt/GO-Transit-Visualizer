@@ -15,7 +15,6 @@ export function City(name, pop, lat, lon, type) {
     this.alwaysDrawName = pop >= 100000;
 
     this.radius = clampCityRadius(pop);
-    console.log(this.name + "," + this.radius)
 
     this.plot = function(ctx) {
         let r = this.radius * cam.scale;
