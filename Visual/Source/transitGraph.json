@@ -17915,7 +17915,7 @@
         "Hamilton": {
             "population": 536917,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "HA",
             "lat": -79.8728583,
             "lon": 43.2560802
         },
@@ -17964,7 +17964,7 @@
         "St. Catharines": {
             "population": 133113,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "02813",
             "lat": -79.2441003,
             "lon": 43.1579812
         },
@@ -18020,7 +18020,7 @@
         "Guelph": {
             "population": 131794,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "02518",
             "lat": -80.2493276,
             "lon": 43.5460516
         },
@@ -18482,7 +18482,7 @@
         "Oshawa": {
             "population": 159458,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "OS",
             "lat": -78.8635324,
             "lon": 43.8975558
         },
@@ -18671,7 +18671,7 @@
         "Erin": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": null,
+            "my_hub_stop": "ER",
             "lat": -80.070076,
             "lon": 43.77506
         },
@@ -18713,7 +18713,7 @@
         "Stouffville": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "ST",
+            "my_hub_stop": "00118",
             "lat": -79.2454446,
             "lon": 43.9717581
         },
@@ -18825,7 +18825,7 @@
         "Acton": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "AC",
+            "my_hub_stop": "00868",
             "lat": -80.0414703,
             "lon": 43.629696
         },
@@ -19210,7 +19210,7 @@
         "Newmarket": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "NE",
+            "my_hub_stop": "02637",
             "lat": -79.461708,
             "lon": 44.056258
         },
@@ -19238,7 +19238,7 @@
         "Markham": {
             "population": 328940,
             "place": "city",
-            "my_hub_stop": "MR",
+            "my_hub_stop": "00122",
             "lat": -79.3376825,
             "lon": 43.8563707
         },
@@ -19392,7 +19392,7 @@
         "King City": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "KC",
+            "my_hub_stop": "00027",
             "lat": -79.5252267,
             "lon": 43.929489
         },
@@ -19784,7 +19784,7 @@
         "Barrie": {
             "population": 197059,
             "place": "city",
-            "my_hub_stop": null,
+            "my_hub_stop": "BA",
             "lat": -79.6901736,
             "lon": 44.3893113
         },

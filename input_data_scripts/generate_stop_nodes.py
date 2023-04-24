@@ -197,11 +197,21 @@ class Graph:
     def set_city_data(self, key, value):
         self.city_data[key] = value
 
-    def set_city_stop(self, city, stopid):
-        data = self.city_data.get(city, None)
+    def set_city_stop(self, cityName, stopid):
+        data = self.city_data.get(cityName, None)
         if (data == None):
-            print(f'Attempted to set {city} hub stop, city DNE.')
-            return
+
+            #Check if Substring
+            for city in self.city_data:
+                if (city in cityName): #Hamilton's stop is Hamilton GO Center, we want to check
+                    data = self.city_data[city]
+                    break;
+
+            #Not Found
+            if (data == None):
+                print(f'Attempted to set {cityName} hub stop, city DNE.')
+                return
+        
         data['my_hub_stop'] = stopid;
 
     def add_node(self, node):
@@ -565,10 +575,10 @@ def generate_transit_graph(tripCountLimit = -1):
                     G.add_node(stopNode)
 
             #Store as City Name
-            if (" GO" == stop_name[-3:]):
-                cityName = stop_name.replace(" GO", "")
+            if (" GO" in stop_name):
+                cityStopName = stop_name.replace(" GO", "")
                 replaceName = stopNamesToId[stop_name];
-                G.set_city_stop(cityName, replaceName);
+                G.set_city_stop(cityStopName, replaceName);
 
             #Continue
             line = f.readline().strip();
