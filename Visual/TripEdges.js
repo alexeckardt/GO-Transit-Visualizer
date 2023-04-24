@@ -70,9 +70,10 @@ export function TripEdge(fromStop, toStop) {
             var ii = i - (s-1)/2;
             var route = selectedRoutesOfMine[i];
             var offset = realDiff.scale(ii*(lW));
-            let col = this.edge_colors[route];;
 
-            ctx.strokeStyle = '#' + col;
+            let col = "#" + this.edge_colors[route];
+
+            ctx.strokeStyle = col;
 
             ctx.beginPath();
             ctx.moveTo(pFrom.x + offset.x, pFrom.y + offset.y);
@@ -80,6 +81,8 @@ export function TripEdge(fromStop, toStop) {
             ctx.closePath();
             ctx.stroke();
         }
+
+        ctx.setLineDash([]);
         
     }
 

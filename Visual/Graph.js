@@ -3,7 +3,7 @@ import { Vector2 } from "../Components/helper.js";
 import { originX, originY, real_coords_to_world_position } from "../Components/Coordinates.js";
 import { TripEdge } from  "./TripEdges.js";
 import { mouse } from "../Components/Mouse.js";
-import { edgeColour, backgroundCol, busStopCol, gridLineCol, cityColour, defFont, cityNameCol } from "../Components/Style.js";
+import { edgeColour, backgroundCol, busStopCol, gridLineCol, cityColour, defFont, cityNameCol, } from "../Components/Style.js";
 import { cam } from "../Components/Camera.js";
 import { City } from "./City.js";
 
@@ -278,7 +278,8 @@ export async function generateGraph() {
             //Add Self to the edges
             for (var i=0; i < routeData.travels_edges.length; i++) {
                 let edge = routeData.travels_edges[i];
-                edge.add_route_that_travels_me(key, routeData.route_color);
+
+                edge.add_route_that_travels_me(key, routeData.route_color, routeData.route_type);
             }
 
         }

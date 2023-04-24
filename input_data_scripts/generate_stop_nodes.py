@@ -475,7 +475,17 @@ class Graph:
 
 def name_is_duplicate(stopNamesToId, stop_name):
     return stopNamesToId.get(stop_name, None) == None
-    
+
+#https://stackoverflow.com/questions/61488790/how-can-i-proportionally-mix-colors-in-python
+def combine_hex_values(d):
+    d_items = sorted(d.items())
+    tot_weight = sum(d.values())
+    red = int(sum([int(k[:2], 16)*v for k, v in d_items])/tot_weight)
+    green = int(sum([int(k[2:4], 16)*v for k, v in d_items])/tot_weight)
+    blue = int(sum([int(k[4:6], 16)*v for k, v in d_items])/tot_weight)
+    zpad = lambda x: x if len(x)==2 else '0' + x
+    return zpad(hex(red)[2:]) + zpad(hex(green)[2:]) + zpad(hex(blue)[2:])
+
 def generate_transit_graph(tripCountLimit = -1):
         
     with open('input_data_scripts/in_GTFS/stops.txt', 'r') as f:
@@ -535,7 +545,12 @@ def generate_transit_graph(tripCountLimit = -1):
         while line != '':
 
             route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color = line.split(',')
-            route = Route(route_id,agency_id,route_short_name,route_long_name,route_type,COT[route_color],route_text_color);
+            col = COT[route_color];
+
+            if (route_type == '2'): #Train
+                col = combine_hex_values({col: 1.0, "ffffff": 0.2})
+
+            route = Route(route_id,agency_id,route_short_name,route_long_name,route_type,col,route_text_color);
             G.add_route(route)
 
             #Continue

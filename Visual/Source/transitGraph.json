@@ -2,7 +2,7 @@
     "routes": {
         "ST": {
             "agency_id": "GO",
-            "route_color": "754b2f",
+            "route_color": "8c6951",
             "route_short_name": "ST",
             "route_long_name": "Stouffville",
             "route_text_color": "FFFFFF",
@@ -50,7 +50,7 @@
         },
         "RH": {
             "agency_id": "GO",
-            "route_color": "178c92",
+            "route_color": "3d9fa4",
             "route_short_name": "RH",
             "route_long_name": "Richmond Hill",
             "route_text_color": "FFFFFF",
@@ -86,7 +86,7 @@
         },
         "MI": {
             "agency_id": "GO",
-            "route_color": "b78337",
+            "route_color": "c39758",
             "route_short_name": "MI",
             "route_long_name": "Milton",
             "route_text_color": "FFFFFF",
@@ -130,7 +130,7 @@
         },
         "LW": {
             "agency_id": "GO",
-            "route_color": "a01740",
+            "route_color": "af3d5f",
             "route_short_name": "LW",
             "route_long_name": "Lakeshore West",
             "route_text_color": "FFFFFF",
@@ -204,7 +204,7 @@
         },
         "LE": {
             "agency_id": "GO",
-            "route_color": "b92525",
+            "route_color": "c44949",
             "route_short_name": "LE",
             "route_long_name": "Lakeshore East",
             "route_text_color": "FFFFFF",
@@ -252,7 +252,7 @@
         },
         "GT": {
             "agency_id": "GO",
-            "route_color": "00853e",
+            "route_color": "2a995e",
             "route_short_name": "KI",
             "route_long_name": "Kitchener",
             "route_text_color": "FFFFFF",
@@ -326,7 +326,7 @@
         },
         "BR": {
             "agency_id": "GO",
-            "route_color": "0c4a80",
+            "route_color": "346895",
             "route_short_name": "BR",
             "route_long_name": "Barrie",
             "route_text_color": "FFFFFF",
