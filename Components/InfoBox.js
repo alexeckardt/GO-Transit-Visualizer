@@ -17,6 +17,8 @@ export function InfoBox(infoCanvas) {
     this.routeBoxWidth = 40;
     this.routeBoxHeight = -1;
 
+    this.routeBoxXOffset = 0;
+
     this.canvas = infoCanvas;
     this.ctx = function() {
         return this.canvas.getContext('2d')}
@@ -72,10 +74,12 @@ export function InfoBox(infoCanvas) {
         this.descLines = "";
         this.routesToDraw = [];
         this.draw_box = false;
+        this.routeBoxXOffset = 0;
     }
 
     this.show = function() {
         this.draw_box = true;
+        this.routeBoxXOffset = 0;
     }
 
     this.update = function() {
@@ -146,11 +150,10 @@ export function InfoBox(infoCanvas) {
             //Draw the selected routes
             for (var i = 0; i < routes.length; i++) {
 
-                let boxX = this.edgeBuffer + (boxW+this.routeBoxSep)*i
+                var boxX = this.edgeBuffer + (boxW+this.routeBoxSep)*i - this.routeBoxXOffset;
 
                 let route = routes[i];
                 let data = G.route_data[route];
-
 
                 ctx.fillStyle = "#" + data.route_color;
                 ctx.beginPath();
@@ -165,7 +168,6 @@ export function InfoBox(infoCanvas) {
                 ctx.fillText(data.route_short_name, boxX + boxW / 2, boxY + boxH/2 + 2);
             }
 
-        
         } else {
 
         }
