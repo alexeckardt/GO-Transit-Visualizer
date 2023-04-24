@@ -3,6 +3,7 @@ import { cam } from "./Camera.js";
 import { gui_coords_to_world_coords } from "./Coordinates.js";
 import { G } from "../Visual/Graph.js";
 import { infoBox } from "../index.js";
+import { routeDescInfoBoxColour } from "./Style.js";
 
 function Mouse() {
     this.gui_position = new Vector2(0, 0);
@@ -20,9 +21,11 @@ function Mouse() {
         this.selectedRoutes = [];
     }
 
+    //Busstop
     this.select_element = function(el) {
         this.elementSelected = el;
 
+        infoBox.setBusstopScheme();
         el.selected_events();
 
         //More!!
@@ -167,7 +170,13 @@ export function setupMouse() {
 
                 if (BoxI >= 0 && BoxI < mouse.selectedRoutes.length) {
                     //Update Routes
-                    mouse.selectedRoutes = [mouse.selectedRoutes[BoxI]];
+                    let route = mouse.selectedRoutes[BoxI]
+                    mouse.selectedRoutes = [route];
+
+                    //
+                    highlightRoute(route);
+
+                    //
                     infoBox.update();
                 }
             }
@@ -209,13 +218,30 @@ export function setupMouse() {
                 let secW = (infoBox.routeBoxWidth + infoBox.routeBoxSep);
                 let maxBoxesOnScreen = (infoBox.width - infoBox.edgeBuffer*2) / secW;
                 let maxXoffset = secW*Math.max(count-maxBoxesOnScreen, 0);
+
+                //Change
                 infoBox.routeBoxXOffset = Math.max(0, Math.min(infoBox.routeBoxXOffset + yy*scrollSpeed, maxXoffset))
 
-                console.log(maxXoffset, infoBox.routeBoxXOffset);
+                //Force Update
                 infoBox.update();
             }
 
         }
     });
+}
 
+function highlightRoute(route) {
+
+    let routeInfo = G.route_data[route];
+    console.log(routeInfo);
+
+    //Set Scheme
+    infoBox.setCustomScheme("#" + routeInfo['route_color'], routeDescInfoBoxColour);
+
+    let title = routeInfo['route_short_name'] + ": " + routeInfo['route_long_name'];
+    let desc = routeInfo['route_type'] == 2 ? "Train Route" : "Bus Route";
+    desc += "\nStops at " + routeInfo['stops_at'].length + " stops"
+    desc += "\nStops at " + routeInfo['stops_at'].length + " stops"
+
+    infoBox.set_text(title, "", desc);
 }

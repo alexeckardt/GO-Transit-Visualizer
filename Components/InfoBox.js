@@ -23,6 +23,9 @@ export function InfoBox(infoCanvas) {
     this.ctx = function() {
         return this.canvas.getContext('2d')}
 
+    this.titleCol = 'black';
+    this.descCol = 'black';
+
     this.set_dimentions = function(width, height, routeSelectorHeight, edgeBuffer) {
         this.width = width;
         this.height = height;
@@ -37,6 +40,9 @@ export function InfoBox(infoCanvas) {
     this.set_text = function(title, smalldesc, desc) {
         this.title = title;
         this.smallDescLines = smalldesc.split("\n");
+        if (this.smallDescLines.length == 1 && this.smallDescLines[0] == ""){
+            this.smallDescLines = [];
+        }
         this.descLines = [];
 
         let split = desc.split("\n");
@@ -75,11 +81,22 @@ export function InfoBox(infoCanvas) {
         this.routesToDraw = [];
         this.draw_box = false;
         this.routeBoxXOffset = 0;
+
+        this.setBusstopScheme();
     }
 
     this.show = function() {
         this.draw_box = true;
         this.routeBoxXOffset = 0;
+    }
+
+    this.setBusstopScheme = function() {
+        this.setCustomScheme(selectedBusStopCol, busStopCol);
+    }
+
+    this.setCustomScheme = function(titleCol, descCol) {
+        this.titleCol = titleCol;
+        this.descCol = descCol;
     }
 
     this.update = function() {
@@ -100,13 +117,13 @@ export function InfoBox(infoCanvas) {
         ctx.fillRect(0, 0, this.width, this.height+5);
         ctx.strokeRect(0, 0, this.width, this.height+5);
 
-        ctx.fillStyle = selectedBusStopCol;
+        ctx.fillStyle = this.titleCol;
         ctx.textAlign = 'left';
         ctx.textBaseline = 'top';
         ctx.font = titleFont;
         ctx.fillText(this.title, b, b);
 
-        ctx.fillStyle = busStopCol;
+        ctx.fillStyle = this.descCol;
         ctx.font = defFont;
         
         let lineHeight = 10;
@@ -117,10 +134,11 @@ export function InfoBox(infoCanvas) {
             ctx.fillText(line, b, b*2+titleHeight+lineHeight*i);
         }
 
-        titleHeight = 20 + this.smallDescLines.length*lineHeight+this.edgeBuffer/2;
+        let base = (this.smallDescLines.length != 0) ? 20 : 13;
+        titleHeight = base + this.smallDescLines.length*lineHeight+this.edgeBuffer/2;
         lineHeight = 25;
 
-        ctx.fillStyle = busStopCol;
+        ctx.fillStyle = this.descCol;
         ctx.font = descFont;
 
         for (var i=0; i < this.descLines.length; i++) {
