@@ -185,6 +185,7 @@ class Graph:
         self.routes = {}
         self.nodes = {}
         self.duplicate_stops = {}
+        self.city_data = {}
 
     #
     #
@@ -193,6 +194,16 @@ class Graph:
     #
 
     #
+    def set_city_data(self, key, value):
+        self.city_data[key] = value
+
+    def set_city_stop(self, city, stopid):
+        data = self.city_data.get(city, None)
+        if (data == None):
+            print(f'Attempted to set {city} hub stop, city DNE.')
+            return
+        data['my_hub_stop'] = stopid;
+
     def add_node(self, node):
 
         #Make Sure Not Overriding
@@ -488,9 +499,34 @@ def combine_hex_values(d):
 
 def generate_transit_graph(tripCountLimit = -1):
         
+    G = Graph()
+
+    #Generate Cities
+    cityOrgData = []
+    with open('input_data_scripts/cities.json', 'r') as f:
+        cityOrgData = json.load(f);
+    
+        for city in cityOrgData:
+
+            name = city['name']
+            pos = city['coords']
+
+            del city['name']
+            del city['coords']
+
+            city['designated_hub_stop'] = None;
+            city['lat'] = pos[0]
+            city['lon'] = pos[1]
+
+            G.set_city_data(name, city)
+
+    #
+    #
+    #
+
     with open('input_data_scripts/in_GTFS/stops.txt', 'r') as f:
 
-        G = Graph()
+
 
         # Drop Heading Line
         line = f.readline();
@@ -528,6 +564,11 @@ def generate_transit_graph(tripCountLimit = -1):
                     #Too Far, Keep Seperate
                     G.add_node(stopNode)
 
+            #Store as City Name
+            if (" GO" == stop_name[-3:]):
+                cityName = stop_name.replace(" GO", "")
+                G.set_city_stop(cityName, stop_id);
+
             #Continue
             line = f.readline().strip();
 
@@ -535,6 +576,7 @@ def generate_transit_graph(tripCountLimit = -1):
     COT = {}
     with open('input_data_scripts/color_switch.json', 'r') as f:
         COT = json.load(f);
+
     #
     #Generate Routes
     with open('input_data_scripts/in_GTFS/routes.txt', 'r') as f:
@@ -613,6 +655,10 @@ def generate_transit_graph(tripCountLimit = -1):
     # Add Constant Walking Edges
     #
     G.add_walking_edge("UN", "02300", 600) #10 minute walk
+
+    #Set City Stops, Force
+    G.set_city_stop('Toronto', 'UN');
+
 
     G.clean_routes()
 

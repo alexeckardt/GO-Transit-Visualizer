@@ -67,6 +67,7 @@ def export_g(G):
     graphDict["routes"] = export_routes(G)
     graphDict["edges"] = export_edges(G)
     graphDict["nodes"] = export_nodes(G)
+    graphDict["cities"] = G.city_data;
 
     strr = json.dumps(graphDict, indent=4)
     with open('./Visual/Source/transitGraph.json', 'w') as f:

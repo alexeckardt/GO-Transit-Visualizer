@@ -17912,5 +17912,2063 @@
                 "19"
             ]
         }
+    },
+    "cities": {
+        "Toronto": {
+            "population": 2731571,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.3839347,
+            "lon": 43.6534817,
+            "my_hub_stop": "UN"
+        },
+        "Ottawa": {
+            "population": 934243,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -75.6901106,
+            "lon": 45.4208777
+        },
+        "Hamilton": {
+            "population": 536917,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.8728583,
+            "lon": 43.2560802
+        },
+        "Cambridge": {
+            "population": 129920,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -80.3123023,
+            "lon": 43.3600536
+        },
+        "Thunder Bay": {
+            "population": 108359,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -89.259796,
+            "lon": 48.406414
+        },
+        "Belleville": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.3852556,
+            "lon": 44.1633264
+        },
+        "Sarnia": {
+            "population": 72366,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -82.4065585,
+            "lon": 42.9746137
+        },
+        "Peterborough": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.3199496,
+            "lon": 44.3048009
+        },
+        "Niagara Falls": {
+            "population": 82184,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.0639039,
+            "lon": 43.1065603,
+            "my_hub_stop": "NI"
+        },
+        "St. Catharines": {
+            "population": 133113,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.2441003,
+            "lon": 43.1579812
+        },
+        "Orangeville": {
+            "population": 27975,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.0973754,
+            "lon": 43.9193171
+        },
+        "Tottenham": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.8056098,
+            "lon": 44.0225014
+        },
+        "Alliston": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.8692321,
+            "lon": 44.1539369
+        },
+        "Napanee": {
+            "population": 15892,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -76.9505543,
+            "lon": 44.2473883
+        },
+        "Harriston": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.8690127,
+            "lon": 43.9118312
+        },
+        "Brockville": {
+            "population": 21870,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -75.6843332,
+            "lon": 44.5895925
+        },
+        "Prescott": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.5128981,
+            "lon": 44.710417
+        },
+        "Guelph": {
+            "population": 131794,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -80.2493276,
+            "lon": 43.5460516
+        },
+        "Morrisburg": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.1829545,
+            "lon": 44.8977043
+        },
+        "Orillia": {
+            "population": 30546,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.4175587,
+            "lon": 44.6092059
+        },
+        "Parry Sound": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.0337392,
+            "lon": 45.3436067
+        },
+        "Blind River": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.95639,
+            "lon": 46.188388
+        },
+        "Iron Bridge": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -83.2202252,
+            "lon": 46.2789817
+        },
+        "Huron Shores": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -83.3830444,
+            "lon": 46.2998537
+        },
+        "Thessalon": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -83.5483478,
+            "lon": 46.2638311
+        },
+        "Wiarton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.1408154,
+            "lon": 44.7438271
+        },
+        "Owen Sound": {
+            "population": 21688,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -80.9430094,
+            "lon": 44.5678105
+        },
+        "Meaford": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.5916531,
+            "lon": 44.6069298
+        },
+        "Thornbury": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.4528539,
+            "lon": 44.5618428
+        },
+        "Stayner": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.0904451,
+            "lon": 44.4194642
+        },
+        "Wawa": {
+            "population": 2610,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -84.7740199,
+            "lon": 47.9929283
+        },
+        "White River": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -85.2844723,
+            "lon": 48.5932963
+        },
+        "Marathon": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -86.371598,
+            "lon": 48.7209349
+        },
+        "Hanover": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.0279572,
+            "lon": 44.1520712
+        },
+        "Mount Forest": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.7338237,
+            "lon": 43.9806979
+        },
+        "Pembroke": {
+            "population": 16146,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -77.113541,
+            "lon": 45.8260909
+        },
+        "Fort Severn": {
+            "population": 550,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -87.626953,
+            "lon": 55.995309
+        },
+        "Kapuskasing": {
+            "population": 8200,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.433333,
+            "lon": 49.416667
+        },
+        "Pikangikum": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -93.9925233,
+            "lon": 51.8078647
+        },
+        "Ignace": {
+            "population": 1202,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -91.654816,
+            "lon": 49.41276
+        },
+        "Moosonee": {
+            "population": 1725,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.650635,
+            "lon": 51.267071
+        },
+        "Hornepayne": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -84.7752864,
+            "lon": 49.2181387
+        },
+        "Nipigon": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -88.2610663,
+            "lon": 49.0155918
+        },
+        "Dryden": {
+            "population": 7617,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -92.835846,
+            "lon": 49.785698
+        },
+        "Cochrane": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.017303,
+            "lon": 49.066668
+        },
+        "Red Lake": {
+            "population": 1274,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -93.827362,
+            "lon": 51.018938
+        },
+        "Moose Factory": {
+            "population": 2458,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.6032819,
+            "lon": 51.2602173
+        },
+        "Big Trout Lake": {
+            "population": 904,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -89.8905535,
+            "lon": 53.8231082
+        },
+        "Armstrong": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -89.0373698,
+            "lon": 50.302131
+        },
+        "Cayuga": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.8585358,
+            "lon": 42.9497266
+        },
+        "Caledonia": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.9519084,
+            "lon": 43.0737943
+        },
+        "Hagersville": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.0517133,
+            "lon": 42.961976
+        },
+        "Shelburne": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.203431,
+            "lon": 44.078473
+        },
+        "Burlington": {
+            "population": 160000,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.7966835,
+            "lon": 43.3248924,
+            "my_hub_stop": "00177"
+        },
+        "Brampton": {
+            "population": 593638,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.7599337,
+            "lon": 43.6858146,
+            "my_hub_stop": "BR"
+        },
+        "Mississauga": {
+            "population": 721599,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.6443879,
+            "lon": 43.5896231
+        },
+        "Bobcaygeon": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.5444995,
+            "lon": 44.5372969
+        },
+        "Brantford": {
+            "population": 97496,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -80.2631733,
+            "lon": 43.1408157
+        },
+        "Fergus": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.3779366,
+            "lon": 43.7059439
+        },
+        "Woodstock": {
+            "population": 40404,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -80.7562977,
+            "lon": 43.1301111
+        },
+        "Ingersoll": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.88211,
+            "lon": 43.037725
+        },
+        "Chesley": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.0952892,
+            "lon": 44.29874
+        },
+        "Southampton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.3715844,
+            "lon": 44.4957386
+        },
+        "Paisley": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.2726203,
+            "lon": 44.3060195
+        },
+        "Waterloo": {
+            "population": 104986,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -80.5222961,
+            "lon": 43.4652699
+        },
+        "Lakefield": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.2721953,
+            "lon": 44.4233365
+        },
+        "Windsor": {
+            "population": 217188,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -83.0373389,
+            "lon": 42.3167397
+        },
+        "LaSalle": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -83.0606534,
+            "lon": 42.2450635
+        },
+        "Tecumseh": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.8861974,
+            "lon": 42.3117951
+        },
+        "Chatham": {
+            "population": 103671,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -82.1853837,
+            "lon": 42.4057219
+        },
+        "Glencoe": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.711159,
+            "lon": 42.7481918
+        },
+        "Bradford": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.5647069,
+            "lon": 44.1143279,
+            "my_hub_stop": "02160"
+        },
+        "Paris": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.384281,
+            "lon": 43.193234
+        },
+        "Kitchener": {
+            "population": 233222,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -80.4927815,
+            "lon": 43.451291,
+            "my_hub_stop": "02186"
+        },
+        "Leamington": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.5996998,
+            "lon": 42.0531166
+        },
+        "Essex": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.8215468,
+            "lon": 42.1744783
+        },
+        "Minden": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.72493,
+            "lon": 44.9254436
+        },
+        "Penetanguishene": {
+            "population": 8962,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.9339487,
+            "lon": 44.7688035
+        },
+        "Midland": {
+            "population": 16864,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.885712,
+            "lon": 44.750147
+        },
+        "Elmvale": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.8661611,
+            "lon": 44.5837294
+        },
+        "Wasaga Beach": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.0203156,
+            "lon": 44.5224813
+        },
+        "Milton": {
+            "population": 110128,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.882817,
+            "lon": 43.513671,
+            "my_hub_stop": "00194"
+        },
+        "Picton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.1411741,
+            "lon": 44.0077067
+        },
+        "Oshawa": {
+            "population": 159458,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -78.8635324,
+            "lon": 43.8975558
+        },
+        "Harrow": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.9183594,
+            "lon": 42.035586
+        },
+        "Kingsville": {
+            "population": 21552,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.7396606,
+            "lon": 42.0378963
+        },
+        "Tilbury": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.4322682,
+            "lon": 42.2593155
+        },
+        "Embrun": {
+            "population": 8669,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.2749125,
+            "lon": 45.2742012
+        },
+        "Casselman": {
+            "population": 3642,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.086746,
+            "lon": 45.313529
+        },
+        "Cornwall": {
+            "population": 46867,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -74.728703,
+            "lon": 45.0184417
+        },
+        "Haliburton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.5087406,
+            "lon": 45.0464422
+        },
+        "Arthur": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.5355526,
+            "lon": 43.8309446
+        },
+        "Smiths Falls": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -76.0212062,
+            "lon": 44.9013316
+        },
+        "Port Stanley": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.2121712,
+            "lon": 42.6660437
+        },
+        "Aylmer": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.983658,
+            "lon": 42.773227
+        },
+        "Dorchester": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.0586953,
+            "lon": 42.9886863
+        },
+        "Delhi": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.4983709,
+            "lon": 42.8544957
+        },
+        "Simcoe": {
+            "population": 14777,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.3039146,
+            "lon": 42.8372434
+        },
+        "Norwich": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.59756,
+            "lon": 42.987699
+        },
+        "Ridgetown": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.8821334,
+            "lon": 42.4394208
+        },
+        "Seaforth": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.3934183,
+            "lon": 43.5534328
+        },
+        "Strathroy": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.6220202,
+            "lon": 42.9561795
+        },
+        "Port Dover": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.2005169,
+            "lon": 42.7845713
+        },
+        "Waterford": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.290768,
+            "lon": 42.9345071
+        },
+        "Dresden": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.1795314,
+            "lon": 42.5909853
+        },
+        "Wallaceburg": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.3873866,
+            "lon": 42.5928652
+        },
+        "Palmerston": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.8495763,
+            "lon": 43.8341108
+        },
+        "Durham": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.8182299,
+            "lon": 44.1762639
+        },
+        "Sauble Beach": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.2648606,
+            "lon": 44.6298478
+        },
+        "St. Marys": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.1421953,
+            "lon": 43.2594556
+        },
+        "Erin": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.070076,
+            "lon": 43.77506
+        },
+        "Smithville": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.5463593,
+            "lon": 43.09879
+        },
+        "Little Current": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.9267993,
+            "lon": 45.9800486
+        },
+        "Bruce Mines": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -83.792725,
+            "lon": 46.302355
+        },
+        "Almonte": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -76.1945277,
+            "lon": 45.226049
+        },
+        "Port Perry": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.9425076,
+            "lon": 44.1054151
+        },
+        "Stouffville": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.2454446,
+            "lon": 43.9717581,
+            "my_hub_stop": "ST"
+        },
+        "Vaughan": {
+            "population": 306233,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.5268023,
+            "lon": 43.7941544
+        },
+        "Uxbridge": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.1226768,
+            "lon": 44.1088502
+        },
+        "Val Caron": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.0073925,
+            "lon": 46.6103312
+        },
+        "Val Therese": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.0046165,
+            "lon": 46.6526765
+        },
+        "Hanmer": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.9447962,
+            "lon": 46.6530558
+        },
+        "Capreol": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.922546,
+            "lon": 46.705969
+        },
+        "Azilda": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.1148103,
+            "lon": 46.5521017
+        },
+        "Chelmsford": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.1978944,
+            "lon": 46.5691573
+        },
+        "Dowling": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.3317946,
+            "lon": 46.5862126
+        },
+        "Levack": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.3902774,
+            "lon": 46.6394749
+        },
+        "Onaping": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.4155975,
+            "lon": 46.6234435
+        },
+        "Skead": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.7497967,
+            "lon": 46.6667476
+        },
+        "Welland": {
+            "population": 52293,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.2484192,
+            "lon": 42.9922181
+        },
+        "Ajax": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.0208814,
+            "lon": 43.8505287,
+            "my_hub_stop": "00161"
+        },
+        "Cobourg": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.1677784,
+            "lon": 43.9595998
+        },
+        "Acton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.0414703,
+            "lon": 43.629696,
+            "my_hub_stop": "AC"
+        },
+        "Rockwood": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.1442087,
+            "lon": 43.6189078
+        },
+        "New Hamburg": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.7097716,
+            "lon": 43.3784216
+        },
+        "Stratford": {
+            "population": 31465,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -80.9818016,
+            "lon": 43.3700899
+        },
+        "Tavistock": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.8363123,
+            "lon": 43.32104
+        },
+        "Courtice": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.7780561,
+            "lon": 43.9118139
+        },
+        "Exeter": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.4801081,
+            "lon": 43.3449871
+        },
+        "Deep River": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.487602,
+            "lon": 46.101328
+        },
+        "Listowel": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.952882,
+            "lon": 43.731593
+        },
+        "Clinton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.539576,
+            "lon": 43.617187
+        },
+        "Gananoque": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -76.1626654,
+            "lon": 44.3296206
+        },
+        "Aurora": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.467545,
+            "lon": 43.99973,
+            "my_hub_stop": "00081"
+        },
+        "Pickering": {
+            "population": 91771,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.090576,
+            "lon": 43.835765,
+            "my_hub_stop": "00147"
+        },
+        "Oakville": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.666672,
+            "lon": 43.447436,
+            "my_hub_stop": "00137"
+        },
+        "Petawawa": {
+            "population": 17500,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.2826645,
+            "lon": 45.8984286
+        },
+        "Barry's Bay": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.679176,
+            "lon": 45.488298
+        },
+        "Bracebridge": {
+            "population": 15414,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.310989,
+            "lon": 45.041508
+        },
+        "Elmira": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.557654,
+            "lon": 43.6
+        },
+        "Fort Frances": {
+            "population": 7952,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -93.3967615,
+            "lon": 48.6114425
+        },
+        "Newcastle": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.5888307,
+            "lon": 43.9174838
+        },
+        "Whitby": {
+            "population": 128377,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -78.9421751,
+            "lon": 43.87982,
+            "my_hub_stop": "00031"
+        },
+        "Timmins": {
+            "population": 41788,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -81.330414,
+            "lon": 48.477473
+        },
+        "Foleyet": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.4420815,
+            "lon": 48.244486
+        },
+        "Atikokan": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -91.624603,
+            "lon": 48.762526
+        },
+        "Kemptville": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.644567,
+            "lon": 45.0154164
+        },
+        "Winchester": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.35299,
+            "lon": 45.0928774
+        },
+        "Metcalfe": {
+            "population": 1763,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.472641,
+            "lon": 45.236218
+        },
+        "Alexandria": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -74.6367573,
+            "lon": 45.3112037
+        },
+        "Port Hope": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.2939704,
+            "lon": 43.9515755
+        },
+        "Grimsby": {
+            "population": 28883,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.5606834,
+            "lon": 43.1931881
+        },
+        "Brighton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.7370071,
+            "lon": 44.0422275
+        },
+        "Emo": {
+            "population": 1252,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -93.8339174,
+            "lon": 48.6319778
+        },
+        "Sioux Narrows": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -94.0957123,
+            "lon": 49.4082025
+        },
+        "Amherstburg": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -83.1086458,
+            "lon": 42.1013315
+        },
+        "Goderich": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.7110949,
+            "lon": 43.7430924
+        },
+        "Corunna": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.4533014,
+            "lon": 42.8885911
+        },
+        "Fonthill": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.2859628,
+            "lon": 43.0307817
+        },
+        "New Liskeard": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.6789029,
+            "lon": 47.508731
+        },
+        "Haileybury": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.6360804,
+            "lon": 47.4441901
+        },
+        "Ingleside": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -74.9867427,
+            "lon": 44.9954941
+        },
+        "Fenelon Falls": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.7363805,
+            "lon": 44.5370301
+        },
+        "Kenora": {
+            "population": 15348,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -94.4893528,
+            "lon": 49.766215
+        },
+        "Pickle Lake": {
+            "population": 500,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -90.1925284,
+            "lon": 51.4648142
+        },
+        "Geraldton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -86.9493168,
+            "lon": 49.7188752
+        },
+        "Iroquois Falls": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.6770998,
+            "lon": 48.7672213
+        },
+        "Longlac": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -86.5393957,
+            "lon": 49.7781907
+        },
+        "St. Thomas": {
+            "population": 41813,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -81.1929882,
+            "lon": 42.779022
+        },
+        "Beamsville": {
+            "population": 13323,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.4751839,
+            "lon": 43.1654577
+        },
+        "Kincardine": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.6348713,
+            "lon": 44.1776378
+        },
+        "Port Elgin": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.3889458,
+            "lon": 44.4358826
+        },
+        "Gravenhurst": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.373131,
+            "lon": 44.91741
+        },
+        "Georgetown": {
+            "population": 40150,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.9036058,
+            "lon": 43.6502652,
+            "my_hub_stop": "02413"
+        },
+        "Bancroft": {
+            "population": 3880,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.8537127,
+            "lon": 45.0570769
+        },
+        "Walkerton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.1485894,
+            "lon": 44.1331908
+        },
+        "Bolton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.73826,
+            "lon": 43.879548
+        },
+        "Newmarket": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.461708,
+            "lon": 44.056258,
+            "my_hub_stop": "NE"
+        },
+        "Mattawa": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.703308,
+            "lon": 46.317296
+        },
+        "Carleton Place": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -76.1465672,
+            "lon": 45.1403366
+        },
+        "Port Colborne": {
+            "population": 18424,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.2513905,
+            "lon": 42.8862392
+        },
+        "Markham": {
+            "population": 328940,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.3376825,
+            "lon": 43.8563707,
+            "my_hub_stop": "MR"
+        },
+        "Hawkesbury": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -74.6055611,
+            "lon": 45.610281
+        },
+        "Sudbury": {
+            "population": 161531,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -80.991211,
+            "lon": 46.49272
+        },
+        "Mitchell": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.197899,
+            "lon": 43.467942
+        },
+        "Fort Erie": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.918611,
+            "lon": 42.91308
+        },
+        "Niagara-on-the-Lake": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.0723264,
+            "lon": 43.2556116
+        },
+        "Blenheim": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.9974055,
+            "lon": 42.3354182
+        },
+        "Dunnville": {
+            "population": 12000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.6188457,
+            "lon": 42.9059168
+        },
+        "Sturgeon Falls": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.9321566,
+            "lon": 46.3653409
+        },
+        "Tweed": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.3119649,
+            "lon": 44.4764863
+        },
+        "Thorold": {
+            "population": 18801,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.2005935,
+            "lon": 43.1249127
+        },
+        "Cobalt": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.6856668,
+            "lon": 47.3962288
+        },
+        "North Cobalt": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.6441577,
+            "lon": 47.4252021
+        },
+        "Temiskaming Shores": {
+            "population": 10400,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.675598,
+            "lon": 47.512563
+        },
+        "Terrace Bay": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -87.102356,
+            "lon": 48.782437
+        },
+        "Schreiber": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -87.2627416,
+            "lon": 48.8114595
+        },
+        "Hearst": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -83.666382,
+            "lon": 49.690732
+        },
+        "Renfrew": {
+            "population": 8218,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -76.6838617,
+            "lon": 45.4720417
+        },
+        "Sutton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.365311,
+            "lon": 44.310301
+        },
+        "Tillsonburg": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.7265015,
+            "lon": 42.859494
+        },
+        "Merrickville": {
+            "population": 2800,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.8369285,
+            "lon": 44.9161119
+        },
+        "Petrolia": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.149582,
+            "lon": 42.882002
+        },
+        "King City": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.5252267,
+            "lon": 43.929489,
+            "my_hub_stop": "KC"
+        },
+        "Deseronto": {
+            "population": 1835,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.049866,
+            "lon": 44.195005
+        },
+        "Espanola": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.769867,
+            "lon": 46.265341
+        },
+        "Englehart": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.8733624,
+            "lon": 47.8255744
+        },
+        "Chapleau": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -83.4018741,
+            "lon": 47.845632
+        },
+        "Coniston": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.8496581,
+            "lon": 46.4867024
+        },
+        "Warren": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.3103205,
+            "lon": 46.4429891
+        },
+        "Verner": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.123348,
+            "lon": 46.4112427
+        },
+        "Lavigne": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.1701683,
+            "lon": 46.3265105
+        },
+        "Red Rock": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -88.2592117,
+            "lon": 48.9425393
+        },
+        "Falconbridge": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.8102233,
+            "lon": 46.5765483
+        },
+        "Cartier": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.5536245,
+            "lon": 46.7051435
+        },
+        "Ear Falls": {
+            "population": 1026,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -93.236847,
+            "lon": 50.640752
+        },
+        "Spanish": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.347307,
+            "lon": 46.193239
+        },
+        "Massey": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.0771831,
+            "lon": 46.2126468
+        },
+        "Elliot Lake": {
+            "population": 11348,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -82.652893,
+            "lon": 46.373464
+        },
+        "Sault Ste. Marie": {
+            "population": 75141,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -84.320068,
+            "lon": 46.52391
+        },
+        "Keswick": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.4686558,
+            "lon": 44.2396166
+        },
+        "Dubreuilville": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -84.5510486,
+            "lon": 48.349083
+        },
+        "Matachewan": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.6472976,
+            "lon": 47.9394185
+        },
+        "Angus": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.8883585,
+            "lon": 44.3248565
+        },
+        "Gogama": {
+            "population": 300,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.7250895,
+            "lon": 47.6736705
+        },
+        "Kirkland Lake": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.031281,
+            "lon": 48.154177
+        },
+        "Beeton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.784557,
+            "lon": 44.0789618
+        },
+        "Ansonville": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.6863272,
+            "lon": 48.7582042
+        },
+        "Montrock": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.6920264,
+            "lon": 48.7684685
+        },
+        "Kingston": {
+            "population": 123363,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -76.481323,
+            "lon": 44.230687
+        },
+        "Russell": {
+            "population": 15247,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.3583264,
+            "lon": 45.2573172
+        },
+        "Manitouwadge": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -85.8384058,
+            "lon": 49.121541
+        },
+        "Rainy River": {
+            "population": 842,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -94.564819,
+            "lon": 48.722679
+        },
+        "Sandy Lake": {
+            "population": 1861,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -93.321991,
+            "lon": 53.061025
+        },
+        "New Osnaburgh": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -90.2378273,
+            "lon": 51.2341584
+        },
+        "Fort Hope": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -87.9045918,
+            "lon": 51.5570591
+        },
+        "Fort Albany": {
+            "population": 2031,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.682452,
+            "lon": 52.2130217
+        },
+        "Temagami": {
+            "population": 802,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.789581,
+            "lon": 47.062638
+        },
+        "Richmond Hill": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.4392925,
+            "lon": 43.8801166,
+            "my_hub_stop": "00062"
+        },
+        "Peawanuck": {
+            "population": 195,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -85.424194,
+            "lon": 55.011489
+        },
+        "Collingwood": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.2172379,
+            "lon": 44.5027226
+        },
+        "Ogoki": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -85.9243272,
+            "lon": 51.6313648
+        },
+        "Arnprior": {
+            "population": 8114,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -76.3543692,
+            "lon": 45.433515
+        },
+        "Campbellford": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.798084,
+            "lon": 44.3085912
+        },
+        "Huntsville": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.218434,
+            "lon": 45.3263919
+        },
+        "North Bay": {
+            "population": 51553,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.4607617,
+            "lon": 46.3092115
+        },
+        "Wikwemikong": {
+            "population": 2500,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.7122055,
+            "lon": 45.8079681
+        },
+        "Kasabonika Lake": {
+            "population": 850,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -88.6078048,
+            "lon": 53.5338547
+        },
+        "Smooth Rock Falls": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.6311885,
+            "lon": 49.2768
+        },
+        "Gore Bay": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.4640868,
+            "lon": 45.9167876
+        },
+        "Sioux Lookout": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -91.9190268,
+            "lon": 50.1000964
+        },
+        "Field": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.0273257,
+            "lon": 46.5206969
+        },
+        "Attawapiskat": {
+            "population": 1550,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.4270112,
+            "lon": 52.9244075
+        },
+        "Neskantaga": {
+            "population": 304,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -88.0194897,
+            "lon": 52.2028003
+        },
+        "Nibinamik": {
+            "population": 382,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -88.5135657,
+            "lon": 52.740287
+        },
+        "Weagamow Lake": {
+            "population": 677,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -91.3401673,
+            "lon": 52.9499448
+        },
+        "Keewaywin": {
+            "population": 340,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -92.798636,
+            "lon": 53.0073811
+        },
+        "Kawartha Lakes": {
+            "population": 75423,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -78.7421729,
+            "lon": 44.3596825
+        },
+        "Quinte West": {
+            "population": 43577,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -77.5748551,
+            "lon": 44.0988246
+        },
+        "Barrie": {
+            "population": 197059,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -79.6901736,
+            "lon": 44.3893113
+        },
+        "Clarence-Rockland": {
+            "population": 24512,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.2607533,
+            "lon": 45.5247978
+        },
+        "Lakeshore": {
+            "population": 36611,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.8189267,
+            "lon": 42.3038299
+        },
+        "Innisfil": {
+            "population": 36566,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.5461073,
+            "lon": 44.3150892
+        },
+        "Belle River": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -82.7113352,
+            "lon": 42.2928986
+        },
+        "Trenton": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -77.57539,
+            "lon": 44.1019126
+        },
+        "Rockland": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -75.2915629,
+            "lon": 45.5485795
+        },
+        "Lindsay": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.7369939,
+            "lon": 44.3551266
+        },
+        "Bowmanville": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -78.6891675,
+            "lon": 43.9122995
+        },
+        "Garson": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -80.8611935,
+            "lon": 46.5549401
+        },
+        "Lively": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.146366,
+            "lon": 46.4365168
+        },
+        "Copper Cliff": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.067045,
+            "lon": 46.4743667
+        },
+        "South Porcupine": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.2087005,
+            "lon": 48.4850936
+        },
+        "Porcupine": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.1676413,
+            "lon": 48.4939712
+        },
+        "Schumacher": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.2982223,
+            "lon": 48.4768905
+        },
+        "Keewatin": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -94.5568907,
+            "lon": 49.7572156
+        },
+        "Whitefish Falls": {
+            "population": 297,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.7287589,
+            "lon": 46.1129339
+        },
+        "Kashechewan First Nation": {
+            "population": 2537,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -81.6393641,
+            "lon": 52.2934597
+        },
+        "Pelham": {
+            "population": 17110,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.2838481,
+            "lon": 43.0445702
+        },
+        "Atherley": {
+            "population": 1649,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -79.3653434,
+            "lon": 44.6024745
+        },
+        "Michipicoten": {
+            "population": 10000,
+            "place": "town",
+            "designated_hub_stop": null,
+            "lat": -84.9254261,
+            "lon": 47.9606096
+        },
+        "London": {
+            "population": 422324,
+            "place": "city",
+            "designated_hub_stop": null,
+            "lat": -81.243372,
+            "lon": 42.9832406
+        }
     }
 }
