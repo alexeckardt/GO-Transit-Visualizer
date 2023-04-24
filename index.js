@@ -29,6 +29,9 @@ updateConstantCanvas();
 function draw(){
     window.requestAnimationFrame(draw);
 
+    canvas.setAttribute('width', window.innerWidth);
+    canvas.setAttribute('height', window.innerHeight);
+
     //Clear
     ctx.fillStyle = backgroundCol;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
