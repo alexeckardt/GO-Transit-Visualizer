@@ -541,7 +541,7 @@ def generate_transit_graph(tripCountLimit = -1):
             stopNode = Node(stop_id, stop_name, stop_lat, stop_lon,zone_id,stop_url,location_type,parent_station,wheelchair_boarding,stop_code)
 
             # Rename GO BUS, Keep them the same station
-            if ("GO Bus" in stop_name):
+            if (" GO" in stop_name and " Bus" in stop_name):
                 stop_name = stop_name.replace(" Bus", "")
 
             #Check if same named stop
