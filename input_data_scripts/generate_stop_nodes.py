@@ -541,9 +541,6 @@ def generate_transit_graph(tripCountLimit = -1):
             #Continue
             line = f.readline().strip();
 
-    
-
-
     #
     # Generate Edges
     with open('input_data_scripts/in_GTFS/stop_times.txt', 'r') as f:
