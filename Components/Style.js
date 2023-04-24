@@ -6,6 +6,9 @@ export const selectedBusStopCol = '#31ed53';
 export const selectedAndHoveringBusStopCol = '#a6ffb6';
 export const edgeColour = "#113c1d";
 
+export const cityColour = "#080808";
+export const cityNameCol = "#959595";
+
 export const defFont = "10px sans-serif";
 export const titleFont = "30px sans-serif";
 export const descFont = "20px sans-serif";

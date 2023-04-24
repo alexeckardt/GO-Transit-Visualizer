@@ -1,10 +1,11 @@
 import { BusStopNode } from "./Busstop.js";
 import { Vector2 } from "../Components/helper.js";
-import { originX, originY } from "../Components/Coordinates.js";
+import { originX, originY, real_coords_to_world_position } from "../Components/Coordinates.js";
 import { TripEdge } from  "./TripEdges.js";
 import { mouse } from "../Components/Mouse.js";
-import { edgeColour, backgroundCol, busStopCol } from "../Components/Style.js";
+import { edgeColour, backgroundCol, busStopCol, gridLineCol, cityColour, defFont, cityNameCol } from "../Components/Style.js";
 import { cam } from "../Components/Camera.js";
+import { City } from "./City.js";
 
 const shouldBakeGraph = false;
 
@@ -19,6 +20,8 @@ function Graph() {
 
     this.route_data = {};
 
+    this.cities = [];
+
     this.addStop = function(stop) {
 
         this.busstops.push(stop);
@@ -26,6 +29,10 @@ function Graph() {
         //Keep Reference
         this.stop_data[stop.stop_id].StopNode = stop;
         return;
+    }
+
+    this.addCity = function(city) {
+        this.cities.push(city);
     }
 
     this.getStop = function(stopId) {
@@ -65,15 +72,27 @@ function Graph() {
 
         //New
         
+        //Draw Cities as
+        ctx.globalCompositeOperation = "lighter";
+        ctx.fillStyle = cityColour;
+        ctx.beginPath();
+        var s = cam.get_feature_scale();
+        for (var i = 0; i < this.cities.length; i++) {
+            let city = this.cities[i];
+            city.plot(ctx);
+        }
+        ctx.closePath();
+        ctx.fill();
+        ctx.globalCompositeOperation = "normal";
 
         //Draw Edges
-
         //Start
-        var s = cam.get_feature_scale();
+        ctx.beginPath();
         for (var i = 0; i < this.display_edges.length; i++) {
             let edge = this.display_edges[i];
             edge.plot(ctx);
         }
+        ctx.closePath();
         ctx.strokeStyle = edgeColour;
         ctx.lineWidth = 3*s;
         ctx.stroke();
@@ -97,18 +116,10 @@ function Graph() {
         
         ctx.closePath();
 
+
         //
         // Semi Selected
         //
-        /*
-        for (var i = 0; i < this.display_edges.length; i++) {
-            let edge = this.display_edges[i];
-            if (edge.from)
-            edge.plot(ctx);
-        }
-        ctx.strokeStyle = edgeColour;
-        ctx.lineWidth = 3*s;
-        ctx.stroke();*/
 
         //
         // Route Selected info
@@ -133,6 +144,24 @@ function Graph() {
                 stop.draw_selected(ctx);
             }
         }
+
+        //
+        //Draw City Names
+        ctx.fillStyle = cityNameCol;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+        ctx.font = defFont;
+        ctx.beginPath();
+        for (var i = 0; i < this.cities.length; i++) {
+            let city = this.cities[i];
+            let position = real_coords_to_world_position(city.position);
+
+            if (city.alwaysDrawName || (cam.scaleInd > 2)) {
+                city.plot_name(ctx, position);
+            }
+        }
+        ctx.closePath();
+        ctx.fill();
 
         //Redraw Selected
         if (mouse.elementSelected != undefined) {
@@ -208,6 +237,9 @@ export async function generateGraph() {
         const res = await fetch('./Visual/Source/transitGraph.json')
         let obj = await res.json();
 
+        const res2 = await fetch('./Visual/Source/cities.json')
+        let citiesObj = await res2.json();
+
         //Add Nodes
         for (const [key, value] of Object.entries(obj.nodes)) {
             //console.log(value)
@@ -253,6 +285,16 @@ export async function generateGraph() {
                 console.log(key);
             }
 
+        }
+
+        //Add Nodes
+        for (var i = 0; i < citiesObj.length; i++) {
+            
+            var cityData = citiesObj[i];
+
+            var pos = cityData['coords'];
+            var newCity = new City(cityData['name'], cityData['population'], parseFloat(pos[1]), parseFloat(pos[0]), cityData['place']);
+            G.addCity(newCity);
         }
 
         console.log(G.route_data)
