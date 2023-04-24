@@ -240,8 +240,10 @@ function highlightRoute(route) {
 
     let title = routeInfo['route_short_name'] + ": " + routeInfo['route_long_name'];
     let desc = routeInfo['route_type'] == 2 ? "Train Route" : "Bus Route";
-    desc += "\nStops at " + routeInfo['stops_at'].length + " stops"
-    desc += "\nStops at " + routeInfo['stops_at'].length + " stops"
+    desc += "\n" + routeInfo['subroute_count'] + " sub-routes"
+    desc += "\nStops at " + routeInfo['stops_at'].length + " stops\n"
+    desc += "\nFirst Stop: " + G.get_stop_name(routeInfo['gen_first_stop']);
+    desc += "\nLast Stop: " + G.get_stop_name(routeInfo['gen_last_stop']);
 
     infoBox.set_text(title, "", desc);
 }

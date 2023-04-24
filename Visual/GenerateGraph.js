@@ -78,6 +78,8 @@ export async function generateGraph() {
             //Pass Data Into Struct
             let routeData = {};
 
+            console.log(value);
+
             routeData.agency_id = value['agency_id'];
             routeData.route_color = value['route_color'];
             routeData.route_short_name = value['route_short_name'];
@@ -86,6 +88,10 @@ export async function generateGraph() {
             routeData.route_type = value['route_type'];
             routeData.travels_edges = get_travel_edges(value['travels_edges']);
             routeData.stops_at = get_travel_stop(value['travels_edges']);
+
+            routeData.gen_first_stop = value['gen_first_stop'];
+            routeData.gen_last_stop = value['gen_last_stop'];
+            routeData.subroute_count = value['subroute_count'];
 
             G.route_data[key] = routeData;
 

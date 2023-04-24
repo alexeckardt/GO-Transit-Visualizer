@@ -53,6 +53,10 @@ function Graph() {
         return this.stop_data[stopId].StopNode;
     }
 
+    this.get_stop_name = function(stopId) {
+        return this.stop_data[stopId].name;
+    }
+
     this.addEdge = function(fromId, toId, weight) {
 
         //Add Data
