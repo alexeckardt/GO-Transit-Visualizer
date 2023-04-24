@@ -7,6 +7,9 @@
             "route_long_name": "Stouffville",
             "route_text_color": "FFFFFF",
             "route_type": "2",
+            "gen_first_stop": "UN",
+            "gen_last_stop": "LI",
+            "subroute_count": 1,
             "travels_edges": {
                 "UN": {
                     "KE": 1
@@ -55,6 +58,9 @@
             "route_long_name": "Richmond Hill",
             "route_text_color": "FFFFFF",
             "route_type": "2",
+            "gen_first_stop": "BM",
+            "gen_last_stop": "UN",
+            "subroute_count": 1,
             "travels_edges": {
                 "BM": {
                     "GO": 1
@@ -91,6 +97,9 @@
             "route_long_name": "Milton",
             "route_text_color": "FFFFFF",
             "route_type": "2",
+            "gen_first_stop": "UN",
+            "gen_last_stop": "ML",
+            "subroute_count": 1,
             "travels_edges": {
                 "UN": {
                     "KP": 1
@@ -135,6 +144,9 @@
             "route_long_name": "Lakeshore West",
             "route_text_color": "FFFFFF",
             "route_type": "2",
+            "gen_first_stop": "UN",
+            "gen_last_stop": "WR",
+            "subroute_count": 6,
             "travels_edges": {
                 "UN": {
                     "EX": 1,
@@ -209,6 +221,9 @@
             "route_long_name": "Lakeshore East",
             "route_text_color": "FFFFFF",
             "route_type": "2",
+            "gen_first_stop": "OS",
+            "gen_last_stop": "UN",
+            "subroute_count": 1,
             "travels_edges": {
                 "OS": {
                     "WH": 1
@@ -257,6 +272,9 @@
             "route_long_name": "Kitchener",
             "route_text_color": "FFFFFF",
             "route_type": "2",
+            "gen_first_stop": "UN",
+            "gen_last_stop": "MO",
+            "subroute_count": 8,
             "travels_edges": {
                 "UN": {
                     "BL": 1,
@@ -331,6 +349,9 @@
             "route_long_name": "Barrie",
             "route_text_color": "FFFFFF",
             "route_type": "2",
+            "gen_first_stop": "BD",
+            "gen_last_stop": "UN",
+            "subroute_count": 2,
             "travels_edges": {
                 "AD": {
                     "BA": 1
@@ -383,6 +404,9 @@
             "route_long_name": "Oshawa / Finch Express",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "OS",
+            "gen_last_stop": "02816",
+            "subroute_count": 3,
             "travels_edges": {
                 "00736": {
                     "02709": 1
@@ -474,6 +498,9 @@
             "route_long_name": "Pickering / Square One",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "00133",
+            "gen_last_stop": "PIN",
+            "subroute_count": 1,
             "travels_edges": {
                 "00133": {
                     "02659": 1
@@ -530,6 +557,9 @@
             "route_long_name": "Oshawa / Yorkdale",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "OS",
+            "gen_last_stop": "00019",
+            "subroute_count": 2,
             "travels_edges": {
                 "02672": {
                     "00729": 1
@@ -657,6 +687,9 @@
             "route_long_name": "Lakeshore East",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "OS",
+            "gen_last_stop": "UN",
+            "subroute_count": 1,
             "travels_edges": {
                 "OS": {
                     "02573": 1
@@ -695,6 +728,9 @@
             "route_long_name": "Peterborough / Oshawa",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "OS",
+            "gen_last_stop": "00156",
+            "subroute_count": 2,
             "travels_edges": {
                 "02501": {
                     "02502": 1
@@ -825,6 +861,9 @@
             "route_long_name": "Stouffville",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "UN",
+            "gen_last_stop": "MJ",
+            "subroute_count": 4,
             "travels_edges": {
                 "LI": {
                     "00974": 1,
@@ -1012,6 +1051,9 @@
             "route_long_name": "Uxbridge / Mount Joy",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "MJ",
+            "gen_last_stop": "00302",
+            "subroute_count": 3,
             "travels_edges": {
                 "MJ": {
                     "02575": 1
@@ -1147,6 +1189,9 @@
             "route_long_name": "Barrie / Newmarket",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "EA",
+            "gen_last_stop": "EA",
+            "subroute_count": 3,
             "travels_edges": {
                 "EA": {
                     "02743": 1,
@@ -1339,6 +1384,9 @@
             "route_long_name": "Keswick / North York",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "02522",
+            "gen_last_stop": "00736",
+            "subroute_count": 1,
             "travels_edges": {
                 "02522": {
                     "02523": 1
@@ -1421,6 +1469,9 @@
             "route_long_name": "East Gwillimbury / Newmarket / North York",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "02674",
+            "gen_last_stop": "EA",
+            "subroute_count": 1,
             "travels_edges": {
                 "02674": {
                     "00334": 1
@@ -1486,6 +1537,9 @@
             "route_long_name": "Newmarket / Toronto",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "UN",
+            "gen_last_stop": "EA",
+            "subroute_count": 2,
             "travels_edges": {
                 "UN": {
                     "00307": 1,
@@ -1598,6 +1652,9 @@
             "route_long_name": "King City / Toronto",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "UN",
+            "gen_last_stop": "00027",
+            "subroute_count": 1,
             "travels_edges": {
                 "UN": {
                     "RU": 1
@@ -1632,6 +1689,9 @@
             "route_long_name": "Richmond Hill",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "UN",
+            "gen_last_stop": "RI",
+            "subroute_count": 2,
             "travels_edges": {
                 "BM": {
                     "GO": 1
@@ -1756,6 +1816,9 @@
             "route_long_name": "Oshawa / Oakville",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "OA",
+            "gen_last_stop": "OS",
+            "subroute_count": 1,
             "travels_edges": {
                 "OA": {
                     "01729": 1
@@ -1890,6 +1953,9 @@
             "route_long_name": "Markham / Hwy 407 Terminal",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "02674",
+            "gen_last_stop": "MJ",
+            "subroute_count": 1,
             "travels_edges": {
                 "02674": {
                     "02021": 1
@@ -1964,6 +2030,9 @@
             "route_long_name": "Oshawa / Hwy 407 Terminal",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "OS",
+            "gen_last_stop": "02820",
+            "subroute_count": 3,
             "travels_edges": {
                 "OS": {
                     "02748": 1
@@ -2038,6 +2107,9 @@
             "route_long_name": "Guelph / Hwy 407 Terminal",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "02674",
+            "gen_last_stop": "00201",
+            "subroute_count": 1,
             "travels_edges": {
                 "02674": {
                     "BE": 1
@@ -2193,6 +2265,9 @@
             "route_long_name": "Hamilton / Hwy 407 Terminal",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "HA",
+            "gen_last_stop": "02820",
+            "subroute_count": 5,
             "travels_edges": {
                 "HA": {
                     "01014": 1
@@ -2294,6 +2369,9 @@
             "route_long_name": "Hamilton / Pickering",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "PIN",
+            "gen_last_stop": "HA",
+            "subroute_count": 2,
             "travels_edges": {
                 "PIN": {
                     "00727": 1
@@ -2446,6 +2524,9 @@
             "route_long_name": "Hamilton / Richmond Hill",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "00350",
+            "gen_last_stop": "HA",
+            "subroute_count": 1,
             "travels_edges": {
                 "00350": {
                     "02771": 1
@@ -2548,6 +2629,9 @@
             "route_long_name": "Bolton / Malton",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "MA",
+            "gen_last_stop": "02116",
+            "subroute_count": 2,
             "travels_edges": {
                 "MA": {
                     "00242": 1
@@ -2652,6 +2736,9 @@
             "route_long_name": "Orangeville / Brampton",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "BR",
+            "gen_last_stop": "00349",
+            "subroute_count": 2,
             "travels_edges": {
                 "BR": {
                     "01426": 1
@@ -2800,6 +2887,9 @@
             "route_long_name": "Brampton / North York Express",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "08032",
+            "gen_last_stop": "00011",
+            "subroute_count": 1,
             "travels_edges": {
                 "08032": {
                     "01185": 1
@@ -2847,6 +2937,9 @@
             "route_long_name": "Guelph / North York",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "MO",
+            "gen_last_stop": "MO",
+            "subroute_count": 10,
             "travels_edges": {
                 "00011": {
                     "00019": 1
@@ -3137,6 +3230,9 @@
             "route_long_name": "Brampton Trinity Common / North York",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "08032",
+            "gen_last_stop": "00011",
+            "subroute_count": 2,
             "travels_edges": {
                 "08032": {
                     "01185": 1
@@ -3299,6 +3395,9 @@
             "route_long_name": "Georgetown",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "UN",
+            "gen_last_stop": "GE",
+            "subroute_count": 8,
             "travels_edges": {
                 "00201": {
                     "02518": 1
@@ -3582,6 +3681,9 @@
             "route_long_name": "Kitchener / Bramalea",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "02800",
+            "gen_last_stop": "BE",
+            "subroute_count": 1,
             "travels_edges": {
                 "02800": {
                     "02153": 1
@@ -3628,6 +3730,9 @@
             "route_long_name": "Guelph / Mississauga",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "02778",
+            "gen_last_stop": "GL",
+            "subroute_count": 1,
             "travels_edges": {
                 "02778": {
                     "02661": 1
@@ -3716,6 +3821,9 @@
             "route_long_name": "Milton / North York",
             "route_text_color": "000000",
             "route_type": "3",
+            "gen_first_stop": "ML",
+            "gen_last_stop": "00736",
+            "subroute_count": 3,
             "travels_edges": {
                 "ML": {
                     "00932": 1
@@ -3932,6 +4040,9 @@
             "route_long_name": "Waterloo / Mississauga",
             "route_text_color": "000000",
             "route_type": "3",
+            "gen_first_stop": "00133",
+            "gen_last_stop": "02800",
+            "subroute_count": 1,
             "travels_edges": {
                 "00133": {
                     "02215": 1,
@@ -3987,6 +4098,9 @@
             "route_long_name": "Milton",
             "route_text_color": "000000",
             "route_type": "3",
+            "gen_first_stop": "PO",
+            "gen_last_stop": "ML",
+            "subroute_count": 9,
             "travels_edges": {
                 "OA": {
                     "01729": 1
@@ -4279,6 +4393,9 @@
             "route_long_name": "Mississauga / North York",
             "route_text_color": "000000",
             "route_type": "3",
+            "gen_first_stop": "00736",
+            "gen_last_stop": "00133",
+            "subroute_count": 2,
             "travels_edges": {
                 "00736": {
                     "02709": 1
@@ -4374,6 +4491,9 @@
             "route_long_name": "Lakeshore West",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "WR",
+            "gen_last_stop": "UN",
+            "subroute_count": 8,
             "travels_edges": {
                 "HA": {
                     "01014": 1,
@@ -4535,6 +4655,9 @@
             "route_long_name": "Waterloo / Hamilton",
             "route_text_color": "000000",
             "route_type": "3",
+            "gen_first_stop": "HA",
+            "gen_last_stop": "02800",
+            "subroute_count": 1,
             "travels_edges": {
                 "HA": {
                     "01014": 1
@@ -4670,6 +4793,9 @@
             "route_long_name": "Hamilton / Toronto Express",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "UN",
+            "gen_last_stop": "HA",
+            "subroute_count": 1,
             "travels_edges": {
                 "UN": {
                     "00178": 1
@@ -4734,6 +4860,9 @@
             "route_long_name": "Brantford / Aldershot",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "AL",
+            "gen_last_stop": "02617",
+            "subroute_count": 1,
             "travels_edges": {
                 "AL": {
                     "00310": 1
@@ -4790,6 +4919,9 @@
             "route_long_name": "Niagara Falls / Toronto",
             "route_text_color": "FFFFFF",
             "route_type": "3",
+            "gen_first_stop": "BU",
+            "gen_last_stop": "02408",
+            "subroute_count": 4,
             "travels_edges": {
                 "BU": {
                     "00820": 1,
@@ -4873,8 +5005,7 @@
             "BE": 1620,
             "KE": 1140,
             "DW": 1260,
-            "OR": 1740,
-            "UN": 600
+            "OR": 1740
         },
         "UI": {
             "02144": 60,

@@ -44,6 +44,8 @@ def export_routes(G):
     for route in routesin:
         info = routesin[route]
 
+        moreInfo = info.get_more_route_info();
+
         store = {}
         store['agency_id'] = info.agency_id
         store['route_color'] = info.route_color
@@ -51,6 +53,10 @@ def export_routes(G):
         store['route_long_name'] = info.route_long_name
         store['route_text_color'] = info.route_text_color
         store['route_type'] = info.route_type
+
+        store['gen_first_stop'] = moreInfo["firstStop"]
+        store['gen_last_stop'] = moreInfo["lastStop"]
+        store['subroute_count'] = moreInfo["subroute_count_no_direction"]
 
         store['travels_edges'] = info.edges
 

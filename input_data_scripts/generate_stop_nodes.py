@@ -140,10 +140,48 @@ class Route:
         #Store, Trash Prev
         self.subroute_paths = cleanedSubroutes
 
+    def get_edge_stops(self):
+        
+        firstLasts = {}
+
+        for subroute in self.subroute_paths:
+            path = self.subroute_paths[subroute]
+            firstLasts[(path[0][0], path[-1][1])] = 1
+
+        return firstLasts;
+
+    def get_more_route_info(self):
+
+        edgeStops = self.get_edge_stops()
+
+        # Count Route Types (No Direction)
+        counted = {}
+        for firstLastPair in edgeStops:
+            inverse = (firstLastPair[1], firstLastPair[0])
+
+            if (not inverse in counted):
+                counted[firstLastPair] = counted.get(firstLastPair, 0) + 1
+            else:
+                counted[inverse] = counted.get(inverse, 0) + 1
+
+        subrouteCount = len(counted)
+        maxCountKey = max(counted);
+
+        moreInfo = {}
+        moreInfo['subroute_count_no_direction'] = subrouteCount
+        moreInfo['firstStop'] = maxCountKey[0]
+        moreInfo['lastStop'] = maxCountKey[1]
+
+        return moreInfo;
+
 
     def __repr__(self):
         return self.name
-    
+
+
+
+
+
 class Trip:
     def __init__(self, trip_id,arrival_time,departure_time,stop_id,stop_sequence,pickup_type,drop_off_type,stop_headsign):
         self.trip_id = trip_id
@@ -177,6 +215,11 @@ class Trip:
             return False
 
         return True
+
+
+
+
+
 
 class Graph:
     def __init__(self):
@@ -493,6 +536,7 @@ class Graph:
         d['time'] = seconds_to_time_elapsed(time)
 
         return d
+
 
 def name_is_duplicate(stopNamesToId, stop_name):
     return stopNamesToId.get(stop_name, None) == None
