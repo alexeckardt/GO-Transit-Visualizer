@@ -40,10 +40,6 @@ function Mouse() {
     }
 }
 
-function clampCamPosition() {
-    //if (cam.position.x <)
-}
-
 export let mouse = new Mouse();
 let dragStartMousePos = new Vector2(0, 0);
 let dragStartCamPos = new Vector2(0, 0);
@@ -100,8 +96,6 @@ export function setupMouse() {
                 //Update Position
                 cam.position = new Vector2(x, y);
 
-                clampCamPosition();
-
             } else {
 
                 let selectable = cam.selectable();
@@ -146,6 +140,8 @@ export function setupMouse() {
     window.addEventListener('mouseup', (event) => {
         console.log("Mouse Up");
         dragging = false;
+
+        console.log(cam.position);
 
         //Drag
         if (!mouse.overInfoBox) {

@@ -86,6 +86,5 @@ export function TripEdge(fromStop, toStop) {
     this.add_route_that_travels_me = function(routeId, colourToDrawWhenHighlighted) {
         this.edge_colors[routeId] = colourToDrawWhenHighlighted;
         this.routes_on_me.push(routeId);
-        console.log(colourToDrawWhenHighlighted);
     }
 }
