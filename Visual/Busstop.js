@@ -60,16 +60,16 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         this.drewAsHighlighted = false;
     }
 
-    this.draw_selected = function(ctx) {
+    this.draw_selected = function(ctx, scale=1) {
 
-        var s = cam.get_feature_scale();
+        var s = cam.get_feature_scale()*scale;
 
         ctx.beginPath();
         ctx.fillStyle = backgroundCol;
         ctx.strokeStyle = selectedBusStopCol;
         ctx.lineWidth = 3*s;
 
-        this.plot_arc(ctx)
+        this.plot_arc(ctx, scale)
             
             ctx.fill();
             ctx.stroke();
@@ -99,8 +99,8 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         this.drewAsHighlighted = true;
     }
 
-    this.plot_arc = function(ctx) {
-        var s = cam.get_feature_scale();
+    this.plot_arc = function(ctx, scale=1) {
+        var s = cam.get_feature_scale()*scale;
         var w = baseBusStopWidth*s*1.5;
         var pos = this.draw_position();
 
@@ -118,6 +118,7 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         var w = baseBusStopWidth*s*1.5;
         var pos = this.draw_position();
         ctx.fillRect(pos.x - w/2, pos.y - w/2, w, w);
+        this.drewAsHighlighted = false;
     }
 
     this.coordinate_string = function() {

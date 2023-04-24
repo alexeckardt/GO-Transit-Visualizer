@@ -13,7 +13,7 @@ export const routeDescInfoBoxColour = "#454545";
 
 export const defFont = "10px sans-serif";
 export const titleFont = "30px sans-serif";
-export const descFont = "18px sans-serif";
+export const descFont = "16px sans-serif";
 export const routeFont = "20px serif";
 
 /*

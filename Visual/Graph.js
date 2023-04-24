@@ -130,10 +130,17 @@ function Graph() {
                 busstop.plot_rect(ctx)
             }
             ctx.fill();
+
+            // Always draw Hub Bus Stops Small
+            for (let key in this.stop_hubs) {
+                let stop = this.getStop(key);
+                stop.draw_selected(ctx, 0.5);
+            }
         }
         
         ctx.closePath();
 
+  
 
         //
         // Semi Selected
