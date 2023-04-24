@@ -7,6 +7,7 @@ export function InfoBox(infoCanvas) {
     this.smallDescLines = ["Empty"];
     this.descLines = ["Empty"];
     this.routesToDraw = [];
+    this.expanded = false;
 
     this.draw_box = false;
 

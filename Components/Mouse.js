@@ -11,6 +11,8 @@ function Mouse() {
     this.elementHovering = undefined;
     this.elementSelected = undefined;
 
+    this.overInfoBox = false;
+
     this.selectedRoutes = [];
 
     this.deselect_element = function() {
@@ -75,6 +77,16 @@ export function setupMouse() {
             mouse.gui_position = new Vector2(event.pageX, event.pageY); 
             mouse.world_position = gui_coords_to_world_coords(mouse.gui_position);
 
+            //Check if In GUI
+            let inW = infoBox.width;
+            let inH = infoBox.height;
+
+            if (mouse.selectedRoutes.length > 0) {
+                inH = infoBox.canvas.height;
+            }
+            mouse.overInfoBox = (mouse.gui_position.x < inW && mouse.gui_position.y < inH && infoBox.draw_box);
+            
+
             // Use event.pageX / event.pageY here
             if (dragging) {
 
@@ -120,11 +132,13 @@ export function setupMouse() {
         //console.log('MGUIP:' + cam.mouse_world_position())
         console.log('CI' + cam.position)
         console.log('CW:' + cam.get_world_position())
-        dragging = true;
-        dragStartMousePos = mouse.gui_position;
-        dragStartCamPos = cam.position;
-        dragged = false;
 
+        if (!mouse.overInfoBox) {
+            dragging = true;
+            dragStartMousePos = mouse.gui_position;
+            dragStartCamPos = cam.position;
+            dragged = false;
+        }
     });
 
     window.addEventListener('mouseup', (event) => {
@@ -132,14 +146,20 @@ export function setupMouse() {
         dragging = false;
 
         //Drag
-        if (mouse.elementHovering == undefined) {
-            if (dragStartCamPos.distance(cam.position) < 10) {
-                mouse.deselect_element();
-                infoBox.clear();
-                infoBox.update();
+        if (!mouse.overInfoBox) {
+            if (mouse.elementHovering == undefined) {
+                if (dragStartCamPos.distance(cam.position) < 10) {
+                    mouse.deselect_element();
+                    infoBox.clear();
+                    infoBox.update();
+                }
+            } else {
+                mouse.select_element(mouse.elementHovering);
             }
         } else {
-            mouse.select_element(mouse.elementHovering);
+
+            //Click GUI Events
+
         }
     });
 
