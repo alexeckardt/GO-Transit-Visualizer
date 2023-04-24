@@ -12,7 +12,8 @@ export function InfoBox(infoCanvas) {
     this.draw_box = false;
 
     this.edgeBuffer = 15;
-
+    this.routeBoxSep = this.edgeBuffer/2;
+    
     this.routeBoxWidth = 40;
     this.routeBoxHeight = -1;
 
@@ -28,6 +29,7 @@ export function InfoBox(infoCanvas) {
         this.canvas.setAttribute('height', height+routeSelectorHeight);
 
         this.routeBoxHeight = routeSelectorHeight - 2*this.edgeBuffer;
+        this.routeBoxSep = this.edgeBuffer/2;
     }
 
     this.set_text = function(title, smalldesc, desc) {
@@ -144,7 +146,7 @@ export function InfoBox(infoCanvas) {
             //Draw the selected routes
             for (var i = 0; i < routes.length; i++) {
 
-                let boxX = this.edgeBuffer + (boxW+this.edgeBuffer/2)*i
+                let boxX = this.edgeBuffer + (boxW+this.routeBoxSep)*i
 
                 let route = routes[i];
                 let data = G.route_data[route];

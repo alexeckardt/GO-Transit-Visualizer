@@ -160,6 +160,20 @@ export function setupMouse() {
 
             //Click GUI Events
 
+            //Select a route
+            if (mouse.gui_position.y > infoBox.height) {
+
+                //Get box i would be in
+                var xx = mouse.gui_position.x - infoBox.edgeBuffer;
+                var BoxI = Math.floor(xx / (infoBox.routeBoxWidth + infoBox.routeBoxSep));
+
+                console.log(BoxI);
+                if (BoxI >= 0 && BoxI < mouse.selectedRoutes.length) {
+                    //Update Routes
+                    mouse.selectedRoutes = [mouse.selectedRoutes[BoxI]];
+                    infoBox.update();
+                }
+            }
         }
     });
 
