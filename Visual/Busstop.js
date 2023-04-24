@@ -132,6 +132,7 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         }
         let descc = this.coordinate_string() + "\nID:" + this.stop_id;
 
+        infoBox.setBusstopScheme();
         infoBox.set_text(this.name, descc, desc);
         infoBox.update();
     }
