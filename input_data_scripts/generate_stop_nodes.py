@@ -500,12 +500,14 @@ def name_is_duplicate(stopNamesToId, stop_name):
 def manual_stop_override(stopName):
 
     #Look up tabel
-    const = {
-        "Brampton Bus Terminal": "Brampton GO"
-    }
+    const = {}
+    const["Brampton Bus Terminal"]="Brampton GO";
+    const["Union Station Bus Terminal"]="Union Station";
+
 
     #Get update, if none, return self.
-    return const.get(stopName, stopName)
+    name = const.get(stopName, stopName);
+    return name
 
 
 #https://stackoverflow.com/questions/61488790/how-can-i-proportionally-mix-colors-in-python
@@ -613,7 +615,7 @@ def generate_transit_graph(tripCountLimit = -1):
             col = COT[route_color];
 
             if (route_type == '2'): #Train
-                col = combine_hex_values({col: 1.0, "ffffff": 0.2})
+                col = combine_hex_values({col: 1.0, "ffffff": 0.4})
 
             route = Route(route_id,agency_id,route_short_name,route_long_name,route_type,col,route_text_color);
             G.add_route(route)
@@ -677,7 +679,7 @@ def generate_transit_graph(tripCountLimit = -1):
     #
     # Add Constant Walking Edges
     #
-    G.add_walking_edge("UN", "02300", 600) #10 minute walk
+    # G.add_walking_edge("UN", "02300", 600) #10 minute walk
 
     #Set City Stops, Force
     G.set_city_stop('Toronto', 'UN');
