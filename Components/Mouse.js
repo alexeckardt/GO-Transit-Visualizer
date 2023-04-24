@@ -15,6 +15,7 @@ function Mouse() {
     this.overInfoBox = false;
 
     this.selectedRoutes = [];
+    this.displayingOneRoute = false;
 
     this.deselect_element = function() {
         this.elementSelected = undefined;
@@ -26,7 +27,10 @@ function Mouse() {
         this.elementSelected = el;
 
         infoBox.setBusstopScheme();
+        this.displayingOneRoute = false;
+
         el.selected_events();
+        infoBox.routeBoxXOffset = 0; //reset
 
         //More!!
         this.selectedRoutes = G.get_all_routes_from_stop(el);
@@ -108,7 +112,10 @@ export function setupMouse() {
                 for (const node of G.busstops) {
                     if (mouse.gui_position.distance(node.draw_position()) < 10*sc && (selectable || node.drewAsHighlighted)) {
                         mouse.elementHovering = node;
-                        node.selected_events();
+
+                        if (!mouse.displayingOneRoute) {
+                            node.selected_events();
+                        }
                     }
                 }
 
@@ -116,7 +123,9 @@ export function setupMouse() {
                     if (mouse.gui_position.distance(mouse.elementHovering.draw_position()) > 40) {
                         mouse.elementHovering = undefined;
                         if (mouse.elementSelected != undefined) {
-                            mouse.elementSelected.selected_events();
+                            if (!mouse.displayingOneRoute) {
+                                mouse.elementSelected.selected_events();
+                            }
                         }
                     }
                 }
@@ -246,4 +255,7 @@ function highlightRoute(route) {
     desc += "\nLast Stop: " + G.get_stop_name(routeInfo['gen_last_stop']);
 
     infoBox.set_text(title, "", desc);
+
+    mouse.displayingOneRoute = true;
+    infoBox.routeBoxXOffset = 0; //reset
 }

@@ -62,8 +62,31 @@ export function InfoBox(infoCanvas) {
 
                 //Add Line
                 if (lineStr.length >= maxLineLength) {
-                    this.descLines.push(lineStr)
-                    lineStr = "";
+
+                    let tryGoBack = lineStr.length;
+                    let orgLineStr = lineStr;
+                    let orgJ = j;
+                    let pushed = false;
+                    while (tryGoBack > 0) {
+                        j--;
+                        lineStr = lineStr.substring(0, lineStr.length-1);
+
+                        console.log(lineStr);
+
+                        if (line[j] == ' ') {
+                            console.log('Pushed!', lineStr)
+                            this.descLines.push(lineStr)
+                            tryGoBack = -100; //end here, continue
+                            pushed = true;
+                            lineStr = "        "; //Add a tab
+                        }
+                    }
+
+                    if (!pushed) {
+                        j = orgJ
+                        this.descLines.push(orgLineStr)
+                        lineStr = "";
+                    }
                 }
             }
 

@@ -736,7 +736,7 @@ def generate_transit_graph(tripCountLimit = -1):
     G.set_city_stop('Uxbridge', '00302');
     # G.set_city_stop('Barrie', 'AD'); BARRIE HAS ONE, it's just not in the circle
     G.set_city_stop('Bolton', '02682');
-    G.set_city_stop('Orangeville', '02653');
+    G.set_city_stop('Orangeville', '00349');
     G.set_city_stop('Brantford', '02617');
     G.set_city_stop('St. Catharines', '02402');
 
