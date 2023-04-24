@@ -163,7 +163,7 @@ export function setupMouse() {
 
                 //Get box i would be in
                 var xx = mouse.gui_position.x - infoBox.edgeBuffer;
-                var BoxI = Math.floor(xx / (infoBox.routeBoxWidth + infoBox.routeBoxSep));
+                var BoxI = Math.floor((xx + infoBox.routeBoxXOffset) / (infoBox.routeBoxWidth + infoBox.routeBoxSep));
 
                 if (BoxI >= 0 && BoxI < mouse.selectedRoutes.length) {
                     //Update Routes
@@ -176,23 +176,46 @@ export function setupMouse() {
 
     window.addEventListener('wheel', (event) => {
         
-        //Get
         let deltaY = event.deltaY > 0
 
-        //Scroll Up
-        if (event.deltaY > 0) {
+        //Get
+        if (!mouse.overInfoBox) {
+            
+            //Scroll Up
+            if (event.deltaY > 0) {
 
-            cam.zoom_in();
+                cam.zoom_in();
+                dragStartMousePos = mouse.gui_position;
+                dragStartCamPos = cam.position;
+                return;
+                
+            }
+            
+            //Scroll Down
+            cam.zoom_out();
             dragStartMousePos = mouse.gui_position;
             dragStartCamPos = cam.position;
-            return;
-            
+        } else {
+         
+            if (mouse.gui_position.y > infoBox.height) {
+
+                let yy = 1;
+                if (event.deltaY > 0) {
+                    yy = -1;
+                }
+
+                let scrollSpeed = 30;
+                let count = mouse.selectedRoutes.length;
+                let secW = (infoBox.routeBoxWidth + infoBox.routeBoxSep);
+                let maxBoxesOnScreen = (infoBox.width - infoBox.edgeBuffer*2) / secW;
+                let maxXoffset = secW*Math.max(count-maxBoxesOnScreen, 0);
+                infoBox.routeBoxXOffset = Math.max(0, Math.min(infoBox.routeBoxXOffset + yy*scrollSpeed, maxXoffset))
+
+                console.log(maxXoffset, infoBox.routeBoxXOffset);
+                infoBox.update();
+            }
+
         }
-        
-        //Scroll Down
-        cam.zoom_out();
-        dragStartMousePos = mouse.gui_position;
-        dragStartCamPos = cam.position;
     });
 
 }
