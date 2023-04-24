@@ -575,7 +575,7 @@ def generate_transit_graph(tripCountLimit = -1):
                     G.add_node(stopNode)
 
             #Store as City Name
-            if (" GO" in stop_name):
+            if (" GO" in stop_name and "(" not in stop_name):
                 cityStopName = stop_name.replace(" GO", "")
                 replaceName = stopNamesToId[stop_name];
                 G.set_city_stop(cityStopName, replaceName);

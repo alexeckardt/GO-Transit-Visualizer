@@ -84,6 +84,11 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         this.draw(ctx);
 
         var s = cam.get_feature_scale();
+        //Hubs Are Bigger
+        if (this.isHubOf != undefined) {
+            s *= 2;
+        }
+
         var pos = this.draw_position();
         ctx.fillStyle = selectedBusStopCol;
         ctx.textAlign = 'center';

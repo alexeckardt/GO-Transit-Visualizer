@@ -17964,7 +17964,7 @@
         "St. Catharines": {
             "population": 133113,
             "place": "city",
-            "my_hub_stop": "02813",
+            "my_hub_stop": null,
             "lat": -79.2441003,
             "lon": 43.1579812
         },
@@ -18020,7 +18020,7 @@
         "Guelph": {
             "population": 131794,
             "place": "city",
-            "my_hub_stop": "02518",
+            "my_hub_stop": "GL",
             "lat": -80.2493276,
             "lon": 43.5460516
         },
@@ -18713,7 +18713,7 @@
         "Stouffville": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "00118",
+            "my_hub_stop": "ST",
             "lat": -79.2454446,
             "lon": 43.9717581
         },
@@ -18825,7 +18825,7 @@
         "Acton": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "00868",
+            "my_hub_stop": "AC",
             "lat": -80.0414703,
             "lon": 43.629696
         },
@@ -19210,7 +19210,7 @@
         "Newmarket": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "02637",
+            "my_hub_stop": "NE",
             "lat": -79.461708,
             "lon": 44.056258
         },
@@ -19238,7 +19238,7 @@
         "Markham": {
             "population": 328940,
             "place": "city",
-            "my_hub_stop": "00122",
+            "my_hub_stop": "MR",
             "lat": -79.3376825,
             "lon": 43.8563707
         },
@@ -19392,7 +19392,7 @@
         "King City": {
             "population": 10000,
             "place": "town",
-            "my_hub_stop": "00027",
+            "my_hub_stop": "KC",
             "lat": -79.5252267,
             "lon": 43.929489
         },
