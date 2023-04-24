@@ -39,14 +39,12 @@ function Graph() {
 
     this.city_set_hub_city = function(cityName, hubId) {
 
-        console.log(cityName, hubId);
         if (hubId == undefined) {
             return;
         }
 
         this.stop_hubs[hubId] = cityName;
         let stop = this.getStop(hubId);
-        console.log(stop)
 
         stop.isHubOf = cityName;
     }
