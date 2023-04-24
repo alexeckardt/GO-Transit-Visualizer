@@ -514,7 +514,7 @@ def generate_transit_graph(tripCountLimit = -1):
             del city['name']
             del city['coords']
 
-            city['designated_hub_stop'] = None;
+            city['my_hub_stop'] = None;
             city['lat'] = pos[0]
             city['lon'] = pos[1]
 

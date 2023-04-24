@@ -6,11 +6,12 @@ function clampCityRadius(rad) {
     return Math.max(1, Math.min(Math.sqrt(rad)/100, 30));
 }
 
-export function City(name, pop, lat, lon, type) {
+export function City(name, pop, lat, lon, type, hub) {
     this.name = name;
     this.population = pop;
-    this.position = new Vector2(lon, lat);
+    this.position = new Vector2(lat, lon);
     this.type = type;
+    this.hub_stop = hub;
 
     this.alwaysDrawName = pop >= 100000;
 
