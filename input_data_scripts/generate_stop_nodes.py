@@ -548,9 +548,10 @@ def manual_stop_override(stopName):
     const["Brampton Bus Terminal"]="Brampton GO";
     const["Union Station Bus Terminal"]="Union Station";
 
-
     #Get update, if none, return self.
     name = const.get(stopName, stopName);
+    if (name != stopName):
+        print(f'Read {stopName}, Replacing with {name}')
     return name
 
 
@@ -598,6 +599,7 @@ def generate_transit_graph(tripCountLimit = -1):
         line = f.readline().strip();
 
         stopNamesToId = {}
+        pattern = r".*(\(.* GO\))"
         
         #Loop
         while line != '':
@@ -608,6 +610,14 @@ def generate_transit_graph(tripCountLimit = -1):
             # Rename GO BUS, Keep them the same station
             if (" GO" in stop_name and " Bus" in stop_name):
                 stop_name = stop_name.replace(" Bus", "")
+
+            # Replace Long Names w/ GO Station Name substring
+            match = re.match(pattern, stop_name)
+            if (match != None):
+                old = stop_name
+                stop_name = match.groups()[0]
+                print(f"{old} -> {stop_name}")
+
 
             #Manual Renaming
             stop_name = manual_stop_override(stop_name);
