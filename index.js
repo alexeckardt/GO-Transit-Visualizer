@@ -1,7 +1,7 @@
 //Comment
 import { setupMouse } from "./Components/Mouse.js";
 import { goalCamW, goalCamH } from "./Components/Camera.js";
-import { backgroundCol, defFont } from "./Components/Style.js";
+import { backgroundCol, defFont, descFont } from "./Components/Style.js";
 import { drawGraph } from "./Visual/Graph.js";
 import { generateGraph } from "./Visual/GenerateGraph.js";
 import { drawLakes } from "./Visual/Background.js";
@@ -57,10 +57,17 @@ function updateConstantCanvas() {
     constCanvas.style.top = canvas.height - h - 100 - p + 'px';
 
     ctxh.clearRect(0, 0, constCanvas.width, constCanvas.height);
+    //ctxh.fillRect(0, 0, constCanvas.width, constCanvas.height);
 
     ctxh.fillStyle = 'black';
     ctxh.textAlign = 'right';
     ctxh.textBaseline = 'bottom';
     ctxh.font = defFont;
     ctxh.fillText("GTFS Data Provided by Metrolinks, Accessed April 2023", w, h);
+    ctxh.fillText("No Touch-screen functionality.", w, h - 10);
+
+    ctxh.font = descFont;
+    ctxh.fillStyle = 'white';
+    ctxh.fillText("Click on Stops to reveal routes.", w, h - 50);
+    ctxh.fillText("Click on routes to see information.", w, h - 31);
 }
