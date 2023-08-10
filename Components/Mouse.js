@@ -58,6 +58,38 @@ let dragging = false;
 let dragged = false;
 let initedDragPositions = true;
 
+function mouse_hovering_select() {
+    
+    let selectable = cam.selectable();
+    let sc = cam.get_feature_scale();
+
+    //Reset
+    mouse.elementHovering = undefined;
+
+    //Check Which Bus Stop Hovering Over
+    for (const node of G.busstops) {
+        if (mouse.gui_position.distance(node.draw_position()) < 10*sc && (selectable || node.drewAsHighlighted)) {
+            mouse.elementHovering = node;
+
+            if (!mouse.displayingOneRoute) {
+                node.selected_events();
+            }
+        }
+    }
+
+    if (mouse.elementHovering != undefined) {
+        if (mouse.gui_position.distance(mouse.elementHovering.draw_position()) > 40) {
+            mouse.elementHovering = undefined;
+            if (mouse.elementSelected != undefined) {
+                if (!mouse.displayingOneRoute) {
+                    mouse.elementSelected.selected_events();
+                }
+            }
+        }
+    }
+
+}
+
 //
 // Dragging
 //
@@ -144,33 +176,7 @@ function whileDragging(event) {
 
     } else {
 
-        let selectable = cam.selectable();
-        let sc = cam.get_feature_scale();
-
-        //Reset
-        mouse.elementHovering = undefined;
-
-        //Check Which Bus Stop Hovering Over
-        for (const node of G.busstops) {
-            if (mouse.gui_position.distance(node.draw_position()) < 10*sc && (selectable || node.drewAsHighlighted)) {
-                mouse.elementHovering = node;
-
-                if (!mouse.displayingOneRoute) {
-                    node.selected_events();
-                }
-            }
-        }
-
-        if (mouse.elementHovering != undefined) {
-            if (mouse.gui_position.distance(mouse.elementHovering.draw_position()) > 40) {
-                mouse.elementHovering = undefined;
-                if (mouse.elementSelected != undefined) {
-                    if (!mouse.displayingOneRoute) {
-                        mouse.elementSelected.selected_events();
-                    }
-                }
-            }
-        }
+        mouse_hovering_select();
 
     }
 
@@ -282,6 +288,7 @@ document.addEventListener('touchmove', function(event) {
 
 document.addEventListener('touchend', function(event) {
     pinchStartDistance = 0;
+    mouse_hovering_select();
     endDrag(event);
 });
 
