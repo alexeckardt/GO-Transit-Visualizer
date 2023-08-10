@@ -1,4 +1,4 @@
-import { Vector2 } from "./helper.js";
+import { Vector2, clamp } from "./helper.js";
 import { mouse } from "./Mouse.js";
 import {gui_coords_to_real_coords } from "./Coordinates.js";
 
@@ -38,6 +38,21 @@ function Camera(position) {
         this.update_scale(true)
     }
 
+    this.zoom_delta = function(zoom_index) {
+
+        //Update
+        this.scaleInd = floor(zoom_level);
+        this.scale = cameraScales[this.scaleInd];
+        
+        let newMousePos = this.mouse_world_position();
+        let coordDiff = new Vector2(newMousePos.x-mousePos.x, newMousePos.y-mousePos.y);
+
+        var p = this.position;
+        var adding = coordDiff.scale(this.scale);
+        this.position = p.subtract(adding);
+
+    }
+
     //
     //
     //
@@ -64,14 +79,11 @@ function Camera(position) {
         }
 
         //Update
-        var prevScale = this.scale 
-        this.scale = cameraScales[this.scaleInd];
-        var ratio = this.scale / prevScale;
+        this.reflect_scale();
         
         let newMousePos = this.mouse_world_position();
-        
+
         //Get Update
-        let postCoords = this.mouse_world_position();
         let coordDiff = new Vector2(newMousePos.x-mousePos.x, newMousePos.y-mousePos.y);
 
         var p = this.position;
@@ -93,6 +105,11 @@ function Camera(position) {
         return 0.25;
 
     }
+
+    this.reflect_scale = function() {
+        var sc = clamp(this.scaleInd, 0, scaleCount);
+        this.scale = cameraScales[sc];
+    }
 }
-export let cam = new Camera(new Vector2(-goalCamW/2.4, -goalCamH/2.6), 1);
+export let cam = new Camera(new Vector2(0, 0), 1);
 //export let cam = new Camera(new Vector2(0, 0), 1);

@@ -42,3 +42,16 @@ Vector2.prototype.toString = function() {
 export function toVector2(jsonTuple) {
     return new Vector2(jsonTuple[0], jsonTuple[1])
 }
+
+export function min(a, b) {
+    if (a < b) {
+        return a;
+    }
+    return b;
+}
+
+export function clamp(x, a, b) {
+    if (x < a)
+        return a;
+    return min(x, b);
+}
