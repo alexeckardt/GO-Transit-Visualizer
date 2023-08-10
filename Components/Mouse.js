@@ -243,7 +243,7 @@ function endDrag(event) {
 //
 var initialZoomAmount = 0;
 var pinchStartDistance = 0;
-var scalingFactor = 0.05;
+var scalingFactor = 0.5;
 document.addEventListener('touchstart', function(event) {
     if (event.touches.length === 2) {
         // Calculate the initial distance between the two touch points
@@ -271,7 +271,7 @@ document.addEventListener('touchmove', function(event) {
         var scrollChange = pinchDelta * scalingFactor;
         
         // Apply the scroll change to the initial scroll position
-        cam.zoom_delta(0, initialZoomAmount - scrollChange);
+        cam.zoom_delta(initialZoomAmount - scrollChange);
     }
 
     //

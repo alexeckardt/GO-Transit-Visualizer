@@ -110,7 +110,6 @@ function onWindowResize() {
     console.log('Window Resize');
 
     //Get Screen Dimensions
-    // Mobile Divices use outerWidth
     _width = min(window.innerWidth, window.outerWidth) + pagePadding;
     _height = min(window.innerHeight, window.outerHeight) + pagePadding;
   
