@@ -49,3 +49,9 @@ export function min(a, b) {
     }
     return b;
 }
+
+export function clamp(x, a, b) {
+    if (x < a)
+        return a;
+    return min(x, b);
+}

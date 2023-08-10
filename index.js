@@ -1,6 +1,6 @@
 //Comment
-import { setupMouse } from "./Components/Mouse.js";
-import { goalCamW, goalCamH } from "./Components/Camera.js";
+import { cam } from "./Components/Camera.js";
+import { Vector2, clamp } from "./Components/helper.js";
 import { backgroundCol, defFont, descFont } from "./Components/Style.js";
 import { drawGraph } from "./Visual/Graph.js";
 import { generateGraph } from "./Visual/GenerateGraph.js";
@@ -13,37 +13,59 @@ const canvas = document.getElementById('myCanvas');
 const infoCanvas = document.getElementById('infoCanvas');
 const constCanvas = document.getElementById('constantCanvas');
 let ctx = canvas.getContext('2d');
-
-canvas.setAttribute('width', goalCamW);
-canvas.setAttribute('height', goalCamH);
-
 export const infoBox = new InfoBox(infoCanvas);
-infoBox.set_dimentions(500, 200, 60, 15);
 
-//infoBox.set_text("Test", "Liufehfiewufhewuifwbnfuiwehfewiuhfewuifhweifuhwiuefhweiufhwuiffuiehfewiufhewuifhewfuiwehfuiwehfwuiefhweiufhweuifhwuifhweiufhwefhweiufhweuifhweiufhewiufhne\nLine\nLine\nLine\nLine\nLine\nLine\nLine\n");
-infoBox.update();
+var _width = 0;
+var _height = 0;
 
-setupMouse();
+//
+// Initialize
+//
+window.addEventListener('load', init, false);
+function init() {
+    
+    infoBox.set_dimentions(500, 200, 60, 15);
+    infoBox.update();
 
-generateGraph();
+    // setupMouse();
+    generateGraph();
 
-updateConstantCanvas();
+    updateConstantCanvas();
 
+    onWindowResize();
+
+    // Resize
+    cam.position = new Vector2(-_width / 1.7, -_height / 2);
+    cam.scaleInd = 2;
+    cam.reflect_scale();
+
+    console.log(cam.position);
+    
+    //Start
+    draw();
+}
+
+//
+// Draw
+//
 function draw(){
-    window.requestAnimationFrame(draw);
-
-    canvas.setAttribute('width', window.innerWidth);
-    canvas.setAttribute('height', window.innerHeight);
-
     //Clear
     ctx.fillStyle = backgroundCol;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    //Draw Background
     drawLakes(ctx, canvas.width / 2, canvas.height / 2);
 
+    //Draw Graph
     drawGraph(ctx);
-}
-draw()
 
+    //Redo
+    window.requestAnimationFrame(draw);
+}
+
+//
+// Update Bottom Left Canvas
+//
 function updateConstantCanvas() {
 
     let ctxh = constCanvas.getContext('2d');
@@ -75,25 +97,28 @@ function updateConstantCanvas() {
     ctxh.fillText("Click on routes to see information.", w, h - 31);
 }
 
-
+//
+//
+//Add Resize Events
+window.addEventListener('resize', onWindowResize, false);
+window.addEventListener('orientationchange', onWindowResize, false);
 function onWindowResize() {
+
+    console.log('Window Resize');
 
     //Get Screen Dimensions
     // Mobile Divices use outerWidth
-    var _width = min(window.innerWidth, window.outerWidth);
-    var _height = min(window.innerHeight, window.outerHeight);
+    _width = min(window.innerWidth, window.outerWidth);
+    _height = min(window.innerHeight, window.outerHeight);
   
     //Update div
-    constCanvas.style.width = _width;
-    constCanvas.style.height = _height;
-  
+    canvas.style.width = _width;
+    canvas.style.height = _height;
+    canvas.setAttribute('width', _width);
+    canvas.setAttribute('height', _height);
+    
     updateConstantCanvas();
 
     //
     // Center Camera
-    
 }
-
-//Add Resize Events
-window.addEventListener('resize', onWindowResize, false);
-window.addEventListener('orientationchange', onWindowResize, false);
