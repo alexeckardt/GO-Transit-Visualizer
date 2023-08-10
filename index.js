@@ -72,29 +72,28 @@ function updateConstantCanvas() {
 
     let w = 400;
     let h = 100;
-    let p = 5;
+    let p = 25;
 
     constCanvas.setAttribute('width', w);
     constCanvas.setAttribute('height', h);
 
     constCanvas.style.position = 'absolute';
     constCanvas.style.left = canvas.width - w - p + 'px'; 
-    constCanvas.style.top = canvas.height - h - 100 - p + 'px';
+    constCanvas.style.top = canvas.height - h - p + 'px';
 
     ctxh.clearRect(0, 0, constCanvas.width, constCanvas.height);
     //ctxh.fillRect(0, 0, constCanvas.width, constCanvas.height);
 
-    ctxh.fillStyle = 'black';
+    ctxh.fillStyle = '#666';
     ctxh.textAlign = 'right';
     ctxh.textBaseline = 'bottom';
     ctxh.font = defFont;
     ctxh.fillText("GTFS Data Provided by Metrolinks, Accessed April 2023", w, h);
-    ctxh.fillText("No Touch-screen functionality.", w, h - 10);
 
     ctxh.font = descFont;
     ctxh.fillStyle = 'white';
-    ctxh.fillText("Click on Stops to reveal routes.", w, h - 50);
-    ctxh.fillText("Click on routes to see information.", w, h - 31);
+    ctxh.fillText("Click on Stops to reveal routes.", w, h - 40);
+    ctxh.fillText("Click on routes to see information.", w, h - 21);
 }
 
 //
@@ -122,3 +121,9 @@ function onWindowResize() {
     //
     // Center Camera
 }
+
+window.addEventListener('wheel', function(event) {
+    if (event.ctrlKey) {
+        event.preventDefault();
+    }
+}, { passive: false });
