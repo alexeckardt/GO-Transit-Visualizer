@@ -88,12 +88,13 @@ function updateConstantCanvas() {
     ctxh.textAlign = 'right';
     ctxh.textBaseline = 'bottom';
     ctxh.font = defFont;
-    ctxh.fillText("GTFS Data Provided by Metrolinks, Accessed April 2023", w, h);
+    ctxh.fillText("GTFS Data Provided by Metrolinks, Accessed April 2023", w, h-10);
+    ctxh.fillText("Application version 23.8.10.2", w, h);
 
     ctxh.font = descFont;
     ctxh.fillStyle = 'white';
-    ctxh.fillText("Click on Stops to reveal routes.", w, h - 40);
-    ctxh.fillText("Click on routes to see information.", w, h - 21);
+    ctxh.fillText("Click on Stops to reveal routes.", w, h - 50);
+    ctxh.fillText("Click on routes to see information.", w, h - 31);
 }
 
 //
