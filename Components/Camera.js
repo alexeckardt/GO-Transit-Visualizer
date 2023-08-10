@@ -40,8 +40,10 @@ function Camera(position) {
 
     this.zoom_delta = function(zoom_index) {
 
+        let mousePos = this.mouse_world_position();
+
         //Update
-        this.scaleInd = floor(zoom_level);
+        this.scaleInd = clamp(Math.floor(zoom_index), 0, scaleCount-1);
         this.scale = cameraScales[this.scaleInd];
         
         let newMousePos = this.mouse_world_position();
@@ -107,7 +109,7 @@ function Camera(position) {
     }
 
     this.reflect_scale = function() {
-        var sc = clamp(this.scaleInd, 0, scaleCount);
+        var sc = clamp(this.scaleInd, 0, scaleCount-1);
         this.scale = cameraScales[sc];
     }
 }
