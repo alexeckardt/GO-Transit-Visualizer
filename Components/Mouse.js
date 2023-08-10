@@ -288,6 +288,16 @@ document.addEventListener('touchmove', function(event) {
 
 document.addEventListener('touchend', function(event) {
     pinchStartDistance = 0;
+
+    // Reposition
+    var x = 0;
+    var y = 0;
+
+    var touch = event.touches[0]; // Assuming you're interested in the first touch point
+    x = touch.clientX;
+    y = touch.clientY;
+    mouse.gui_position = new Vector2(x, y); 
+
     mouse_hovering_select();
     endDrag(event);
 });
