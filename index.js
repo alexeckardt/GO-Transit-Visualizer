@@ -18,6 +18,8 @@ export const infoBox = new InfoBox(infoCanvas);
 var _width = 0;
 var _height = 0;
 
+const version = "23.8.10.6";
+
 //
 // Initialize
 //
@@ -89,7 +91,7 @@ function updateConstantCanvas() {
     ctxh.textBaseline = 'bottom';
     ctxh.font = defFont;
     ctxh.fillText("GTFS Data Provided by Metrolinks, Accessed April 2023", w, h-10);
-    ctxh.fillText("Application version 23.8.10.4", w, h);
+    ctxh.fillText("Application version" + version, w, h);
 
     ctxh.font = descFont;
     ctxh.fillStyle = 'white';
@@ -100,6 +102,7 @@ function updateConstantCanvas() {
 //
 //
 //Add Resize Events
+const pagePadding = 2;
 window.addEventListener('resize', onWindowResize, false);
 window.addEventListener('orientationchange', onWindowResize, false);
 function onWindowResize() {
@@ -108,8 +111,8 @@ function onWindowResize() {
 
     //Get Screen Dimensions
     // Mobile Divices use outerWidth
-    _width = min(window.innerWidth, window.outerWidth);
-    _height = min(window.innerHeight, window.outerHeight);
+    _width = min(window.innerWidth, window.outerWidth) + pagePadding;
+    _height = min(window.innerHeight, window.outerHeight) + pagePadding;
   
     //Update div
     canvas.style.width = _width;
