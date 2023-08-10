@@ -6,6 +6,8 @@ import { drawGraph } from "./Visual/Graph.js";
 import { generateGraph } from "./Visual/GenerateGraph.js";
 import { drawLakes } from "./Visual/Background.js";
 import { InfoBox } from "./Components/InfoBox.js";
+import { min } from './Components/helper.js';
+
 //Canvas
 const canvas = document.getElementById('myCanvas');
 const infoCanvas = document.getElementById('infoCanvas');
@@ -17,6 +19,7 @@ canvas.setAttribute('height', goalCamH);
 
 export const infoBox = new InfoBox(infoCanvas);
 infoBox.set_dimentions(500, 200, 60, 15);
+
 //infoBox.set_text("Test", "Liufehfiewufhewuifwbnfuiwehfewiuhfewuifhweifuhwiuefhweiufhwuiffuiehfewiufhewuifhewfuiwehfuiwehfwuiefhweiufhweuifhwuifhweiufhwefhweiufhweuifhweiufhewiufhne\nLine\nLine\nLine\nLine\nLine\nLine\nLine\n");
 infoBox.update();
 
@@ -71,3 +74,26 @@ function updateConstantCanvas() {
     ctxh.fillText("Click on Stops to reveal routes.", w, h - 50);
     ctxh.fillText("Click on routes to see information.", w, h - 31);
 }
+
+
+function onWindowResize() {
+
+    //Get Screen Dimensions
+    // Mobile Divices use outerWidth
+    var _width = min(window.innerWidth, window.outerWidth);
+    var _height = min(window.innerHeight, window.outerHeight);
+  
+    //Update div
+    constCanvas.style.width = _width;
+    constCanvas.style.height = _height;
+  
+    updateConstantCanvas();
+
+    //
+    // Center Camera
+    
+}
+
+//Add Resize Events
+window.addEventListener('resize', onWindowResize, false);
+window.addEventListener('orientationchange', onWindowResize, false);
