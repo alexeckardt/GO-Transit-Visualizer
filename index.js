@@ -18,7 +18,7 @@ export const infoBox = new InfoBox(infoCanvas);
 var _width = 0;
 var _height = 0;
 
-const version = "23.8.10.11";
+const version = "23.8.22.0";
 
 //
 // Initialize
