@@ -250,6 +250,9 @@ function endDrag(event) {
 var initialZoomAmount = 0;
 var pinchStartDistance = 0;
 var scalingFactor = 0.02;
+
+var touchStartPos = {};
+
 document.addEventListener('touchstart', function(event) {
     if (event.touches.length === 2) {
         // Calculate the initial distance between the two touch points
@@ -260,10 +263,13 @@ document.addEventListener('touchstart', function(event) {
     } 
 
     // One Finger, Do Movement Start
+    touchStartPos = event.touches[0];
     startDrag(event);
 });
 
 document.addEventListener('touchmove', function(event) {
+
+    console.log('dragging')
 
     // Pinching for Zooming
     if (event.touches.length === 2) {
@@ -289,11 +295,14 @@ document.addEventListener('touchmove', function(event) {
 document.addEventListener('touchend', function(event) {
     pinchStartDistance = 0;
 
+    console.log('touch end');
+
     // Reposition
     var x = 0;
     var y = 0;
 
-    var touch = event.touches[0]; // Assuming you're interested in the first touch point
+    var touch = touchStartPos; // Assuming you're interested in the first touch point
+    console.log(touchStartPos);
     x = touch.clientX;
     y = touch.clientY;
     mouse.gui_position = new Vector2(x, y); 
