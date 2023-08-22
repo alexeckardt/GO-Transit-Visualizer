@@ -174,7 +174,9 @@ function Graph() {
         //Draw City Names
         ctx.fillStyle = cityNameCol;
         ctx.textAlign = 'center';
-        ctx.textBaseline = 'bottom';
+        ctx.textBaseline = 'center';
+        ctx.strokeStyle = backgroundCol;
+        ctx.lineWidth = 3;
         ctx.font = defFont;
         ctx.beginPath();
         for (var i = 0; i < this.cities.length; i++) {

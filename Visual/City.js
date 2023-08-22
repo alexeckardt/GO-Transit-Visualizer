@@ -25,6 +25,7 @@ export function City(name, pop, lat, lon, type, hub) {
     }
 
     this.plot_name = function(ctx, pos) {
+        ctx.strokeText(this.name, pos.x, pos.y);
         ctx.fillText(this.name, pos.x, pos.y);
     }
 }

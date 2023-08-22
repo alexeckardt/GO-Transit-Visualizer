@@ -6,7 +6,7 @@ import { drawGraph } from "./Visual/Graph.js";
 import { generateGraph } from "./Visual/GenerateGraph.js";
 import { drawLakes } from "./Visual/Background.js";
 import { InfoBox } from "./Components/InfoBox.js";
-import { min } from './Components/helper.js';
+import { min, max } from './Components/helper.js';
 
 //Canvas
 const canvas = document.getElementById('myCanvas');
@@ -15,10 +15,12 @@ const constCanvas = document.getElementById('constantCanvas');
 let ctx = canvas.getContext('2d');
 export const infoBox = new InfoBox(infoCanvas);
 
+ctx.imageSmoothingEnabled = false;
+
 var _width = 0;
 var _height = 0;
 
-const version = "23.8.22.0";
+const version = "23.8.22.5";
 
 //
 // Initialize
@@ -91,7 +93,7 @@ function updateConstantCanvas() {
     ctxh.textBaseline = 'bottom';
     ctxh.font = defFont;
     ctxh.fillText("GTFS Data Provided by Metrolinks, Accessed April 2023", w, h-10);
-    ctxh.fillText("Application version" + version, w, h);
+    ctxh.fillText("Application version v" + version, w, h);
 
     ctxh.font = descFont;
     ctxh.fillStyle = 'white';

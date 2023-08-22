@@ -94,6 +94,11 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         ctx.textAlign = 'center';
         ctx.textBaseline = 'bottom';
         ctx.font = defFont;
+
+        ctx.strokeStyle = backgroundCol;
+        ctx.lineWidth = 2;
+
+        ctx.strokeText(this.name, pos.x, pos.y - baseBusStopWidth*s*2);
         ctx.fillText(this.name, pos.x, pos.y - baseBusStopWidth*s*2);
 
         this.drewAsHighlighted = true;

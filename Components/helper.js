@@ -50,6 +50,13 @@ export function min(a, b) {
     return b;
 }
 
+export function max(a, b) {
+    if (a > b) {
+        return a;
+    }
+    return b;
+}
+
 export function clamp(x, a, b) {
     if (x < a)
         return a;
