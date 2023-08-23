@@ -5,6 +5,8 @@ import { mouse } from "../Components/Mouse.js";
 import { infoBox } from "../index.js";
 
 const baseBusStopWidth = 6;
+export const routesToBeHub = 6; // aviod Younge Str LOL
+
 
 export function BusStopNode(stop_id, input_coordinate, name) {
 
@@ -13,8 +15,9 @@ export function BusStopNode(stop_id, input_coordinate, name) {
     this.name = name;
 
     this.isHubOf = undefined;
-
     this.drewAsHighlighted = false;
+
+    this.routesOntoMe = 0;
 
     this.draw_position = function() {
         return real_coords_to_world_position(this.coord);
@@ -51,7 +54,18 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         ctx.strokeStyle = c;
         ctx.lineWidth = 3*s;
 
-        this.plot_arc(ctx)
+        //Circle normal Stop
+        if (this.routesOntoMe < routesToBeHub || this.isHubOf != undefined) {
+            this.plot_arc(ctx)
+        }
+        else {
+            //Large Square If High Connection
+            var s = cam.get_feature_scale();
+            var w = baseBusStopWidth*s*5;
+            var pos = this.draw_position();
+            ctx.fillRect(pos.x - w/2, pos.y - w/2, w, w);
+            ctx.strokeRect(pos.x - w/2, pos.y - w/2, w, w);
+        }
             
             ctx.fill();
             ctx.stroke();
@@ -69,7 +83,19 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         ctx.strokeStyle = selectedBusStopCol;
         ctx.lineWidth = 3*s;
 
-        this.plot_arc(ctx, scale)
+        //Circle normal Stop
+        if (this.routesOntoMe < routesToBeHub || this.isHubOf != undefined) {
+            this.plot_arc(ctx, scale)
+        }
+        else {
+            //Large Square If High Connection
+            var s = cam.get_feature_scale();
+            var w = baseBusStopWidth*s*3*scale;
+            var pos = this.draw_position();
+            ctx.fillRect(pos.x - w/2, pos.y - w/2, w, w);
+            ctx.strokeRect(pos.x - w/2, pos.y - w/2, w, w);
+        }
+            
             
             ctx.fill();
             ctx.stroke();
@@ -118,9 +144,9 @@ export function BusStopNode(stop_id, input_coordinate, name) {
         ctx.arc(pos.x, pos.y, w, 0, 2 * Math.PI, false);
     }
 
-    this.plot_rect = function(ctx) {
+    this.plot_rect = function(ctx, scale=1) {
         var s = cam.get_feature_scale();
-        var w = baseBusStopWidth*s*1.5;
+        var w = baseBusStopWidth*s*1.5*scale;
         var pos = this.draw_position();
         ctx.fillRect(pos.x - w/2, pos.y - w/2, w, w);
         this.drewAsHighlighted = false;

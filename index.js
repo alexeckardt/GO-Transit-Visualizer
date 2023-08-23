@@ -20,7 +20,7 @@ ctx.imageSmoothingEnabled = false;
 var _width = 0;
 var _height = 0;
 
-const version = "23.8.22.5";
+const version = "23.8.22.12";
 
 //
 // Initialize

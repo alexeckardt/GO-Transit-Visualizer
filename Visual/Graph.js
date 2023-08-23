@@ -3,6 +3,7 @@ import { TripEdge } from  "./TripEdges.js";
 import { mouse } from "../Components/Mouse.js";
 import { edgeColour, backgroundCol, busStopCol, gridLineCol, cityColour, defFont, cityNameCol, } from "../Components/Style.js";
 import { cam } from "../Components/Camera.js";
+import { routesToBeHub } from "./Busstop.js";
 
 export const shouldBakeGraph = false;
 
@@ -132,9 +133,11 @@ function Graph() {
             ctx.fill();
 
             // Always draw Hub Bus Stops Small
-            for (let key in this.stop_hubs) {
-                let stop = this.getStop(key);
-                stop.draw_selected(ctx, 0.5);
+            for (var i = 0; i < this.busstops.length; i++) {
+                let busstop = this.busstops[i];
+                if (busstop.isHubOf != undefined || busstop.routesOntoMe >= routesToBeHub) {
+                    busstop.draw_selected(ctx, 0.5)
+                }
             }
         }
         

@@ -102,6 +102,12 @@ export async function generateGraph() {
                 edge.add_route_that_travels_me(key, routeData.route_color, routeData.route_type);
             }
 
+            for (const i in routeData.stops_at) {
+                var stopId = routeData.stops_at[i];
+                var stop = G.getStop(stopId);
+                stop.routesOntoMe += 1;
+            }
+
         }
 
         //Add Nodes
